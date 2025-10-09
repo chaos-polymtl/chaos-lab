@@ -24,10 +24,10 @@ Lethe provides:
 Lethe is developed in C++ and built upon the deal.II finite-element library.  
 All code is released under a dual **Apache-2.0 WITH LLVM-exception** or **LGPL-2.1-or-later** license.
 
-> 🔗 [Lethe on GitHub](https://github.com/lethe-cfd/lethe)  
-> 🌐 [Project website](https://chaos-polymtl.github.io/lethe/index.html)
+> 🔗 [Lethe on GitHub](https://github.com/lethe-cfd/lethe).   
+> 🌐 [Project website](https://chaos-polymtl.github.io/lethe/index.html)        
 > 📘 [User documentation](https://chaos-polymtl.github.io/lethe/documentation/index.html)
-
+ 
 ---
 
 ## deal.II
