@@ -48,6 +48,7 @@ theme:
 # Navigation
 nav:
   - Home: index.md
+  - News: news.md
   - Team: team.md
   - Research: research.md
   - Software: software.md
