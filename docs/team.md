@@ -19,14 +19,14 @@ Meet the talented members of the Chaos Laboratory.
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PI</div>
+  <img src="../assets/pictures/bruno.jpg" alt="Bruno Blais" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
 <h3 class="team-card-name">Bruno Blais</h3>
 <p class="team-card-position">Associate Professor</p>
 <p class="team-card-research">
 <strong>Research Focus:</strong>
-High-performance computing tailored towards multiphase flows and process intensification</p>
+<small>High-performance computing tailored towards multiphase flows and process intensification</small></p>
 </div>
 </div>
 
