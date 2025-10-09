@@ -47,15 +47,13 @@ Meet the talented members of the Chaos Laboratory.
 <div class="placeholder">PD</div>
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Bruna Campos</h3>
+<h3 class="team-card-name">Postdoc Name 1</h3>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-C
+Advanced numerical methods for turbulent flow simulations in complex geometries.
 </p>
 </div>
-</div>
-
 </div>
 
 <div class="team-card" markdown>
@@ -63,27 +61,11 @@ C
 <div class="placeholder">PD</div>
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Victor Oliveira Ferreira</h3>
+<h3 class="team-card-name">Postdoc Name 2</h3>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-B
-</p>
-</div>
-</div>
-
-
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-<div class="placeholder">PD</div>
-</div>
-<div class="team-card-content" markdown>
-<h3 class="team-card-name">Antonella Succar</h3>
-<p class="team-card-position">Postdoctoral Researcher</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-A
+Machine learning applications for accelerating computational fluid dynamics simulations.
 </p>
 </div>
 </div>
