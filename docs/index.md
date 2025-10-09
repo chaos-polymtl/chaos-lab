@@ -5,9 +5,6 @@ hide:
 
 # Welcome to the Chaos laboratory
 
-
-![Chaos Laboratory Logo](assets/logo.png){ align=right width=200 }
-
 Welcome to the official website of the **Chaos Laboratory** research group. We are dedicated to advancing the frontiers of computational research and scientific innovation.
 
 ## About Us
