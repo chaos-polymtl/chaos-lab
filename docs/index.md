@@ -1,4 +1,10 @@
-# Welcome to the Chaos Laboratory
+---
+hide:
+  - navigation
+---
+
+# Welcome to the Chaos laboratory
+
 
 ![Chaos Laboratory Logo](assets/logo.png){ align=right width=200 }
 

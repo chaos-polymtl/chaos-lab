@@ -6,8 +6,8 @@ Browse our research publications and scholarly contributions.
 
 ### 2024
 
-*Publications from 2024 will be listed here.*
-
+Format example:
+> Author1, Author2, Author3. "Title of the Paper." *Journal Name*, Volume(Issue), Pages, Year. DOI: [link]
 ---
 
 ### 2023
@@ -19,31 +19,6 @@ Browse our research publications and scholarly contributions.
 ### 2022
 
 *Publications from 2022 will be listed here.*
-
----
-
-## Publication Categories
-
-### Journal Articles
-
-#### Peer-Reviewed Journal Articles
-
-*List of peer-reviewed journal publications will be added here.*
-
-Format example:
-> Author1, Author2, Author3. "Title of the Paper." *Journal Name*, Volume(Issue), Pages, Year. DOI: [link]
-
----
-
-### Conference Papers
-
-#### International Conferences
-
-*List of international conference papers will be added here.*
-
-#### National Conferences
-
-*List of national conference papers will be added here.*
 
 ---
 

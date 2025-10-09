@@ -1,0 +1,44 @@
+/* Hide the site name in the header bar */
+.md-header__title {
+  display: none !important;
+}
+
+/* Control the logo size in the navigation bar */
+.md-header__button.md-logo img {
+  height: 50px;   /* change this value as you wish */
+  width: auto;    /* keeps the aspect ratio */
+}
+
+/* ---------------------------------------------------------------
+   HEADER LAYOUT:  logo left, utilities (toggle, search, GitHub) right
+   Compatible with MkDocs Material v9.x
+---------------------------------------------------------------- */
+
+/* Main header: logo stays left, everything else can push right */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Keep the logo pinned left */
+.md-header__button.md-logo {
+  margin-right: auto;
+}
+
+.md-source__facts {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Responsive tweak for small screens */
+@media screen and (max-width: 768px) {
+  .md-header__inner {
+    flex-wrap: wrap;
+  }
+  .md-search {
+    width: 100%;
+    order: 99;
+  }
+}
