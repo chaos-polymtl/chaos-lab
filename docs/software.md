@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Software
 
 Explore the computational tools and software developed by the Chaos Laboratory.

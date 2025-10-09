@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Research
 
 Explore our current and past research projects at the Chaos Laboratory.

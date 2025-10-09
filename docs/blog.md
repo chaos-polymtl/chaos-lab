@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Blog
 
 Welcome to the Chaos Laboratory blog! Here we share news, commentary, articles, and updates about our research and activities.

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Publications
 
 Browse our research publications and scholarly contributions.
