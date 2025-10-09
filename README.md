@@ -2,17 +2,6 @@
 
 This repository contains the source code for the Chaos Laboratory research group website, built with MkDocs and the Material theme.
 
-## 🎨 Adding Your Logo
-
-To add the Chaos Laboratory logo to the website:
-
-1. Place your logo file in the `docs/assets/` directory
-2. Name it `logo.png` (or update the path in `mkdocs.yml`)
-3. Recommended size: 200x200 pixels or larger
-4. For best results, use a transparent background
-
-See `docs/assets/README.md` for detailed instructions.
-
 ## 🚀 Quick Start
 
 ### Prerequisites
