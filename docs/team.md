@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Team
 
 Meet the talented members of the Chaos Laboratory research group.
