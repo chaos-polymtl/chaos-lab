@@ -181,3 +181,50 @@
 [data-md-color-scheme="slate"] .team-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
+
+/* === Team Section Card Styling === */
+
+.team-section h2 {
+  font-size: 1.6rem;        /* Slightly smaller header */
+  margin-bottom: 0.5rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;                /* smaller spacing between cards */
+}
+
+.team-card {
+  flex: 1 1 260px;          /* smaller min width than before */
+  max-width: 300px;
+  background-color: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0.8rem;          /* reduced padding */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+
+.team-card-name {
+  font-size: 1.1rem;        /* smaller title text */
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+
+.team-card-position {
+  font-size: 0.95rem;
+  color: var(--md-typeset-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-card-research {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+}

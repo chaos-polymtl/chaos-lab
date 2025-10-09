@@ -5,13 +5,13 @@ hide:
 
 # Team
 
-Meet the talented members of the Chaos Laboratory research group.
+Meet the talented members of the Chaos Laboratory.
 
 ---
 
 <div class="team-section">
 
-## Principal Investigator
+<h2><strong>Principal Investigator</strong></h2>
 
 </div>
 
@@ -22,12 +22,11 @@ Meet the talented members of the Chaos Laboratory research group.
 <div class="placeholder">PI</div>
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Principal Investigator Name</h3>
-<p class="team-card-position">Principal Investigator</p>
+<h3 class="team-card-name">Bruno Blais</h3>
+<p class="team-card-position">Associate Professor</p>
 <p class="team-card-research">
 <strong>Research Focus:</strong>
-Leading the laboratory's research in computational fluid dynamics, multiphysics simulations, and high-performance computing applications.
-</p>
+High-performance computing tailored towards multiphase flows and process intensification</p>
 </div>
 </div>
 
@@ -37,7 +36,7 @@ Leading the laboratory's research in computational fluid dynamics, multiphysics 
 
 <div class="team-section">
 
-## Postdoctoral Researchers
+<h2><strong>Postdoctoral Fellows</strong></h2>
 
 </div>
 
@@ -77,7 +76,7 @@ Machine learning applications for accelerating computational fluid dynamics simu
 
 <div class="team-section">
 
-## PhD Students
+<h2><strong>PhD Students</strong></h2>
 
 </div>
 
@@ -131,7 +130,7 @@ Parallel algorithms for solving coupled physics problems on heterogeneous comput
 
 <div class="team-section">
 
-## Master's Students
+<h2><strong>Master's students</strong></h2>
 
 </div>
 
