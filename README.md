@@ -14,7 +14,7 @@ This repository contains the source code for the Chaos Laboratory research group
 Install MkDocs and the Material theme:
 
 ```bash
-pip install mkdocs mkdocs-material
+pip install mkdocs mkdocs-material markdown_include
 ```
 
 ### Local Development
@@ -41,6 +41,7 @@ The built site will be in the `site/` directory.
 
 - `docs/` - Contains all the Markdown content for the website
   - `index.md` - Home page
+  - `news.md`  - News about the laboratory
   - `team.md` - Team members and information
   - `research.md` - Research projects and areas
   - `software.md` - Software and tools developed by the lab
