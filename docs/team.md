@@ -1,6 +1,8 @@
 ---
 hide:
   - navigation
+toc:
+  depth: 2
 ---
 
 # Team
@@ -9,11 +11,11 @@ Meet the talented members of the Chaos Laboratory.
 
 ---
 
-<div class="team-section">
+<div class="team-section"></div>
 
-<h2><strong>Principal Investigator</strong></h2>
 
-</div>
+## Principal Investigator
+
 
 <div class="team-grid" markdown>
 
@@ -22,23 +24,22 @@ Meet the talented members of the Chaos Laboratory.
   <img src="../assets/pictures/bruno.jpg" alt="Bruno Blais" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Bruno Blais</h3>
+<p class="team-card-name"><strong>Bruno Blais</strong></p>
 <p class="team-card-position">Associate Professor</p>
 <p class="team-card-research">
 <strong>Research Focus:</strong>
 <small>High-performance computing tailored towards multiphase flows and process intensification</small></p>
 </div>
 </div>
-
 </div>
 
 ---
 
-<div class="team-section">
+<div class="team-section"></div>
 
-<h2><strong>Postdoctoral Fellows</strong></h2>
+## Postdoctoral Fellows
 
-</div>
+
 
 <div class="team-grid" markdown>
 
@@ -88,11 +89,11 @@ TODO
 
 ---
 
-<div class="team-section">
+<div class="team-section"></div>
 
-<h2><strong>PhD Students</strong></h2>
 
-</div>
+## PhD Students
+
 
 <div class="team-grid" markdown>
 
@@ -198,11 +199,11 @@ TODO
 
 ---
 
-<div class="team-section">
+<div class="team-section"></div>
 
-<h2><strong>Master's students</strong></h2>
 
-</div>
+## Master's students
+
 
 <div class="team-grid" markdown>
 
@@ -279,7 +280,6 @@ TODO
 
 ---
 
-<div class="team-section">
 
 </div>
 ## Alumni
@@ -299,9 +299,21 @@ We are proud of our alumni who have gone on to successful careers in academia an
 - Jeanne Joachim, post-doc, 2022
 - Bastien Delacroix, M. Sc., 2019
 
+### Ph.D.
+
+- **Laura Prieto Saavedra** (2025) 
+    - **Thesis Title**: Development of an Efficient Stabilized Navier-Stokes Solver to Simulate Turbulent Flows in Process-Intensified Devices
+    - **Current position**: [Scientist and Research Software Engineer - Weierstrass Institute](https://www.wias-berlin.de/contact/staff/index.jsp?lang=1&uname=prieto)
+- **Lucka Barbeau** (2024)  
+    - **Thesis Title**: Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules
+    - **Current position**: Research Officer - National Research Council Canada
+- **Toni El Geitani Nehme** (2023)
+    - **Thesis Title**: Development of a Robust Eulerian-Lagrangian Model for Process Intensification of Gas Fluidized and Spouted Beds
+    - **Current position**: Associate Data Scientist - Amgen
+
+
 ---
 
-<div class="team-section">
 
 </div>
 ## Join Us
