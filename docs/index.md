@@ -3,8 +3,9 @@ hide:
   - navigation
 ---
 
-<h1 style="display:flex;justify-content:space-between;align-items:center;width:100%;">
-  <span style="flex:1;min-width:250px;">Welcome to the CHAOS Laboratory</span>
+<h1 style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+  <span>Welcome to the CHAOS Laboratory</span>
+  <span style="display: flex; gap: 0.5rem; flex-shrink: 0;">
   <img
     src="assets/chaos_logo_black_without_bkg.png"
     alt="CHAOS logo"
@@ -24,9 +25,9 @@ hide:
 
 CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulation) is a research laboratory specializing in the numerical modeling of unit operations and advanced manufacturing processes. It is recognized for its vertical integration—from the development of new mathematical models to their implementation in high-performance open-source software. These models are used to study the physics of single-phase, granular, and multiphase flows, as well as to design and optimize chemical processes.
 
-<p style="display:flex;justify-content:space-between;align-items:center;width:100%;">
-  <span  style="flex:1;min-width:250px;">
-    The CHAOS laboratory is part of the department of Chemical Engineering of Polytechnique Montréal.
+<p style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; margin: 0;">
+  <span style="flex: 1 1 250px; min-width: 250px;">
+    The CHAOS laboratory is part of the Department of Chemical Engineering of Polytechnique Montréal.
     The CHAOS lab is one of the few chemical engineering laboratories in Canada dedicated to developing
     software and algorithms optimized for modern high-performance computing architectures,
     positioning it at the forefront of technological innovation.
@@ -35,8 +36,8 @@ CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulati
   <img
     src="assets/polymtl_logo_black.png"
     alt="Polytechnique Montréal logo"
-    style="height:120px;margin-left:1rem;"
-    class="poly-logo">
+    style="height: 120px; margin-left: 1rem; flex-shrink: 0;"
+  >
 </p>
 
 <style>
