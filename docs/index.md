@@ -5,9 +5,9 @@ hide:
 
 # Welcome to the Chaos laboratory
 
-CHAOS (Chemical engineering High-performance Analysis Optimization and Simulation) is a research laboratory specializing in the numerical modeling of unit operations and advanced manufacturing processes. It is recognized for its vertical integration—from the development of new mathematical models to their implementation in high-performance open-source software. These models are used to study the physics of single-phase, granular, and multiphase flows, as well as to design and optimize chemical processes.
+CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulation) is a research laboratory specializing in the numerical modeling of unit operations and advanced manufacturing processes. It is recognized for its vertical integration—from the development of new mathematical models to their implementation in high-performance open-source software. These models are used to study the physics of single-phase, granular, and multiphase flows, as well as to design and optimize chemical processes.
 
-CHAOS is the only chemical engineering laboratory in Canada dedicated to developing software and algorithms optimized for modern high-performance computing architectures, positioning it at the forefront of technological innovation.
+The CHAOS laboratory is part of the departement of Chemical Engineering of Polytechnique Montréal. The CHAOS lab is one of the few chemical engineering laboratory in Canada dedicated to developing software and algorithms optimized for modern high-performance computing architectures, positioning it at the forefront of technological innovation.
 
 
 ## Latest News
