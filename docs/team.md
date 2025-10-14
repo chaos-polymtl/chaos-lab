@@ -280,8 +280,6 @@ TODO
 
 ---
 
-
-</div>
 ## Alumni
 
 We are proud of our alumni who have gone on to successful careers in academia and industry.
@@ -304,18 +302,54 @@ We are proud of our alumni who have gone on to successful careers in academia an
 - **Laura Prieto Saavedra** (2025) 
     - **Thesis Title**: Development of an Efficient Stabilized Navier-Stokes Solver to Simulate Turbulent Flows in Process-Intensified Devices
     - **Current position**: [Scientist and Research Software Engineer - Weierstrass Institute](https://www.wias-berlin.de/contact/staff/index.jsp?lang=1&uname=prieto)
+
+- **Ghazaleh Mirakhori** (2024)  
+    - **Thesis Title**: 
+    - **Current position**: 
+
 - **Lucka Barbeau** (2024)  
     - **Thesis Title**: Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules
     - **Current position**: Research Officer - National Research Council Canada
+
 - **Toni El Geitani Nehme** (2023)
     - **Thesis Title**: Development of a Robust Eulerian-Lagrangian Model for Process Intensification of Gas Fluidized and Spouted Beds
     - **Current position**: Associate Data Scientist - Amgen
+
+### M. Sc.
+
+- **Mikael Vaillant** (2025) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Pierre Joseph Eric Laurentin** (2024) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Audrey Collard-Daigneault** (2024) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Valérie Bibeau** (2023)  
+    - **Thesis Title**: 
+    - **Current position**:
+
+- **Carole-Anne Daunais** (2022)
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Bastien Delacroix** (2019)
+    - **Thesis Title**: 
+    - **Current position**: 
+
+### Post-Doc
+
+- **Shahab Golshan** (2022) 
+- **Jeanne Joachim** (2022)  
 
 
 ---
 
 
-</div>
 ## Join Us
 
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
