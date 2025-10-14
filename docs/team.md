@@ -45,28 +45,42 @@ Meet the talented members of the Chaos Laboratory.
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PD</div>
+  <img src="../assets/pictures/victor.jpg" alt="Victor Oliveira Ferreira" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>Postdoc Name 1</strong></p>
+<p class="team-card-name"><strong> Victor Oliveira Ferreira </strong></p>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Advanced numerical methods for turbulent flow simulations in complex geometries.
+Process intensification with CFD and experimental methods
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PD</div>
+  <img src="../assets/pictures/bruna.jpg" alt="Bruna Campos" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>Postdoc Name 1</strong></p>
+<p class="team-card-name"><strong> Bruna Campos </strong></p>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Machine learning applications for accelerating computational fluid dynamics simulations.
+TODO
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/antonella.jpg" alt="Antonella Succar" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Antonella Succar </strong></p>
+<p class="team-card-position">Postdoctoral Researcher</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+TODO
 </p>
 </div>
 </div>
@@ -85,42 +99,98 @@ Machine learning applications for accelerating computational fluid dynamics simu
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PhD</div>
+  <img src="../assets/pictures/oreste.jpg" alt="Oreste Marquis" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>PHD Name 1</strong></p>
+<p class="team-card-name"><strong> Oreste Marquis </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-High-order finite element methods for multiphase flow modeling in industrial applications.
+Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PhD</div>
+  <img src="../assets/pictures/oliviergu.jpg" alt="Olivier Guévremont" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>PHD Name 2</strong></p>
+<p class="team-card-name"><strong> Olivier Guévremont </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Adaptive mesh refinement strategies for large-scale computational fluid dynamics problems.
+TODO
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">PhD</div>
+  <img src="../assets/pictures/olivierga.jpg" alt="Olivier Gaboriault" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>PHD Name 3</strong></p>
+<p class="team-card-name"><strong> Olivier Gaboriault </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Parallel algorithms for solving coupled physics problems on heterogeneous computing architectures.
+TODO
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/helene.jpg" alt="Hélène Papillon Laroche" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Hélène Papillon Laroche </strong></p>
+<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+TODO
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/amishga.jpg" alt="Amishga Alphonius" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Amishga Alphonius </strong></p>
+<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+TODO
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/Charles.jpg" alt="Charles Wilson" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Charles Wilson </strong></p>
+<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+TODO
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/paul.jpg" alt="Paul Alexander Patience" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Paul Alexander Patience </strong></p>
+<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+TODO
 </p>
 </div>
 </div>
@@ -139,56 +209,42 @@ Parallel algorithms for solving coupled physics problems on heterogeneous comput
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">MSc</div>
+  <img src="../assets/pictures/wiebke.jpg" alt="Wiebke Mainville" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>MSC Name 1</strong></p>
+<p class="team-card-name"><strong> Wiebke Mainville </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Development of efficient solvers for incompressible Navier-Stokes equations.
+Control strategies for an active cooling system.
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">MSc</div>
+  <img src="../assets/pictures/jacob.jpg" alt="Jacob Tremblay" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>MSC Name 2</strong></p>
+<p class="team-card-name"><strong> Jacob Tremblay </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Validation and verification of turbulence models for engineering applications.
+TODO
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">MSc</div>
+  <img src="../assets/pictures/justin.jpg" alt="Justin Lamouche" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>MSC Name 1</strong></p>
+<p class="team-card-name"><strong> Justin Lamouche </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Computational modeling of heat transfer in porous media with application to energy systems.
-</p>
-</div>
-</div>
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-<div class="placeholder">MSc</div>
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong>MSC Name 4</strong></p>
-<p class="team-card-position">Master's Student</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-Performance optimization of CFD codes for GPU architectures.
+Computational modeling of acoustically driven particle-laiden flows.
 </p>
 </div>
 </div>
@@ -199,7 +255,7 @@ Performance optimization of CFD codes for GPU architectures.
 
 <div class="team-section">
 
-## Interns
+<h2><strong>Interns</strong></h2>
 
 </div>
 
@@ -207,14 +263,14 @@ Performance optimization of CFD codes for GPU architectures.
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-<div class="placeholder">INT</div>
+  <img src="../assets/pictures/marine.jpg" alt="Marine Harel" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong>Intern Name 1</strong></p>
+<p class="team-card-name"><strong> Marine Harel </strong></p>
 <p class="team-card-position">Research Intern</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Benchmarking of computational fluid dynamics solvers for educational case studies.
+TODO
 </p>
 </div>
 </div>
@@ -224,23 +280,58 @@ Benchmarking of computational fluid dynamics solvers for educational case studie
 
 ---
 
-
 ## Alumni
 
-
-We are proud of our alumni who have gone on to successful careers in academia and industry. Information about former lab members and their current positions will be added here.
+We are proud of our alumni who have gone on to successful careers in academia and industry.
 
 ### Ph.D.
 
 - **Laura Prieto Saavedra** (2025) 
     - **Thesis Title**: Development of an Efficient Stabilized Navier-Stokes Solver to Simulate Turbulent Flows in Process-Intensified Devices
     - **Current position**: [Scientist and Research Software Engineer - Weierstrass Institute](https://www.wias-berlin.de/contact/staff/index.jsp?lang=1&uname=prieto)
+
+- **Ghazaleh Mirakhori** (2024)  
+    - **Thesis Title**: 
+    - **Current position**: 
+
 - **Lucka Barbeau** (2024)  
     - **Thesis Title**: Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules
     - **Current position**: Research Officer - National Research Council Canada
+
 - **Toni El Geitani Nehme** (2023)
     - **Thesis Title**: Development of a Robust Eulerian-Lagrangian Model for Process Intensification of Gas Fluidized and Spouted Beds
     - **Current position**: Associate Data Scientist - Amgen
+
+### M. Sc.
+
+- **Mikael Vaillant** (2025) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Pierre Joseph Eric Laurentin** (2024) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Audrey Collard-Daigneault** (2024) 
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Valérie Bibeau** (2023)  
+    - **Thesis Title**: 
+    - **Current position**:
+
+- **Carole-Anne Daunais** (2022)
+    - **Thesis Title**: 
+    - **Current position**: 
+
+- **Bastien Delacroix** (2019)
+    - **Thesis Title**: 
+    - **Current position**: 
+
+### Post-Doc
+
+- **Shahab Golshan** (2022) 
+- **Jeanne Joachim** (2022)  
 
 
 ---
@@ -248,18 +339,18 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 ## Join Us
 
-
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
-- **Graduate Studies**: MSc or PhD opportunities in computational science and engineering
-- **Postdoctoral Research**: Advanced research positions in multiphysics simulations
-- **Visiting Researchers**: Collaborative research opportunities
-- **Internships**: Undergraduate and graduate research internships
+- **Graduate Studies**: M. Sc. or Ph. D. opportunities in computational science and engineering;
+- **Postdoctoral Research**: Advanced research positions in multiphysics simulations;
+- **Visiting Researchers**: Collaborative research opportunities;
+- **Internships**: Undergraduate and graduate research internships.
 
 Please contact us with your CV and research interests. We welcome applications from diverse backgrounds and are committed to fostering an inclusive research environment.
 
 ---
 
+<!--
 *Note: Replace the placeholder information above with actual team member details, including photos. To add a photo, place the image file in the `docs/assets/` directory and update the `team-card-image` div with:*
 
 ```html
@@ -267,3 +358,4 @@ Please contact us with your CV and research interests. We welcome applications f
   <img src="../assets/your-photo.jpg" alt="Member Name">
 </div>
 ```
+-->
