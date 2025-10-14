@@ -48,7 +48,7 @@ Meet the talented members of the Chaos Laboratory.
   <img src="../assets/pictures/victor.jpg" alt="Victor Oliveira Ferreira" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Victor Oliveira Ferreira</h3>
+<p class="team-card-name"><strong> Victor Oliveira Ferreira </strong></p>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -62,7 +62,7 @@ Process intensification with CFD and experimental methods
   <img src="../assets/pictures/bruna.jpg" alt="Bruna Campos" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Bruna Campos</h3>
+<p class="team-card-name"><strong> Bruna Campos </strong></p>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -76,7 +76,7 @@ TODO
   <img src="../assets/pictures/antonella.jpg" alt="Antonella Succar" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Antonella Succar</h3>
+<p class="team-card-name"><strong> Antonella Succar </strong></p>
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -102,7 +102,7 @@ TODO
   <img src="../assets/pictures/oreste.jpg" alt="Oreste Marquis" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Oreste Marquis</h3>
+<p class="team-card-name"><strong> Oreste Marquis </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -116,7 +116,7 @@ Advanced finite element framework for multiphysics modeling of microwave heating
   <img src="../assets/pictures/oliviergu.jpg" alt="Olivier Guévremont" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Olivier Guévremont</h3>
+<p class="team-card-name"><strong> Olivier Guévremont </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -130,7 +130,7 @@ TODO
   <img src="../assets/pictures/olivierga.jpg" alt="Olivier Gaboriault" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Olivier Gaboriault</h3>
+<p class="team-card-name"><strong> Olivier Gaboriault </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -144,7 +144,7 @@ TODO
   <img src="../assets/pictures/helene.jpg" alt="Hélène Papillon Laroche" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Hélène Papillon Laroche</h3>
+<p class="team-card-name"><strong> Hélène Papillon Laroche </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -158,7 +158,7 @@ TODO
   <img src="../assets/pictures/amishga.jpg" alt="Amishga Alphonius" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Amishga Alphonius</h3>
+<p class="team-card-name"><strong> Amishga Alphonius </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -172,7 +172,7 @@ TODO
   <img src="../assets/pictures/Charles.jpg" alt="Charles Wilson" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Charles Wilson</h3>
+<p class="team-card-name"><strong> Charles Wilson </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -186,7 +186,7 @@ TODO
   <img src="../assets/pictures/paul.jpg" alt="Paul Alexander Patience" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Paul Alexander Patience</h3>
+<p class="team-card-name"><strong> Paul Alexander Patience </strong></p>
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -212,7 +212,7 @@ TODO
   <img src="../assets/pictures/wiebke.jpg" alt="Wiebke Mainville" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Wiebke Mainville</h3>
+<p class="team-card-name"><strong> Wiebke Mainville </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -226,7 +226,7 @@ Control strategies for an active cooling system.
   <img src="../assets/pictures/jacob.jpg" alt="Jacob Tremblay" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Jacob Tremblay</h3>
+<p class="team-card-name"><strong> Jacob Tremblay </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -240,7 +240,7 @@ TODO
   <img src="../assets/pictures/justin.jpg" alt="Justin Lamouche" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Justin Lamouche</h3>
+<p class="team-card-name"><strong> Justin Lamouche </strong></p>
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -266,7 +266,7 @@ Computational modeling of acoustically driven particle-laiden flows.
   <img src="../assets/pictures/marine.jpg" alt="Marine Harel" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<h3 class="team-card-name">Marine Harel</h3>
+<p class="team-card-name"><strong> Marine Harel </strong></p>
 <p class="team-card-position">Research Intern</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
@@ -283,19 +283,6 @@ TODO
 ## Alumni
 
 We are proud of our alumni who have gone on to successful careers in academia and industry.
-
-- Laura Prieto Saavedra, Ph. D., 2025
-- Mikael Vaillant, M. Sc., 2025
-- Ghazaleh Mirakhori, Ph. D., 2024
-- Pierre Joseph Eric Laurentin, M. Sc., 2024
-- Audrey Collard-Daigneault, M. Sc., 2024
-- Lucka Barbeau, Ph. D., 2024
-- Toni El Geitani Nehme, Ph. D., 2023
-- Valérie Bibeau, M. Sc., 2023
-- Carole-Anne Daunais, M. Sc., 2022
-- Shahab Golshan, post-doc, 2022
-- Jeanne Joachim, post-doc, 2022
-- Bastien Delacroix, M. Sc., 2019
 
 ### Ph.D.
 
