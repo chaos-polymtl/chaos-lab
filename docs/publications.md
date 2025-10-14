@@ -92,7 +92,7 @@ Browse our research publications of the last few years.
 - Zarghami, Reza, Sotudeh-Gharebagh, Rahmat, Blais, Buno, Mostoufi, Navid, Chaouki, Jamal. “3 Process extrapolation by simulation.” *Scale-Up Processes: Iterative Methods for the Chemical, Mineral and Biological Industries*, 57-90, 2021.0.
 - Bashiri, Hamed, Rabiee, Roshanak, Shams, Alireza, Golshan, Shahab, Blais, Bruno, Chaouki, Jamal. “4 Transition from e-pilot to full commercial scale.” *Scale-Up Processes: Iterative Methods for the Chemical, Mineral and Biological Industries*, 91-124, 2021.0.
 - Golshan, Shahab, Rabiee, Roshanak, Shams, Alireza, Hoballah, Rayane, Maheshwari, Priyank, Jafari, Rouzbeh, Chaouki, Jamal, Blais, Bruno. “On the VOF Simulation Details and Droplet Size Distribution inside Rotating Packed Beds.” 2021.0.
-- Arndt, D, Bangerth, W, Blais, B, Fehling, M, Gassmöller, R, Heister, T, Heltai, L, Köcher, U, Kronbichler, M, Maier, M. “The $\mathsf {deal. II} $ library, version 9.3.” *Journal of Numerical Mathematics*, 29.0, 171-186, 2021.0.
+- Arndt, D, Bangerth, W, Blais, B, Fehling, M, Gassmöller, R, Heister, T, Heltai, L, Köcher, U, Kronbichler, M, Maier, M. “The deal. II library, version 9.3.” *Journal of Numerical Mathematics*, 29.0, 171-186, 2021.0.
 
 
 ---
