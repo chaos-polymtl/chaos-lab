@@ -15,20 +15,20 @@ Our research spans multiple domains of computational science and engineering:
 
 <!--*Research in computational fluid dynamics methodologies and applications will be described here.* -->
 
-Our group develops advanced numerical methods to model complex singlephase and multiphase flows relevant to chemical engineering. We focus on high-order finite element formulations for newtonian and non-newtonian fluids, along with a possible Eulerian–Lagrangian (CFD–DEM) coupling to accurately capture fluid–solid and gas–liquid interactions under realistic industrial conditions.
-Applications range from spinning disc reactors, particle mixing and fluidized beds. The group combines experimental validation, large-scale simulations, and algorithmic innovation to improve predictive capabilities and support process intensification in singlephase and multiphase reactors.
+Our group develops advanced numerical methods to model complex single-phase and multiphase flows relevant to chemical engineering. We focus on high-order finite element formulations for Newtonian and non-Newtonian fluids in single-phase, gas-liquid and liquid-liquid flows. We also leverage Eulerian–Lagrangian (CFD–DEM) coupling to accurately capture fluid-solid interactions under realistic industrial conditions.  
+Applications range from spinning disc reactors, fluidized beds to additive manufacturing processes. The group combines large-scale simulations, and algorithmic innovation  with  experimental validation to improve predictive capabilities for chemical and manufacturing processes.
 
 ### Multiphysics Simulations
 
 <!--*Information about our multiphysics simulation research will be added here.*-->
 
-Our research in multiphysics modeling focuses on the coupling of thermal, electromagnetic, fluid, and reactive phenomena to simulate and optimize complex engineering processes. We develop and apply high-performance computational frameworks for applications such as catalytic reactor optimization, additive manufacturing, active cooling systems, and microwave-assisted chemical processes. By integrating high-fidelity numerical models with reduced-order and digital twin approaches, our work aims to accelerate design, improve energy efficiency, and enhance process control in advanced manufacturing and reaction engineering.
+Our research in multiphysics modeling focuses on the coupling of thermal, electromagnetic, fluid, and reactive phenomena to simulate and optimize complex engineering processes. We develop and apply high-performance computational frameworks for applications such as catalytic reactor optimization, additive manufacturing, active cooling systems, and microwave-assisted chemical processes.  
 
 ### High-Performance Computing
 
 <!--*Details about our work in parallel computing and HPC optimization will be added here.*-->
 
-Our work in high-performance computing focuses on developing scalable numerical strategies for large-scale simulations of multiphase and granular flows. By leveraging matrix-free finite element methods, advanced domain decomposition, and optimized CFD-DEM coupling schemes, we aim to maximize computational efficiency on modern parallel architectures.
+Our work in high-performance computing focuses on developing scalable numerical strategies for large-scale simulations of multiphase and granular flows. We aim to maximize computational efficiency on modern parallel architectures.  
 
 ### Numerical Methods
 
@@ -40,7 +40,7 @@ The group research centers on the design and analysis of advanced numerical sche
 
 ## Active Projects
 
-### Project 1: Multiphase simulation for powder bed additive manufacturing
+### Multiphase simulation for powder bed additive manufacturing
 
 **Description:** Powder spreading and melting are two critical stages in Laser Powder Bed Fusion (LPBF) that directly determine the final part quality, surface finish, and process reliability. Despite its technological maturity, LPBF still suffers from inconsistencies related to powder flowability, spreading uniformity, and melt-pool stability, largely due to the complex and poorly understood multiphase interactions between solid particles, molten metal, and surrounding gas.
 
@@ -50,9 +50,8 @@ This project aims to develop a comprehensive multiphase numerical framework that
 
 **Funding and Partners:** National Research Council, Canada & TUM School of Engineering and Design, Munich 
 
-**Status:** Ongoing
 
-### Project 2: Graphite spheroidization
+### Graphite spheroidization
 
 **Description:** The graphite spheroidization project, conducted in collaboration with Nouveau Monde Graphite Inc. (NMG), aims to improve the morphological control and energy efficiency of the spheroidization process used to produce battery-grade anode materials for lithium-ion cells. Current industrial methods rely heavily on empirical tuning of operating conditions, leading to high energy consumption and variable product quality.
 
@@ -62,9 +61,8 @@ To address these limitations, the project leverage the CFD-DEM capabilities of L
 
 **Funding and Partners:** Nouveau Monde Graphite Inc
 
-**Status:** Ongoing
 
-### Project 3: Process intensification of multiphysics systems
+### Process intensification of multiphysics systems
 
 **Description:** The transition toward more energy-efficient, compact, and sustainable chemical processes calls for a fundamental rethinking of conventional reactor design. To address this challenge, the present project aims to develop advanced numerical tools and modeling frameworks for process intensification in chemical reactors, with the ultimate goal of improving their energy efficiency, selectivity, and scalability.
 
@@ -74,9 +72,7 @@ More specifically, the research is structured around three complementary directi
 
 **Funding and Partners:** National Research Council, Canada & Institut de l'énergie Trottier
 
-**Status:** Ongoing
-
-### Project 4: Ultrasonic particle control
+### Ultrasonic particle control
 
 **Description:** The growing presence of microplastics in oceans poses a major environmental challenge, yet accurate characterization of their size distribution, composition, and concentration remains limited by the inefficiency of current sampling and analysis methods. This project aims to develop an ultrasonic-based particle manipulation and detection system to improve the quantification and classification of microplastic populations in aquatic environments.
 
@@ -86,13 +82,12 @@ The core innovation relies on the use of acoustic radiation forces to concentrat
 
 **Funding and Partners:** National Research Council, Canada
 
-**Status:** Ongoing
 
 ---
 
 ## Past Projects
 
-### Completed Project 1: Radioactive particle tracking (RPT)
+### Radioactive particle tracking (RPT)
 
 **Description:** The project introduces a novel model-free RPT technique for characterizing hydrodynamics in multiphase reactors. By replacing traditional radiation models with experimental data and training an artificial neural network, the approach significantly improves positional accuracy and eliminates extensive calibration. The method was validated in laminar and transitional stirred tank flows, accurately capturing vortex formation and key hydrodynamic parameters, and showing strong agreement with multiphase CFD simulations. 
 
@@ -106,7 +101,7 @@ The core innovation relies on the use of acoustic radiation forces to concentrat
 
 We actively collaborate with:
 
-- Academic institutions: Polytechnique Montréal;
+- Academic institutions: Polytechnique Montréal, Technische Universität München;
 - Research laboratories: National Research Council;
 - Industry partners: ENIM, Nouveau Monde Graphite Inc;
 - International research groups: Dr. Magdalena Schreter-Fleischhacker group at "Technische Universität München".
