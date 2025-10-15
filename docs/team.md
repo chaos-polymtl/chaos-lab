@@ -160,7 +160,7 @@ TODO
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing</small>
 </p>
 </div>
 </div>
@@ -214,7 +214,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Control strategies for an active cooling system.</small></p>
+<small>Control strategies for an active cooling system.</small>
 </p>
 </div>
 </div>
@@ -242,7 +242,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modeling of acoustically driven particle-laiden flows.</small></p>
+<small>Computational modeling of acoustically driven particle-laiden flows.</small>
 </p>
 </div>
 </div>
@@ -339,7 +339,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
-- **Graduate Studies**: M. Sc. or Ph. D. opportunities in computational science and engineering;
+- **Graduate Studies**: M.Sc. or Ph.D. opportunities in computational science and engineering;
 - **Postdoctoral Research**: Advanced research positions in multiphysics simulations;
 - **Visiting Researchers**: Collaborative research opportunities;
 - **Internships**: Undergraduate and graduate research internships.
