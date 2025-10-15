@@ -40,7 +40,7 @@ The group research centers on the design and analysis of advanced numerical sche
 
 ## Active Projects
 
-### Multiphase simulation for powder bed additive manufacturing
+### Multiphase simulation for powder bed additive manufacturing  <sup>a.1,</sup><sup>a.2,</sup><sup>b.1,</sup><sup>d.1</sup>
 
 **Description:** Powder spreading and melting are two critical stages in Laser Powder Bed Fusion (LPBF) that directly determine the final part quality, surface finish, and process reliability. Despite its technological maturity, LPBF still suffers from inconsistencies related to powder flowability, spreading uniformity, and melt-pool stability, largely due to the complex and poorly understood multiphase interactions between solid particles, molten metal, and surrounding gas.
 
@@ -48,10 +48,8 @@ This project aims to develop a comprehensive multiphase numerical framework that
 
 **Team Members:** Amishga Alphonius, Hélène Papillon Laroche and Olivier Gaboriault
 
-**Funding and Partners:** National Research Council, Canada & TUM School of Engineering and Design, Munich 
 
-
-### Graphite spheroidization
+### Graphite spheroidization  <sup>a.1,</sup><sup>c.2</sup>
 
 **Description:** The graphite spheroidization project, conducted in collaboration with Nouveau Monde Graphite Inc. (NMG), aims to improve the morphological control and energy efficiency of the spheroidization process used to produce battery-grade anode materials for lithium-ion cells. Current industrial methods rely heavily on empirical tuning of operating conditions, leading to high energy consumption and variable product quality.
 
@@ -59,10 +57,8 @@ To address these limitations, the project leverage the CFD-DEM capabilities of L
 
 **Team Members:** Charles Wilson and Jacob Tremblay
 
-**Funding and Partners:** Nouveau Monde Graphite Inc
 
-
-### Process intensification of multiphysics systems
+### Process intensification of multiphysics systems  <sup>a.1,</sup><sup>b.1</sup>
 
 **Description:** The transition toward more energy-efficient, compact, and sustainable chemical processes calls for a fundamental rethinking of conventional reactor design. To address this challenge, the present project aims to develop advanced numerical tools and modeling frameworks for process intensification in chemical reactors, with the ultimate goal of improving their energy efficiency, selectivity, and scalability.
 
@@ -70,9 +66,8 @@ More specifically, the research is structured around three complementary directi
 
 **Team Members:** Oreste Marquis, Victor Oliveira Ferreira, Olivier Guévremont, Wiebke Mainville
 
-**Funding and Partners:** National Research Council, Canada & Institut de l'énergie Trottier
 
-### Ultrasonic particle control
+### Ultrasonic particle control  <sup>a.1,</sup><sup>b.1</sup>
 
 **Description:** The growing presence of microplastics in oceans poses a major environmental challenge, yet accurate characterization of their size distribution, composition, and concentration remains limited by the inefficiency of current sampling and analysis methods. This project aims to develop an ultrasonic-based particle manipulation and detection system to improve the quantification and classification of microplastic populations in aquatic environments.
 
@@ -80,14 +75,12 @@ The core innovation relies on the use of acoustic radiation forces to concentrat
 
 **Team Members:** Justin Lamouche
 
-**Funding and Partners:** National Research Council, Canada
-
 
 ---
 
 ## Past Projects
 
-### Radioactive particle tracking (RPT)
+### Radioactive particle tracking (RPT)<sup>a.1</sup>
 
 **Description:** The project introduces a novel model-free RPT technique for characterizing hydrodynamics in multiphase reactors. By replacing traditional radiation models with experimental data and training an artificial neural network, the approach significantly improves positional accuracy and eliminates extensive calibration. The method was validated in laminar and transitional stirred tank flows, accurately capturing vortex formation and key hydrodynamic parameters, and showing strong agreement with multiphase CFD simulations. 
 
@@ -101,10 +94,10 @@ The core innovation relies on the use of acoustic radiation forces to concentrat
 
 We actively collaborate with:
 
-- Academic institutions: Polytechnique Montréal, Technische Universität München;
-- Research laboratories: National Research Council;
-- Industry partners: ENIM, Nouveau Monde Graphite Inc;
-- International research groups: Dr. Magdalena Schreter-Fleischhacker group at "Technische Universität München".
+- Academic institutions: <sup>a.1</sup>Polytechnique Montréal, <sup>a.2</sup>Technische Universität München;
+- Research laboratories: <sup>b.1</sup>National Research Council;
+- Industry partners: <sup>c.1</sup>ENIM, <sup>c.2</sup>Nouveau Monde Graphite Inc;
+- International research groups: <sup>d.1</sup>Dr. Magdalena Schreter-Fleischhacker group at "Technische Universität München".
 
 
 ---
@@ -113,9 +106,9 @@ We actively collaborate with:
 
 We are grateful for the support from various funding agencies and organizations. 
 
-- Natural Sciences and Engineering Research Council
-- Institut de l'énergie Trottier
-- Fonds de recherche du Québec - Nature et technologies
+- [Natural Sciences and Engineering Research Council](https://www.nserc-crsng.gc.ca/)
+- [Institut de l'énergie Trottier ](https://iet.polymtl.ca/)  
+- [Fonds de recherche du Québec - Nature et technologies](https://frq.gouv.qc.ca/)
 
 ---
 
