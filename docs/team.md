@@ -52,8 +52,7 @@ Meet the talented members of the Chaos Laboratory.
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Process intensification with CFD and experimental methods
-</p>
+<small>Process intensification with CFD and experimental methods</small></p>
 </div>
 </div>
 
@@ -106,8 +105,7 @@ TODO
 <p class="team-card-position">PhD Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems
-</p>
+<small>Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems</small></p>
 </div>
 </div>
 
@@ -216,7 +214,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Control strategies for an active cooling system.
+<small>Control strategies for an active cooling system.</small></p>
 </p>
 </div>
 </div>
@@ -244,7 +242,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-Computational modeling of acoustically driven particle-laiden flows.
+<small>Computational modeling of acoustically driven particle-laiden flows.</small></p>
 </p>
 </div>
 </div>
