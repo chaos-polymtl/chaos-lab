@@ -65,8 +65,7 @@ Meet the talented members of the Chaos Laboratory.
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
-</p>
+<small>Matrix-free domain decomposition methods for rotor-stator reactors</small></p>
 </div>
 </div>
 
@@ -79,8 +78,7 @@ TODO
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
-</p>
+<small>Experimental and numerical analysis of solid–liquid and solid–liquid–gas flows in fluidized beds</small></p>
 </div>
 </div>
 
@@ -102,7 +100,7 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Oreste Marquis </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
 <small>Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems</small></p>
@@ -115,10 +113,10 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Olivier Guévremont </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Pore-resolved CFD and machine learning for the simulation of reactive flows in porous media.</small></p>
 </p>
 </div>
 </div>
@@ -129,7 +127,7 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Olivier Gaboriault </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
 TODO
@@ -143,7 +141,7 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Hélène Papillon Laroche </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
 TODO
@@ -157,7 +155,7 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Amishga Alphonius </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
 <small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing</small>
@@ -171,10 +169,10 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Charles Wilson </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Dynamics of nonspherical-deformable-particle-laden flows</small>
 </p>
 </div>
 </div>
@@ -185,7 +183,7 @@ TODO
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Paul Alexander Patience </strong></p>
-<p class="team-card-position">PhD Candidate</p>
+<p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
 TODO
@@ -214,7 +212,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Control strategies for an active cooling system.</small>
+<small>Control strategies for active cooling systems.</small>
 </p>
 </div>
 </div>
@@ -242,7 +240,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modeling of acoustically driven particle-laiden flows.</small>
+<small>Computational modelling of acoustically driven particle-laden flows.</small>
 </p>
 </div>
 </div>
@@ -289,7 +287,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
     - **Current position**: [Scientist and Research Software Engineer - Weierstrass Institute](https://www.wias-berlin.de/contact/staff/index.jsp?lang=1&uname=prieto)
 
 - **Ghazaleh Mirakhori** (2024)  
-    - **Thesis Title**: 
+    - **Thesis Title**: Development of a Model-Free Radioactive Particle Tracking (RPT) Technique for Hydrodynamic Characterization of Industrial-Scale Reactors 
     - **Current position**: 
 
 - **Lucka Barbeau** (2024)  
@@ -307,23 +305,23 @@ We are proud of our alumni who have gone on to successful careers in academia an
     - **Current position**: 
 
 - **Pierre Joseph Eric Laurentin** (2024) 
-    - **Thesis Title**: 
+    - **Thesis Title**: Développement, implémentation et étalonnage d'un modèle fluide à interface diffuse pour la simulation d'écoulements polyphasiques
     - **Current position**: 
 
 - **Audrey Collard-Daigneault** (2024) 
-    - **Thesis Title**: 
+    - **Thesis Title**:  Développement de stratégies numériques basées sur la DEM et la CFD-DEM améliorant la performance computationnelle de simulations d'écoulements granulaires et polyphasiques 
     - **Current position**: 
 
 - **Valérie Bibeau** (2023)  
-    - **Thesis Title**: 
+    - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
     - **Current position**:
 
 - **Carole-Anne Daunais** (2022)
-    - **Thesis Title**: 
+    - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
     - **Current position**: 
 
 - **Bastien Delacroix** (2019)
-    - **Thesis Title**: 
+    - **Thesis Title**: Développement d'un modèle CFD-DEM en référentiel non-inertiel pour des applications au mélange solide-liquide
     - **Current position**: 
 
 ### Post-Doc
