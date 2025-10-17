@@ -116,7 +116,7 @@ Meet the talented members of the Chaos Laboratory.
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Pore-resolved CFD and machine learning for the simulation of reactive flows in porous media.</small></p>
+<small>Pore-resolved CFD and machine learning for the simulation of reactive flows in porous media</small></p>
 </p>
 </div>
 </div>
@@ -130,7 +130,7 @@ Meet the talented members of the Chaos Laboratory.
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Powder spreading for metal additive manufacturing</small></p>
 </p>
 </div>
 </div>
@@ -144,7 +144,7 @@ TODO
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing</small></p>
 </p>
 </div>
 </div>
@@ -165,7 +165,7 @@ TODO
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-  <img src="../assets/pictures/Charles.jpg" alt="Charles Wilson" class="team-photo">
+  <img src="../assets/pictures/charles.jpg" alt="Charles Wilson" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Charles Wilson </strong></p>
@@ -177,6 +177,7 @@ TODO
 </div>
 </div>
 
+<!--
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/paul.jpg" alt="Paul Alexander Patience" class="team-photo">
@@ -190,6 +191,7 @@ TODO
 </p>
 </div>
 </div>
+-->
 
 </div>
 
@@ -217,6 +219,7 @@ TODO
 </div>
 </div>
 
+<!--
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/jacob.jpg" alt="Jacob Tremblay" class="team-photo">
@@ -230,6 +233,7 @@ TODO
 </p>
 </div>
 </div>
+-->
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -240,7 +244,7 @@ TODO
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modelling of acoustically driven particle-laden flows.</small>
+<small>Computational modelling of acoustically driven particle-laden flows</small>
 </p>
 </div>
 </div>
@@ -266,7 +270,7 @@ TODO
 <p class="team-card-position">Research Intern</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Extension of the geometric interface reinitialization method to non-linear interface reconstructions</small>
 </p>
 </div>
 </div>
@@ -301,28 +305,28 @@ We are proud of our alumni who have gone on to successful careers in academia an
 ### M. Sc.
 
 - **Mikael Vaillant** (2025) 
-    - **Thesis Title**: 
-    - **Current position**: 
+    - **Thesis Title**: Développement d’un modèle de substitution pour un système de  refroidissement actif
+    - **Current position**: - 
 
 - **Pierre Joseph Eric Laurentin** (2024) 
     - **Thesis Title**: Développement, implémentation et étalonnage d'un modèle fluide à interface diffuse pour la simulation d'écoulements polyphasiques
-    - **Current position**: 
+    - **Current position**: Solver software developper - MayaHTT
 
 - **Audrey Collard-Daigneault** (2024) 
     - **Thesis Title**:  Développement de stratégies numériques basées sur la DEM et la CFD-DEM améliorant la performance computationnelle de simulations d'écoulements granulaires et polyphasiques 
-    - **Current position**: 
+    - **Current position**: Solver software developper - MayaHTT
 
 - **Valérie Bibeau** (2023)  
     - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
-    - **Current position**:
+    - **Current position**: Process performance consultant - Enero Solutions
 
 - **Carole-Anne Daunais** (2022)
     - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
-    - **Current position**: 
+    - **Current position**: C++ Developer - Transit
 
 - **Bastien Delacroix** (2019)
     - **Thesis Title**: Développement d'un modèle CFD-DEM en référentiel non-inertiel pour des applications au mélange solide-liquide
-    - **Current position**: 
+    - **Current position**: Post-Doc - Centre étude de la neige Météo France
 
 ### Post-Doc
 
@@ -337,8 +341,8 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
-- **Graduate Studies**: M.Sc. or Ph.D. opportunities in computational science and engineering;
-- **Postdoctoral Research**: Advanced research positions in multiphysics simulations;
+- **Graduate Studies**: M.Sc. or Ph.D. opportunities;
+- **Postdoctoral Research**: - ;
 - **Visiting Researchers**: Collaborative research opportunities;
 - **Internships**: Undergraduate and graduate research internships.
 
