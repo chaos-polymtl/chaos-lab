@@ -303,7 +303,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
 - **Graduate Studies**: M.Sc. or Ph.D. opportunities;
-- **Postdoctoral Research**: - ;
+- **Postdoctoral Research**;
 - **Visiting Researchers**: Collaborative research opportunities;
 - **Internships**: Undergraduate and graduate research internships.
 
