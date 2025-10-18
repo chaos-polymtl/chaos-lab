@@ -5,35 +5,38 @@ hide:
 
 # Research
 
-Explore our current and past research projects at the Chaos Laboratory.
-
 ## Research Areas
 
-Our research spans multiple domains of computational science and engineering:
+??? tip "Computational Fluid Dynamics" 
+    Our group simulates single-phase and multiphase flows relevant to chemical engineering. We focus on high-order finite element formulations for Newtonian and non-Newtonian fluids in single-phase, gas-liquid and liquid-liquid flows. We specialize in implicit LES for turbulent flows. We leverage Eulerian–Lagrangian (CFD–DEM) coupling to accurately capture fluid-solid interactions under realistic industrial conditions.  Applications range from spinning disc reactors, fluidized beds to additive manufacturing processes. The group combines large-scale simulations, and algorithmic innovation with experimental validation to improve predictive capabilities for chemical and manufacturing processes.
 
-### Computational Fluid Dynamics
+??? tip "Physics of Multiphase Flows"
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <img src="../assets/logo_research_topics/particles.svg" alt="Multiphase icon" style="float:right;height:90px;margin-left:1em;margin-bottom:0.5em;">
+      <div>
+        We leverage simulation and experiments to shed light on the physics of multiphase flows (both fluid–fluid and particle-laden flows).  
+        This knowledge is leveraged to assist in the design or optimization of unit operations or manufacturing processes that contain these types of flows.
+      </div>
+    </div>
 
-<!--*Research in computational fluid dynamics methodologies and applications will be described here.* -->
+??? tip "Multiphysics Simulations"
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <img src="../assets/logo_research_topics/multiphysics.svg" alt="Multiphase icon" style="float:right;height:90px;margin-left:1em;margin-bottom:0.5em;">
+      <div>
+        Our research in multiphysics modelling focuses on the coupling of thermal, electromagnetic, fluid, and reactive phenomena to simulate and optimize complex engineering processes. We develop and apply high-performance computational frameworks for applications such as catalytic reactor optimization, additive manufacturing, active cooling systems, and microwave-assisted chemical processes
+      </div>
+    </div>
 
-Our group develops advanced numerical methods to model complex single-phase and multiphase flows relevant to chemical engineering. We focus on high-order finite element formulations for Newtonian and non-Newtonian fluids in single-phase, gas-liquid and liquid-liquid flows. We also leverage Eulerian–Lagrangian (CFD–DEM) coupling to accurately capture fluid-solid interactions under realistic industrial conditions.  
-Applications range from spinning disc reactors, fluidized beds to additive manufacturing processes. The group combines large-scale simulations, and algorithmic innovation with experimental validation to improve predictive capabilities for chemical and manufacturing processes.
+??? tip "High-Performance Computing"
+    Our work in high-performance computing focuses on developing scalable numerical strategies for large-scale simulations of multiphase and granular flows. We aim to maximize computational efficiency on modern parallel architectures.  
 
-### Multiphysics Simulations
-
-<!--*Information about our multiphysics simulation research will be added here.*-->
-
-Our research in multiphysics modelling focuses on the coupling of thermal, electromagnetic, fluid, and reactive phenomena to simulate and optimize complex engineering processes. We develop and apply high-performance computational frameworks for applications such as catalytic reactor optimization, additive manufacturing, active cooling systems, and microwave-assisted chemical processes.  
-
-### High-Performance Computing
-
-<!--*Details about our work in parallel computing and HPC optimization will be added here.*-->
-
-Our work in high-performance computing focuses on developing scalable numerical strategies for large-scale simulations of multiphase and granular flows. We aim to maximize computational efficiency on modern parallel architectures.  
-
-### Numerical Methods
-
-<!--*Research on advanced numerical methods and algorithms will be described here.*-->
-The group research centers on the design and analysis of advanced numerical schemes for multiphysics and multiphase simulations. Current developments include high-order CFD-DEM formulations for fully resolved particulate flows, void fraction projection for unresolved particulate flows, discontinuous Galerkin and Petrov–Galerkin methods for fluid, transport and electromagnetism equations, and accurate diffuse and sharp interface treatments for phase boundaries. We also investigate efficient discretization, stabilization, and averaging strategies, to improve accuracy and stability of numerical methods.
+??? tip "Numerical Methods"
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <img src="../assets/logo_research_topics/numerical_methods.svg" alt="Multiphase icon" style="float:right;height:90px;margin-left:1em;margin-bottom:0.5em;">
+      <div>
+        Our research centers on the design and implementatino of advanced numerical schemes for multiphysics and multiphase simulations. Current developments include high-order CFD-DEM formulations for particle-laden flows, discontinuous Galerkin and Petrov–Galerkin methods for fluid, transport and electromagnetism equations, and accurate diffuse and sharp interface treatments for multiphase flows. We also investigate efficient discretization and stabilization strategies, to improve accuracy and stability of numerical methods.
+      </div>
+    </div>
 
 
 ---

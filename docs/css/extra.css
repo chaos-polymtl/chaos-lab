@@ -44,6 +44,28 @@
 }
 
 /* ---------------------------------------------------------------
+   ADDITIONAL CUSTOMIZATIONS FOR THE TIP BOXES
+---------------------------------------------------------------- */
+
+.md-typeset details.tip > summary::after,
+.md-typeset details.tip[open] > summary::after {
+  transform: rotate(90deg) !important;
+  transition: none !important;
+}
+
+/* Increase font size inside ??? tip blocks */
+.md-typeset details.tip {
+  font-size: 1.05em;     /* slightly larger text */
+  line-height: 1.55;     /* optional: improve readability */
+}
+
+/* Optionally make the summary (header) slightly larger too */
+.md-typeset details.tip > summary {
+  font-size: 1.1em;
+  font-weight: 600;      /* makes the title a bit bolder */
+}
+
+/* ---------------------------------------------------------------
    TEAM PAGE MOSAIC LAYOUT
    Attractive card-based grid for team members
 ---------------------------------------------------------------- */
@@ -240,3 +262,5 @@
   line-height: 1.4;
   color: var(--md-default-fg-color--light);
 }
+
+
