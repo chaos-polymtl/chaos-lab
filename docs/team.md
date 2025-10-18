@@ -5,16 +5,12 @@ toc:
   depth: 2
 ---
 
-# Team
 
-Meet the talented members of the Chaos Laboratory.
-
----
+## Current Members
 
 <div class="team-section"></div>
 
 
-## Principal Investigator
 
 
 <div class="team-grid" markdown>
@@ -31,17 +27,8 @@ Meet the talented members of the Chaos Laboratory.
 <small>High-performance computing tailored towards multiphase flows and process intensification</small></p>
 </div>
 </div>
-</div>
-
----
-
-<div class="team-section"></div>
-
-## Postdoctoral Fellows
 
 
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -82,17 +69,10 @@ Meet the talented members of the Chaos Laboratory.
 </div>
 </div>
 
-</div>
-
----
-
-<div class="team-section"></div>
 
 
-## PhD Students
 
 
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -193,17 +173,6 @@ TODO
 </div>
 -->
 
-</div>
-
----
-
-<div class="team-section"></div>
-
-
-## Master's students
-
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -253,13 +222,7 @@ TODO
 
 ---
 
-<div class="team-section">
 
-<h2><strong>Interns</strong></h2>
-
-</div>
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -275,8 +238,6 @@ TODO
 </div>
 </div>
 
-
-</div>
 
 ---
 
