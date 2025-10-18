@@ -253,7 +253,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 - **Ghazaleh Mirakhori** (2024)  
     - **Thesis Title**: Development of a Model-Free Radioactive Particle Tracking (RPT) Technique for Hydrodynamic Characterization of Industrial-Scale Reactors 
-    - **Current position**: 
+    - **Current position**: Engineering Scientist - Coanda
 
 - **Lucka Barbeau** (2024)  
     - **Thesis Title**: Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules
