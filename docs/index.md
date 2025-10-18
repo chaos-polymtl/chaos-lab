@@ -38,7 +38,6 @@ CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulati
     alt="Polytechnique Montréal logo"
     style="height: 120px; margin-left: 1rem; flex-shrink: 0;"
     class="poly-logo">
-  >
 </p>
 
 <style>
