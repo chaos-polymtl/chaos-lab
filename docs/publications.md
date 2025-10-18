@@ -13,7 +13,7 @@ Browse our research publications of the last few years.
 
 - Vaillant, Mikael, Ferreira, Victor Oliveira, Mainville, Wiebke, Lamarre, Jean-Michel, Raymond, Vincent, Chioua, Moncef, Blais, Bruno. “Surrogate Model for Heat Transfer Prediction in Impinging Jet Arrays using Dynamic Inlet/Outlet and Flow Rate Control.” *arXiv preprint arXiv:2507.07034*, 2025.
 
-## Recent Publications
+## Recent Journal Publications
 
 ### 2025
 
@@ -22,10 +22,8 @@ Browse our research publications of the last few years.
 - Guévremont, Olivier, Barbeau, Lucka, Moreau, Vaiana, Galli, Federico, Virgilio, Nick, Blais, Bruno. “Robust pore-resolved CFD through porous monoliths reconstructed by micro-computed tomography: From digitization to flow prediction.” *Chemical Engineering Journal*, 504.0, 158577, 2025.
 - Schieppati, Dalma, Fattahi, Kobra, Blais, Bruno, Boffito, Daria Camilla, Denner, Fabian. “Acoustic wave propagation in liquid medium and damping mechanisms: modeling and simulation.” *Modeling and Simulation of Sono-Processes*, 35-57, 2025.
 - Badran, Youssef, Dupuy, Dorian, Blais, Bruno, Moureau, Vincent, Ansart, Renaud, Chaouki, Jamal, Simonin, Olivier. “Meso-scale numerical analysis of the role of Van der Waals adhesion and static friction in fluidized beds of fine solids.” *Powder Technology*, 455.0, 120763, 2025.
-- Tremblay, Sylvain, Blais, Bruno. “Optimization of RFI Performances in Large Furnaces Through Mathematical Simulations.” *TMS Annual Meeting & Exhibition*, 225-231, 2025.
 - Mirakhori, Ghazaleh, Doucet, Jocelyn, Chidami, Saad, Blais, Bruno, Chaouki, Jamal. “AI-enhanced radioactive particle tracking: A practical methodology for accelerating industrial process development.” *Chemical Engineering Science*, 318.0, 122173, 2025.
 - Prieto Saavedra, Laura, Archambault, Joël, Munch, Peter, Blais, Bruno. “An implicit large-eddy simulation study of the turbulent Taylor-Couette flow with an inner rotating cylinder.” *Journal of Turbulence*, 1-15, 2025.
-
 - Alphonius, Amishga, Barbeau, Lucka, Blais, Bruno, Gaboriault, Olivier, Guévremont, Olivier, Lamouche, Justin, Laurentin, Pierre, Marquis, Oreste, Munch, Peter, Ferreira, Victor Oliveira. “Lethe 1.0: An open-source parallel high-order computational fluid dynamics software framework for single and multiphase flows.” *Computer Physics Communications*, 109880, 2025.
 
 ---
@@ -45,7 +43,6 @@ Browse our research publications of the last few years.
 - Bangerth, Wolfgang, Kronbichler, Martin, Maier, Matthias, Arndt, Daniel, Kanschat, Guido, Heister, Timo, Wells, David, Munch, Peter, Heltai, Luca, Turcksin, Bruno. “kinnewig/dealii: Tpetra-Wrappers-alpha.” *Zenodo*, 2024.0.
 - Patience, Paul Alexander, Audet, Charles, Blais, Bruno. “Cesogen: Cellular solid generator.” *Available at SSRN 5288588*, 2024.0.
 - Africa, Pasquale C, Arndt, Daniel, Bangerth, Wolfgang, Blais, Bruno, Fehling, Marc, Gassmöller, Rene, Heister, Timo, Heltai, Luca, Kinnewig, Sebastian, Kronbichler, Martin. “Journal of numerical mathematics: The deal. II library, Version 9.6.” *de Gruyter*, 2024.0.
-- Africa, Pasquale C, Arndt, Daniel, Bangerth, Wolfgang, Blais, Bruno, Fehling, Marc, Gassmöller, Rene, Heister, Timo, Heltai, Luca, Kinnewig, Sebastian, Kronbichler, Martin. “The deal. II library, Version 9.6.” *Journal of Numerical Mathematics*, 32.0(4.0), 369-380, 2024.0.
 
 
 ---
@@ -63,6 +60,7 @@ Browse our research publications of the last few years.
 - Mirakhori, Ghazaleh, Collard-Daigneault, Audrey, Alphonius, Amishga, Doucet, Jocelyn, Blais, Bruno, Chaouki, Jamal. “An improved position reconstruction method for radioactive particle tracking.” *Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment*, 1055.0, 168504, 2023.0.
 - El Geitani, Toni, Blais, Bruno. “Solid-liquid rotary kilns: An experimental and CFD-DEM study.” *Powder Technology*, 430.0, 119008, 2023.0.
 - Arndt, Daniel, Bangerth, Wolfgang, Bergbauer, Maximilian, Feder, Marco, Fehling, Marc, Heinz, Johannes, Heister, Timo, Heltai, Luca, Kronbichler, Martin, Maier, Matthias. “The deal. II library, version 9.5.” *Journal of Numerical Mathematics*, 31.0(3.0), 231-246, 2023.0.
+
 ---
 
 ### 2022
@@ -76,7 +74,6 @@ Browse our research publications of the last few years.
 - Golshan, Shahab, Patience, Gregory S, Zarghami, Reza, Chaouki, Jamal, Blais, Bruno. “Experimental methods in chemical engineering: Optical fibre probes in multiphase systems.” *The Canadian Journal of Chemical Engineering*, 2022.0.
 - Golshan, Shahab, Shams, Alireza, Rabiee, Roshanak, Jafari, Rouzbeh, Chaouki, Jamal, Blais, Bruno. “A correlation for average droplet diameter in rotating packed beds.” *The Canadian Journal of Chemical Engineering*, 2022.0.
 
----
 
 ---
 
@@ -107,9 +104,7 @@ Browse our research publications of the last few years.
 - Blais, Bruno, Barbeau, Lucka, Bibeau, Valérie, Gauvin, Simon, El Geitani, Toni, Golshan, Shahab, Kamble, Rajeshwari, Mirakhori, Ghazaleh, Chaouki, Jamal. “Lethe: An open-source parallel high-order adaptative CFD solver for incompressible flows.” *SoftwareX*, 12.0, 100579, 2020.0.
 - Arndt, Daniel, Bangerth, Wolfgang, Blais, Bruno, Clevenger, Thomas C, Fehling, Marc, Grayver, Alexander V, Heister, Timo, Heltai, Luca, Kronbichler, Martin, Maier, Matthias. “The deal. II library, version 9.2.” *Journal of Numerical Mathematics*, 28.0(3.0), 131-146, 2020.0.
 - Blais, Bruno, Delacroix, Bastien, Fradette, Louis, Bertrand, François. “A Comparison of the Performance of Mixing Systems for Viscous Solid-Liquid Mixing Using CFD-DEM.” *2020 Virtual AIChE Annual Meeting*, 2020.0.
-- Arndt, D, Bangerth, W, Blais, B, Clevenger, TC, Fehling, M, Grayver, AV, Heister, T, Heltai, L, Kronbichler, M, Maier, M. “Deal. ii-9.2. 0.” *Journal of Numerical Mathematics*, 28.0, 131-146, 2020.0.
 - Heltai, L, Blais, B, Gassmöller, R. “The deal. II tutorial step-70: massively parallel non-matching grid simulations of fluid structure interaction problems.” 2020.0.
-- Wells, D. “The deal. II Library, Version 9.2.” *Journal of Numerical*, 2020.0.
 
 ---
 
@@ -122,7 +117,6 @@ Browse our research publications of the last few years.
 - Delacroix, Bastien, Blais, Bruno, Fradette, Louis, Bertrand, François. “Development of a CFD-DEM Model in Non-Inertial Frame for Solid-Liquid Mixing Applications.” *2019 AIChE Annual Meeting*, 2019.0.
 - Patience, Gregory S, Patience, Christian A, Blais, Bruno, Bertrand, Francois. “Citation analysis of scientific categories (vol 3, e00300, 2017).” *HELIYON*, 5.0(3.0), 2019.0.
 - Patience, Gregory Scott, Patience, Christian A, Blais, Bruno, Bertrand, François. “Erratum: Citation analysis of scientific categories.” *Heliyon*, 5.0(3.0), 2019.0.
-- Blais, Bruno, Kamble, Rajeshwari. “Lethe: Open-source High-order Computational Fluid Dynamics for Chemical Engineers.” 2019.0.
 
 ---
 
