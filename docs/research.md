@@ -14,8 +14,7 @@ hide:
     <div style="display:flex;align-items:center;gap:1rem;">
       <img src="../assets/logo_research_topics/particles.svg" alt="Multiphase icon" style="float:right;height:90px;margin-left:1em;margin-bottom:0.5em;">
       <div>
-        We use simulation and experiments to shed light on the physics of multiphase flows (both fluid–fluid and particle-laden flows).  
-This knowledge guides the design or optimization of unit operations and manufacturing processes involving such flows.
+        We use simulation and experiments to shed light on the physics of multiphase flows (both fluid–fluid and particle-laden flows). This knowledge guides the design or optimization of unit operations and manufacturing processes involving such flows.
       </div>
     </div>
 
