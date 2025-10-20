@@ -5,16 +5,12 @@ toc:
   depth: 2
 ---
 
-# Team
 
-Meet the talented members of the Chaos Laboratory.
-
----
+## Current Members
 
 <div class="team-section"></div>
 
 
-## Principal Investigator
 
 
 <div class="team-grid" markdown>
@@ -31,17 +27,8 @@ Meet the talented members of the Chaos Laboratory.
 <small>High-performance computing tailored towards multiphase flows and process intensification</small></p>
 </div>
 </div>
-</div>
-
----
-
-<div class="team-section"></div>
-
-## Postdoctoral Fellows
 
 
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -82,17 +69,10 @@ Meet the talented members of the Chaos Laboratory.
 </div>
 </div>
 
-</div>
-
----
-
-<div class="team-section"></div>
 
 
-## PhD Students
 
 
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -193,17 +173,6 @@ TODO
 </div>
 -->
 
-</div>
-
----
-
-<div class="team-section"></div>
-
-
-## Master's students
-
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -253,13 +222,7 @@ TODO
 
 ---
 
-<div class="team-section">
 
-<h2><strong>Interns</strong></h2>
-
-</div>
-
-<div class="team-grid" markdown>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -276,8 +239,6 @@ TODO
 </div>
 
 
-</div>
-
 ---
 
 ## Alumni
@@ -292,7 +253,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 - **Ghazaleh Mirakhori** (2024)  
     - **Thesis Title**: Development of a Model-Free Radioactive Particle Tracking (RPT) Technique for Hydrodynamic Characterization of Industrial-Scale Reactors 
-    - **Current position**: 
+    - **Current position**: Engineering Scientist - Coanda
 
 - **Lucka Barbeau** (2024)  
     - **Thesis Title**: Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules
@@ -342,7 +303,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
 - **Graduate Studies**: M.Sc. or Ph.D. opportunities;
-- **Postdoctoral Research**: - ;
+- **Postdoctoral Research**;
 - **Visiting Researchers**: Collaborative research opportunities;
 - **Internships**: Undergraduate and graduate research internships.
 
