@@ -302,9 +302,9 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 We are always looking for talented and motivated individuals to join our team. If you are interested in:
 
-- **Graduate Studies**: M.Sc. or Ph.D. opportunities;
-- **Postdoctoral Research**;
-- **Visiting Researchers**: Collaborative research opportunities;
+- **Graduate Studies**: M.Sc. or Ph.D. opportunities
+- **Postdoctoral Research**
+- **Visiting Researchers**: Collaborative research opportunities
 - **Internships**: Undergraduate and graduate research internships.
 
 Please contact us with your CV and research interests. We welcome applications from diverse backgrounds and are committed to fostering an inclusive research environment.
