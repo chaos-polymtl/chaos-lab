@@ -50,6 +50,21 @@ CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulati
 }
 </style>
 
+<div style="height: 1rem;"></div>
+
+
+<div class="yt-wrapper">
+  <!-- Option A: point to a static or auto-generated JSON -->
+  <div id="yt-random-player"
+       class="yt-random-player"
+       data-videos-src="assets/videos.json"
+       data-channel-url="https://www.youtube.com/@lethecfd6431">
+  </div>
+  <noscript>
+    Watch our videos on <a href="https://www.youtube.com/@lethecfd6431">YouTube</a>.
+  </noscript>
+</div>
+
 
 ## Latest News
 
@@ -58,6 +73,8 @@ Stay tuned for updates on our latest research, publications, and events. Visit o
 ## Get Involved
 
 Interested in collaborating with us or joining our team? Check out our [Team](team.md) page to learn more about our researchers, or visit our [Research](research.md) page to explore our current projects.
+
+
 
 ---
 

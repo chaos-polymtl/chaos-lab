@@ -4,6 +4,9 @@ site_author: "Chaos Laboratory Team"
 
 extra_css:
   - css/extra.css
+  - css/random-youtube.css
+extra_javascript:
+  - js/random-youtube.js
 
 # Repository
 repo_name: chaos-polymtl/lethe
