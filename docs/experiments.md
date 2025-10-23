@@ -47,7 +47,7 @@ Still curious? Check out our [article](https://arxiv.org/abs/2510.18987) with it
 
 ---
 
-## Particle characterization
+## Particles characterization
 
 
 ### **Granuheap** ![Granuheap](assets/experimental/granuheap.png){ width="450" align=right }
