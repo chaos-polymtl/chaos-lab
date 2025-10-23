@@ -9,6 +9,8 @@ Browse our research publications of the last few years.
 
 ## Preprints
 
+- Oliveira Ferreira, Victor, Mainville, Wiebke, Raymond, Vincent, Lamarre, Jean-Michel, Hamel, Antoine, Vaillant, Mikael, Chioua, Moncef, Blais, Bruno. “Active Cooling Device: A Flexible, Lab-Scale Experimental Unit to Develop Spatio-Temporal Temperature Control Strategies.” arXiv e-prints, arXiv:2510.18987, 2025.
+
 - Gaboriault, Olivier, Timercan, Anatolie, Pelletier, Roger, Lefebvre, Louis-Philippe, Melancon, David, Blais, Bruno. “Increase in packing density during multi-layer powder spreading: An experimental and numerical study.” *arXiv preprint arXiv:2509.26402*, 2025.
 
 - Vaillant, Mikael, Ferreira, Victor Oliveira, Mainville, Wiebke, Lamarre, Jean-Michel, Raymond, Vincent, Chioua, Moncef, Blais, Bruno. “Surrogate Model for Heat Transfer Prediction in Impinging Jet Arrays using Dynamic Inlet/Outlet and Flow Rate Control.” *arXiv preprint arXiv:2507.07034*, 2025.
@@ -37,7 +39,6 @@ Browse our research publications of the last few years.
 - Schieppati, Dalma, Mohan, Mood, Blais, Bruno, Fattahi, Kobra, Patience, Gregory S, Simmons, Blake A, Singh, Seema, Boffito, Daria C. “Characterization of the acoustic cavitation in ionic liquids in a horn-type ultrasound reactor.” *Ultrasonics Sonochemistry*, 102.0, 106721, 2024.0.
 - Bibeau, Valérie, Boffito, Daria Camilla, Blais, Bruno. “Physics-informed Neural Network to predict kinetics of biodiesel production in microwave reactors.” *Chemical Engineering and Processing-Process Intensification*, 196.0, 109652, 2024.0.
 - Oliveira Ferreira, Victor, Blais, Bruno, Cantarelli Lopes, Gabriela. “CFD-DEM study of mixing in a monodispersed solid-liquid fluidized bed.” *arXiv e-prints*, arXiv: 2406.15674, 2024.0.
-- Ferreira, Victor Oliveira, Blais, Bruno, Lopes, Gabriela Cantarelli. “CFD-DEM study of mixing in a monodispersed solid-liquid fluidized bed.” *arXiv preprint arXiv:2406.15674*, 2024.0.
 - Guévremont, Olivier, Barbeau, Lucka, Moreau, Vaiana, Galli, Federico, Virgilio, Nick, Blais, Bruno. “Pore-resolved CFD in Digital Twin of Porous Monoliths Reconstructed by Micro-computed Tomography.” *arXiv preprint arXiv:2408.04711*, 2024.0.
 - Mirakhori, Ghazaleh, Doucet, Jocelyn, Chidami, Saad, Blais, Bruno, Chaouki, Jamal. “AI-Enhanced Radioactive Particle Tracking: A Game Changing Methodology for Accelerating Industrial Process Development.” *Authorea Preprints*, 2024.0.
 - Bangerth, Wolfgang, Kronbichler, Martin, Maier, Matthias, Arndt, Daniel, Kanschat, Guido, Heister, Timo, Wells, David, Munch, Peter, Heltai, Luca, Turcksin, Bruno. “kinnewig/dealii: Tpetra-Wrappers-alpha.” *Zenodo*, 2024.0.
