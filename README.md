@@ -45,6 +45,7 @@ The built site will be in the `site/` directory.
   - `team.md` - Team members and information
   - `research.md` - Research projects and areas
   - `software.md` - Software and tools developed by the lab
+  - `experiments.md` - Experimental facilities and setups
   - `publications.md` - Research publications
   - `blog.md` - News, commentary, and articles
   - `assets/` - Images, logos, and other static assets
