@@ -7,7 +7,7 @@ This page contains lectures or seminars that we have given throughout the years 
 
 ## Specialized numerical methods for transport phenomena - deal.II ![deal.II logo](assets/dealii.png){ width="150" align=right }
 
-Specialized numerical methods for transport phenomena is class taught at Polytechnique Montréal under the label GCH8108E. A major portion of the course is centered around learning the finite element method using the deal.II open-source library. Students progress from the basics of deal.II to assembling their own steady-state Navier-Stokes solver using the finite element method. Each lecture includes slides. There are four homeworks in total that cover the material of the course. Each homework consist of an homework statement and a C++ template. The entire content of the course is available below (by clicking on the themes). This class was authored by **Bruno Blais** and **Laura Prieto Saavedra**, is available under an MIT license.
+Specialized numerical methods for transport phenomena is class taught at Polytechnique Montréal under the label GCH8108E. A major portion of the course is centered around learning the finite element method using the deal.II open-source library. Students progress from the basics of deal.II to assembling their own steady-state Navier-Stokes solver using the finite element method. Each lecture includes slides. There are four homeworks in total that cover the material of the course. Each homework consist of an homework statement and a C++ template. The entire content of the course is available below (by clicking on the themes). This class was authored by **Bruno Blais** and **Laura Prieto Saavedra** and is available under an MIT license.
 
 
 ???+ "Introduction to the course"
