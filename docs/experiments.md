@@ -5,15 +5,14 @@ hide:
 
 # Experimental infrastructure
 
-The CHAOS Laboratory has dedicated a dedicated experimental infrastructure.
+The CHAOS Laboratory has dedicated experimental infrastructure. Check out our facilities!
 
-Check out our facility and some of our dedicated equipment!
 
 ---
 
 ## Experimental facility ![Experimental facilities](assets/experimental/exp_facilities.jpg){ width="400" align=right }
 
-The CHAOS Laboratory's experimental space houses a complete infrastructure to safely conduct experiments involving fluid and granular dynamics, multiphase flow, heat transfer.
+The CHAOS Laboratory's experimental space houses a complete infrastructure to safely conduct experiments involving fluid and granular dynamics, multiphase flow and heat transfer.
 
 The marjority of our experimental units are custom. Their modular design allows for a variety of applications and regimes. Browse th
 
