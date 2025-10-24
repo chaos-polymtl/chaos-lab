@@ -1,0 +1,16 @@
+.yt-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.yt-random-player {
+  width: 80%;
+  max-width: 960px;
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--light);
+  border-radius: 8px;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
