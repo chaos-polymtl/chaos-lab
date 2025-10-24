@@ -28,7 +28,7 @@ CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulati
 <p style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; margin: 0;">
   <span style="flex: 1 1 250px; min-width: 250px;">
     The CHAOS laboratory is part of the Department of Chemical Engineering of Polytechnique Montréal.
-    The CHAOS lab is one of the few chemical engineering laboratories in Canada dedicated to developing
+    We are one of the few chemical engineering laboratories in Canada dedicated to developing
     software and algorithms optimized for modern high-performance computing architectures,
     positioning it at the forefront of technological innovation.
   </span>
