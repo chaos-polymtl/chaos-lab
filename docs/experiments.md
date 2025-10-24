@@ -14,14 +14,14 @@ The CHAOS Laboratory has dedicated experimental infrastructure. Check out our fa
 
 The CHAOS Laboratory's experimental space houses a complete infrastructure to safely conduct experiments involving fluid and granular dynamics, multiphase flow and heat transfer.
 
-The marjority of our experimental units are custom. Their modular design allows for a variety of applications and regimes. Browse th
 
-
-<br><br><br>
+<br><br><br><br><br><br>
 
 ---
 
 ## Custom experimental setups
+
+The marjority of our experimental units are custom. Their modular design allows for a variety of applications and regimes.
 
 ### **Three-phase fluidization column** ![Fluidized bed](assets/experimental/fluidized_bed.jpg){ width="325" align=right }
 
