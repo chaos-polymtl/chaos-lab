@@ -57,6 +57,7 @@ nav:
   - Software: software.md
   - Publications: publications.md
   - Blog: blog.md
+  - Teaching: teaching.md
 
 # Extensions
 markdown_extensions:

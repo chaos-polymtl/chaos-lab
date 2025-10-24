@@ -66,6 +66,28 @@
 }
 
 /* ---------------------------------------------------------------
+   ADDITIONAL CUSTOMIZATIONS FOR THE Note BOXES
+---------------------------------------------------------------- */
+
+.md-typeset details.note > summary::after,
+.md-typeset details.note[open] > summary::after {
+  transform: rotate(90deg) !important;
+  transition: none !important;
+}
+
+/* Increase font size inside ??? note blocks */
+.md-typeset details.note {
+  font-size: 1.05em;     /* slightly larger text */
+  line-height: 1.55;     /* optional: improve readability */
+}
+
+/* Optionally make the summary (header) slightly larger too */
+.md-typeset details.note > summary {
+  font-size: 1.1em;
+  font-weight: 600;      /* makes the title a bit bolder */
+}
+
+/* ---------------------------------------------------------------
    TEAM PAGE MOSAIC LAYOUT
    Attractive card-based grid for team members
 ---------------------------------------------------------------- */
