@@ -49,7 +49,7 @@ Still curious? Check out our [article](https://arxiv.org/abs/2510.18987) with it
 ## Particles characterization
 
 
-### **Granuheap** ![Granuheap](assets/experimental/granuheap.png){ width="450" align=right }
+### **Granuheap** ![Granuheap](assets/experimental/granuheap.png){ width="450" align=right } <span style="font-size: 0.6em; opacity: 0.6;">(*Firgure cortesy of* Granutools&trade;)<span>
 
 Manufactured by Granutools&trade;, Granuheap is an automated equipment that allows for the measurement of powders's angle of repose and cohesive index.
 
