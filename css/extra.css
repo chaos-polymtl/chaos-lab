@@ -1,0 +1,294 @@
+/* Hide the site name in the header bar */
+.md-header__title {
+  display: none !important;
+}
+
+/* Control the logo size in the navigation bar */
+.md-header__button.md-logo img {
+  height: 50px;   /* change this value as you wish */
+  width: auto;    /* keeps the aspect ratio */
+}
+
+/* ---------------------------------------------------------------
+   HEADER LAYOUT:  logo left, utilities (toggle, search, GitHub) right
+   Compatible with MkDocs Material v9.x
+---------------------------------------------------------------- */
+
+/* Main header: logo stays left, everything else can push right */
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Keep the logo pinned left */
+.md-header__button.md-logo {
+  margin-right: auto;
+}
+
+.md-source__facts {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Responsive tweak for small screens */
+@media screen and (max-width: 768px) {
+  .md-header__inner {
+    flex-wrap: wrap;
+  }
+  .md-search {
+    width: 100%;
+    order: 99;
+  }
+}
+
+/* ---------------------------------------------------------------
+   ADDITIONAL CUSTOMIZATIONS FOR THE TIP BOXES
+---------------------------------------------------------------- */
+
+.md-typeset details.tip > summary::after,
+.md-typeset details.tip[open] > summary::after {
+  transform: rotate(90deg) !important;
+  transition: none !important;
+}
+
+/* Increase font size inside ??? tip blocks */
+.md-typeset details.tip {
+  font-size: 1.05em;     /* slightly larger text */
+  line-height: 1.55;     /* optional: improve readability */
+}
+
+/* Optionally make the summary (header) slightly larger too */
+.md-typeset details.tip > summary {
+  font-size: 1.1em;
+  font-weight: 600;      /* makes the title a bit bolder */
+}
+
+/* ---------------------------------------------------------------
+   ADDITIONAL CUSTOMIZATIONS FOR THE Note BOXES
+---------------------------------------------------------------- */
+
+.md-typeset details.note > summary::after,
+.md-typeset details.note[open] > summary::after {
+  transform: rotate(90deg) !important;
+  transition: none !important;
+}
+
+/* Increase font size inside ??? note blocks */
+.md-typeset details.note {
+  font-size: 1.05em;     /* slightly larger text */
+  line-height: 1.55;     /* optional: improve readability */
+}
+
+/* Optionally make the summary (header) slightly larger too */
+.md-typeset details.note > summary {
+  font-size: 1.1em;
+  font-weight: 600;      /* makes the title a bit bolder */
+}
+
+/* ---------------------------------------------------------------
+   TEAM PAGE MOSAIC LAYOUT
+   Attractive card-based grid for team members
+---------------------------------------------------------------- */
+
+/* Container for team member cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+/* Individual team member card */
+.team-card {
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  object-position: top; /* start cropping from the top */
+  height: 100%;
+  object-fit: cover;       /* crop instead of squish */
+}
+
+/* The actual image */
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* crops instead of stretches */
+  object-position: top;    /* anchors the crop at the top */
+  display: block;
+}
+
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image container with consistent aspect ratio */
+.team-card-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder for images */
+.team-card-image .placeholder {
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+/* Card content area */
+.team-card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Member name */
+.team-card-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--md-default-fg-color);
+}
+
+/* Position/role */
+.team-card-position {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--md-accent-fg-color);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Research project title */
+.team-card-research {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.team-card-research strong {
+  color: var(--md-default-fg-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Section headers for team groups */
+.team-section {
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--md-accent-fg-color);
+}
+
+.team-section h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 960px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .team-card-image {
+    height: 240px;
+  }
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .team-card {
+  background: var(--md-code-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .team-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* === Team Section Card Styling === */
+
+.team-section h2 {
+  font-size: 1.6rem;        /* Slightly smaller header */
+  margin-bottom: 0.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;   /* key: all cards same height per row */
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card {
+  flex: 1 1 260px;          /* smaller min width than before */
+  max-width: 300px;
+  background-color: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0.8rem;          /* reduced padding */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+
+.team-card-name {
+  font-size: 1.1rem;        /* smaller title text */
+  margin: 0.3rem 0;
+  font-weight: 600;
+}
+
+.team-card-position {
+  font-size: 0.95rem;
+  color: var(--md-typeset-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-card-research {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+}
+
+
