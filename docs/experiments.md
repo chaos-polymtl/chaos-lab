@@ -12,7 +12,7 @@ The CHAOS Laboratory has dedicated experimental infrastructure. Check out our fa
 
 ## Experimental facility ![Experimental facilities](assets/experimental/exp_facilities.jpg){ width="400" align=right }
 
-The CHAOS Laboratory's experimental space houses a complete infrastructure to safely conduct experiments involving fluid and granular dynamics, multiphase flow and heat transfer.
+The CHAOS Laboratory's experimental space houses a complete infrastructure to safely conduct experiments involving fluid and granular dynamics, multiphase flow, and heat transfer.
 
 
 <br><br><br><br><br><br>
@@ -21,15 +21,15 @@ The CHAOS Laboratory's experimental space houses a complete infrastructure to sa
 
 ## Custom experimental setups
 
-The marjority of our experimental units are custom. Their modular design allows for a variety of applications and regimes.
+The majority of our experimental units are custom-built. Their modular design allows for a variety of applications and regimes.
 
 ### **Three-phase fluidization column** ![Fluidized bed](assets/experimental/fluidized_bed.jpg){ width="325" align=right }
 
-Including two centrifuge pumps, two water tanks, a dedicated system for overflow particle collection, flowmeters, valves, and a discharge system; our three-phase fluidization column can be used to investigate particle and fluid dynamics of liquid-solid, gas-liquid-solid, and gas-liquid systems.
+Including two centrifuge pumps, two water tanks, a dedicated overflow particle collection system, flowmeters, valves, and a discharge system, our three-phase fluidization column can be used to investigate particle and fluid dynamics of liquid-solid, gas-liquid-solid, and gas-liquid systems.
 
 The setup's instrumentation allows for fine control of liquid flow rates between 1 and 50 gpm (approx. 4 and 190 L/min).
 
-The column modules can be easily replaced, allowing for changes in the column dimensions and shape while using the same structure.
+The column modules are easily replaceable, allowing for changes in column dimensions and shape while using the same structure.
 
 
 <br><br><br><br><br>
@@ -51,7 +51,7 @@ Still curious? Check out our [article](https://arxiv.org/abs/2510.18987) with it
 
 ### **Granuheap** ![Granuheap](assets/experimental/granuheap.png){ width="450" align=right } <span style="font-size: 0.6em; opacity: 0.6;">(*Firgure cortesy of* Granutools&trade;)<span>
 
-Manufactured by Granutools&trade;, Granuheap is an automated equipment that allows for the measurement of powders's angle of repose and cohesive index.
+Manufactured by Granutools&trade;, Granuheap is an automated equipment that measures the angle of repose and cohesive index of powders.
 
 For further information, follow the [link](https://www.granutools.com/en/granuheap) to their official website.
 
