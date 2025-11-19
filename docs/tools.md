@@ -1,4 +1,4 @@
-# Tools
+# Utilities
 
 This page gathers small interactive tools for quick calculations.
 
