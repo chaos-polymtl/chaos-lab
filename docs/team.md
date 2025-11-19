@@ -157,7 +157,6 @@ toc:
 </div>
 </div>
 
-<!--
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/paul.jpg" alt="Paul Alexander Patience" class="team-photo">
@@ -167,11 +166,11 @@ toc:
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Design of TPMS-like cellular solids via blackbox optimization</small>
 </p>
 </div>
 </div>
--->
+
 
 
 <div class="team-card" markdown>
