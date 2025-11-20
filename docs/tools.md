@@ -4,6 +4,9 @@ This page gathers small interactive tools for quick calculations.
 
 
 ## Terminal velocity calculator
+
+This utility calculates the terminal velocity, Reynolds number and drag coefficient of a spherical particle. The forces accounted for are drag, buoyancy and gravity. Various drag models are available.
+
 <div id="drag-calculator" class="tool-card">
   <div class="tool-layout">
     <!-- Left: inputs -->
