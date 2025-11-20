@@ -1,0 +1,141 @@
+/* Container card */
+#drag-calculator.tool-card {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout: form on the left, results/plot on the right (wrap on small screens) */
+#drag-calculator .tool-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Form styles */
+#drag-calculator .tool-form {
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+
+#drag-calculator .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+#drag-calculator .field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+#drag-calculator .field input[type="number"] {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#drag-calculator .field input[type="number"]:focus {
+  outline: none;
+  border-color: #2962ff; /* tweak to match your theme */
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+}
+
+/* Button */
+#drag-calculator .tool-button {
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #2962ff; /* primary color */
+  color: #fff;
+}
+
+#drag-calculator .tool-button:hover {
+  background-color: #254ed4;
+}
+
+/* Results */
+#drag-calculator .tool-results {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+#drag-calculator .result-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+#drag-calculator .result-label {
+  font-weight: 500;
+}
+
+#drag-calculator .result-value {
+  font-family: monospace;
+}
+
+/* Plot */
+#drag-calculator .tool-plot {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin-top: 1rem;
+}
+
+
+/* Two-column layout: inputs + drag model */
+#drag-calculator .tool-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Right column: drag model selector */
+#drag-calculator .tool-options {
+  flex: 0 1 400px;
+  max-width: 400px;
+  font-size: 0.9rem;
+}
+
+#drag-calculator .model-choice {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+#drag-calculator .model-choice legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+#drag-calculator .model-choice label {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+#drag-calculator .model-note {
+  margin: 0.25rem 0 0;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+/* Results below, full width */
+#drag-calculator .tool-results-below {
+  margin-top: 1rem;
+}
