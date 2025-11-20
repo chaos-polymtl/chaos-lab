@@ -48,6 +48,7 @@ The built site will be in the `site/` directory.
   - `experiments.md` - Experimental facilities
   - `publications.md` - Research publications
   - `blog.md` - News, commentary, and articles
+  - `utilities.md` - Small JS applications used for quick calculations
   - `assets/` - Images, logos, and other static assets
 - `mkdocs.yml` - MkDocs configuration file
 - `site/` - Built website (generated, not in git)
