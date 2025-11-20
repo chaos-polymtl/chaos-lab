@@ -12,17 +12,17 @@ This utility calculates the terminal velocity, Reynolds number and drag coeffici
     <!-- Left: inputs -->
     <form id="drag-form" class="tool-form">
       <div class="field">
-        <label for="diameter">Diameter D [m]</label>
+        <label for="diameter">Diameter d<sub>p</sub> [m]</label>
         <input type="number" id="diameter" value="0.001" step="0.0001">
       </div>
 
       <div class="field">
-        <label for="rho_p">Particle density ρ_p [kg/m³]</label>
+        <label for="rho_p">Particle density ρ<sub>p</sub> [kg/m³]</label>
         <input type="number" id="rho_p" value="1100" step="10">
       </div>
 
       <div class="field">
-        <label for="rho_f">Fluid density ρ_f [kg/m³]</label>
+        <label for="rho_f">Fluid density ρ<sub>f</sub> [kg/m³]</label>
         <input type="number" id="rho_f" value="1000" step="10">
       </div>
 
