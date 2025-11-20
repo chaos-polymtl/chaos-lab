@@ -60,6 +60,50 @@ document.addEventListener("DOMContentLoaded", () => {
     return 24.0 / Re;
   }
 
+    // ------- Plot of Cd vs Re for all models ---------
+
+  function logspace(minExp, maxExp, n) {
+    const result = [];
+    const step = (maxExp - minExp) / (n - 1);
+    for (let i = 0; i < n; ++i) {
+      result.push(Math.pow(10, minExp + step * i));
+    }
+    return result;
+  }
+
+  function initCdPlot() {
+    if (!plotDiv || typeof Plotly === "undefined") return;
+
+    const ReValues = logspace(-1, 4, 200); // 1e-2 to 1e4
+
+    const modelsForPlot = [
+      { id: "stokes",             label: "Stokes" },
+      { id: "schiller-naumann",   label: "Schiller–Naumann" },
+      { id: "clift-gauvin",       label: "Clift–Gauvin" },
+      { id: "clift-grace-weber",  label: "Clift–Grace–Weber" }
+    ];
+
+    const traces = modelsForPlot.map((m) => {
+      const cds = ReValues.map((Re) => dragCoefficient(Re, m.id));
+      return {
+        x: ReValues,
+        y: cds,
+        mode: "lines",
+        name: m.label
+      };
+    });
+
+    const layout = {
+      xaxis: { type: "log", title: "Re" },
+      yaxis: { type: "log", title: "C\u2091" }, // C_D
+      margin: { t: 10, r: 10, b: 50, l: 60 },
+      height: 300
+    };
+
+    Plotly.newPlot(plotDiv, traces, layout, { responsive: true });
+  }
+
+
   function computeDragForce(rho_f, mu, D, v, model) 
   {
     const Re = (rho_f * v * D) / mu;
@@ -181,6 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
     r.addEventListener("change", update);
   });
 
-  // Initial plot + numbers
+  
+  initCdPlot();   // build the Cd(Re) plot once
+
   update();
 });
+
+
+

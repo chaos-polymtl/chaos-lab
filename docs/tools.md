@@ -80,4 +80,8 @@ This page gathers small interactive tools for quick calculations.
       <span class="result-value"><span id="Cd">–</span> </span>
     </div>
   </div>
+
+<div id="drag-plot" style="margin-top:1rem;"></div>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </div>
