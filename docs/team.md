@@ -187,7 +187,7 @@ toc:
 </div>
 </div>
 
-<!--
+
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/jacob.jpg" alt="Jacob Tremblay" class="team-photo">
@@ -197,11 +197,11 @@ toc:
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-TODO
+<small>Complex particles geometries in discrete element method.</small>
 </p>
 </div>
 </div>
--->
+
 
 <div class="team-card" markdown>
 <div class="team-card-image">
