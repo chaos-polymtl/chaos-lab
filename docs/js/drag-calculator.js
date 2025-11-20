@@ -83,13 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
       { id: "clift-grace-weber",  label: "Clift–Grace–Weber" }
     ];
 
-    const traces = modelsForPlot.map((m) => {
-      const cds = ReValues.map((Re) => dragCoefficient(Re, m.id));
-      return {
-        x: ReValues,
-        y: cds,
-        mode: "lines",
-        name: m.label
+    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
+
+    const traces = modelsForPlot.map((m, i) => {
+    const cds = ReValues.map((Re) => dragCoefficient(Re, m.id));
+    return {
+      x: ReValues,
+      y: cds,
+      mode: "lines",
+      name: m.label,
+      line: { color: colors[i] } // use your palette in order
       };
     });
 
