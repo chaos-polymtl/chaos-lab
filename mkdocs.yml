@@ -5,7 +5,7 @@ site_author: "Chaos Laboratory Team"
 extra_css:
   - css/extra.css
   - css/random-youtube.css
-  - css/tools.css
+  - css/utilities.css
 extra_javascript:
   - js/random-youtube.js
   - https://cdn.plot.ly/plotly-latest.min.js
@@ -62,7 +62,7 @@ nav:
   - Publications: publications.md
   - Blog: blog.md
   - Teaching: teaching.md
-  - Utilities: tools.md
+  - Utilities: utilities.md
 
 # Extensions
 markdown_extensions:
@@ -80,8 +80,6 @@ markdown_extensions:
 # Plugins
 plugins:
   - search
-
-
 
 # Extra
 extra:
