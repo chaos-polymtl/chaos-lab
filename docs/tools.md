@@ -45,12 +45,17 @@ This page gathers small interactive tools for quick calculations.
 
         <label>
           <input type="radio" name="drag_model" value="schiller-naumann">
-          Schiller–Naumann
+          Schiller–Naumann (1933)
         </label>
 
         <label>
           <input type="radio" name="drag_model" value="clift-gauvin">
-          Clift–Gauvin
+          Clift–Gauvin (1970)
+        </label>
+        
+        <label>
+          <input type="radio" name="drag_model" value="clift-grace-weber">
+          Clift–Grace–Weber (2005)
         </label>
       </fieldset>
 

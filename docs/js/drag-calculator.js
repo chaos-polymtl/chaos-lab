@@ -42,6 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       return 0.44;
     }
+    if (model === "clift-grace-weber") {
+      // Piecewise CD,0 correlation
+      if (Re <= 20.0) {
+        // CD,0 = 24/Re [1 + 0.1315 Re^(0.82 – 0.05 log10 Re)]
+        return (
+          (24.0 / Re) *
+          (1.0 + 0.1315 * Math.pow(Re, 0.82 - 0.05 * Math.log10(Re)))
+        );
+        }
+
+        // CD,0 = 24/Re [1 + 0.1935 Re^0.6305], Re >= 20
+        return (24.0 / Re) * (1.0 + 0.1935 * Math.pow(Re, 0.6305));
+    }
 
     // Default: Stokes
     return 24.0 / Re;
@@ -91,6 +104,20 @@ document.addEventListener("DOMContentLoaded", () => {
         "24 / Re<sub>p</sub> · (1 + 0.15 Re<sub>p</sub><sup>0.687</sup>)" +
         " + 0.42 / (1 + 42500 Re<sub>p</sub><sup>-1.16</sup>)" +
         "<br><span style='opacity:0.75'>(Clift–Gauvin)</span>"
+      );
+    }
+
+    if (model === "clift-grace-weber") {
+      return (
+      "<span style='font-size:0.8em'>" +
+        "C<sub>D</sub> = " +
+        "<br>&nbsp;&nbsp;24 / Re<sub>p</sub> · [1 + 0.1315 Re<sub>p</sub>" +
+          "<sup>0.82 - 0.05&nbsp;log<sub>10</sub>Re<sub>p</sub></sup>], " +
+          "if Re<sub>p</sub> &#8804; 20," +
+        "<br>&nbsp;&nbsp;24 / Re<sub>p</sub> · [1 + 0.1935 Re<sub>p</sub>" +
+        "<sup>0.6305</sup>], if Re<sub>p</sub> &#8805; 20" +
+      "</span>" + 
+      "<span style='opacity:0.75'> <br>&nbsp;&nbsp; (Clift–Grace–Weber)</span>"
       );
     }
 
