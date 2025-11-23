@@ -3,45 +3,14 @@ hide:
   - navigation
 ---
 
-## Categories
 
-### News & Announcements
+Stay up to date with the latest news from the lab.
 
-Stay up to date with the latest news from the lab:
+## 2025
 
-- New team members
-- Grant awards and funding announcements
-- Conference presentations
-- Research milestones
-- Upcoming events
+### IPIC4 conference in Montréal 
 
-### Research Insights
+The CHAOS lab is part of the organizing commitee of the 4th International Process Intensification Conference (IPIC4) that will take place in Montréal. This will be a unique opportunity to see our recent work on computer-assisted process intensification. Abstract submission closes: 2025, December 19th
 
-Deep dives into our research topics:
+[Conference website](https://event.fourwaves.com/ipic4/pages){ .md-button .md-button--primary }
 
-- Methodology discussions
-- Case studies
-- Technical tutorials
-- Research findings
-
-### Commentary & Opinion
-
-Thoughts on trends in computational science:
-
-- Industry perspectives
-- Academic discussions
-- Future directions in research
-- Best practices and lessons learned
-
-### Events & Conferences
-
-Coverage of events we attend or organize:
-
-- Conference reports
-- Workshop summaries
-- Seminar series
-- Guest lectures
-
-
-
-*This page is currently being updated. Check back regularly for new posts and updates!*
