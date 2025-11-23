@@ -68,7 +68,7 @@ CHAOS (Chemical engineering High-performance Analysis, Optimization and Simulati
 
 ## Latest News
 
-Stay tuned for updates on our latest research, publications, and events. Visit our [News](news.md) or [Blog](news.md) pages.
+Stay tuned for updates on our latest research, publications, and events. Visit our [News](news.md) pages.
 
 ## Get Involved
 
