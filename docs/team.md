@@ -190,7 +190,7 @@ toc:
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-  <img src="../assets/pictures/jacob.jpg" alt="Jacob Tremblay" class="team-photo">
+  <img src="../assets/pictures/jacob.png" alt="Jacob Tremblay" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Jacob Tremblay </strong></p>
