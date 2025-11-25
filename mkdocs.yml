@@ -10,6 +10,7 @@ extra_javascript:
   - js/random-youtube.js
   - https://cdn.plot.ly/plotly-latest.min.js
   - js/drag-calculator.js   # your custom script
+  - js/fluidization-calculator.js
 
 # Repository
 repo_name: chaos-polymtl/lethe
