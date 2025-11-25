@@ -93,24 +93,27 @@ document.addEventListener("DOMContentLoaded", () => {
     return (rho_p - rho_f) * g * volume;
   }
 
-  function getSelectedModel() {
-    let model = "beetstra";
+  function getSelectedModels() {
+    const selected = [];
     modelInputs.forEach((r) => {
-      if (r.checked) model = r.value;
+      if (r.checked) selected.push(r.value);
     });
-    return model;
+    return selected.length ? selected : ["tenneti"];
   }
 
-  function updateModelNote(model) {
-    if (!modelNote) return;
-    const label = {
-      beetstra: "Beetstra et al. (2007)",
+  function modelLabel(model) {
+    return {
+      beetstra: "Beetstra (2007)",
       "di-felice": "Di Felice (1994)",
-      tenneti: "Tenneti et al. (2011)",
-      rong: "Rong et al. (2015)",
-      ergun: "Ergun (1952) + Wen–Yu (1966)",
-    }[model] || "Selected model";
-    modelNote.textContent = label;
+      tenneti: "Tenneti (2011)",
+      rong: "Rong (2015)",
+      ergun: "Ergun/Wen–Yu (1966)",
+    }[model] || model;
+  }
+
+  function updateModelNote(models) {
+    if (!modelNote) return;
+    modelNote.innerHTML = models.map((m) => modelLabel(m)).join("<br>");
   }
 
   function solveSlipVelocity(params, epsilon, model) {
@@ -157,28 +160,30 @@ document.addEventListener("DOMContentLoaded", () => {
     return { superficial, ratios };
   }
 
-  function plotExpansion(params, epsilon0, model) {
+  function plotExpansion(params, epsilon0, models) {
     if (typeof Plotly === "undefined" || !plotDiv) return;
-    const series = expansionTrace(params, epsilon0, model);
-
-    const trace = {
-      x: series.superficial,
-      y: series.ratios,
-      mode: "lines",
-      name: "Bed expansion",
-      line: { color: "#2962ff", width: 3 },
-      hovertemplate: "U = %{x:.3g} m/s<br>H/H₀ = %{y:.3g}<extra></extra>",
-    };
+    const palette = ["#2962ff", "#d95f02", "#1b9e77", "#e7298a", "#7570b3"];
+    const traces = models.map((model, idx) => {
+      const series = expansionTrace(params, epsilon0, model);
+      return {
+        x: series.superficial,
+        y: series.ratios,
+        mode: "lines",
+        name: modelLabel(model),
+        line: { color: palette[idx % palette.length], width: 3 },
+        hovertemplate: `${modelLabel(model)}<br>U = %{x:.3g} m/s<br>H/H₀ = %{y:.3g}<extra></extra>`,
+      };
+    });
 
     const layout = {
       xaxis: { title: "Superficial fluid velocity U [m/s]" },
       yaxis: { title: "Bed expansion H/H₀" },
       margin: { t: 10, r: 10, b: 60, l: 60 },
       height: 320,
-      showlegend: false,
+      showlegend: models.length > 1,
     };
 
-    Plotly.newPlot(plotDiv, [trace], layout, { responsive: true });
+    Plotly.newPlot(plotDiv, traces, layout, { responsive: true });
   }
 
   function update() {
@@ -196,19 +201,23 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const model = getSelectedModel();
-    updateModelNote(model);
+    const models = getSelectedModels();
+    updateModelNote(models);
 
     const params = { rho_p, rho_f, mu, D };
-    const slip = solveSlipVelocity(params, epsilon0, model);
-    const umf = epsilon0 * slip;
-    const Rep = (rho_f * slip * D) / mu;
+    const results = models.map((model) => {
+      const slip = solveSlipVelocity(params, epsilon0, model);
+      const umf = epsilon0 * slip;
+      const Rep = (rho_f * slip * D) / mu;
+      return { model, slip, umf, Rep };
+    });
 
-    umfSpan.textContent = umf.toExponential(3);
-    slipSpan.textContent = slip.toExponential(3);
-    repSpan.textContent = Rep.toExponential(3);
+    const fmt = (val) => (Number.isFinite(val) ? val.toExponential(3) : "–");
+    umfSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.umf)}`).join("<br>");
+    slipSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.slip)}`).join("<br>");
+    repSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.Rep)}`).join("<br>");
 
-    plotExpansion(params, epsilon0, model);
+    plotExpansion(params, epsilon0, models);
   }
 
   computeBtn.addEventListener("click", update);
