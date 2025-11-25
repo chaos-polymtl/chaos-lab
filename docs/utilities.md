@@ -92,7 +92,7 @@ This utility calculates the terminal velocity, Reynolds number and drag coeffici
 
 ## Minimum fluidization & bed expansion
 
-Estimate the minimum fluidization velocity from hindered-drag correlations and visualize how the bed expands with superficial gas/liquid velocity.
+Estimate the minimum fluidization velocity from hindered-drag correlations. Visualize how the bed expands with superficial gas/liquid velocity (top graph) or what is the equilibrium superficial velocity as a function of the bed voidage (bottom graph).
 
 <div id="fluidization-tool" class="tool-card">
   <div class="tool-layout">
