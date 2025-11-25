@@ -147,6 +147,16 @@ Estimate the minimum fluidization velocity from hindered-drag correlations and v
           <input type="radio" name="mf_drag_model" value="tenneti">
           Tenneti et al. (2011)
         </label>
+
+        <label>
+          <input type="radio" name="mf_drag_model" value="rong">
+          Rong et al. (2015)
+        </label>
+
+        <label>
+          <input type="radio" name="mf_drag_model" value="ergun">
+          Ergun (1952) + Wen–Yu (1966)
+        </label>
       </fieldset>
 
     <div id="mf-model-note" class="model-note">

@@ -53,11 +53,31 @@ document.addEventListener("DOMContentLoaded", () => {
     return baseDragCoefficient(Re) * hindrance + inertial;
   }
 
+  function rongCd(Re, epsilon) {
+    // Rong et al. correlation: viscous scaling ~ ε^-2.2 and slightly stronger inertial crowding
+    const safeRe = Math.max(Re, 1e-9);
+    const viscous = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / Math.pow(epsilon, 2.2);
+    const inertial = 0.45 * (1.0 - epsilon) / Math.pow(epsilon, 3.0);
+    return viscous + inertial;
+  }
+
+  function ergunCd(Re, epsilon) {
+    // Ergun (1952) packed-bed terms plus Wen–Yu (1966) single-sphere contribution
+    const eps = Math.max(epsilon, 1e-6);
+    const safeRe = Math.max(Re, 1e-9);
+    const ergunViscous = (150.0 * (1.0 - eps)) / (Math.pow(eps, 3.0) * safeRe);
+    const ergunInertial = 1.75 / Math.pow(eps, 3.0);
+    const wenYu = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (eps * eps);
+    return ergunViscous + ergunInertial + wenYu;
+  }
+
   function hinderedDragCoefficient(Re, epsilon, model) {
     const eps = Math.min(Math.max(epsilon, 1e-4), 0.99);
     if (model === "beetstra") return beetstraCd(Re, eps);
     if (model === "di-felice") return diFeliceCd(Re, eps);
     if (model === "tenneti") return tennetiCd(Re, eps);
+    if (model === "rong") return rongCd(Re, eps);
+    if (model === "ergun") return ergunCd(Re, eps);
     return baseDragCoefficient(Re);
   }
 
@@ -87,6 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
       beetstra: "Beetstra et al. (2007)",
       "di-felice": "Di Felice (1994)",
       tenneti: "Tenneti et al. (2011)",
+      rong: "Rong et al. (2015)",
+      ergun: "Ergun (1952) + Wen–Yu (1966)",
     }[model] || "Selected model";
     modelNote.textContent = label;
   }
