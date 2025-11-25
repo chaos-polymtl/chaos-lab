@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const g = 9.81;
 
+  const tol = 1e-12;
+
   const diameterInput = document.getElementById("mf-diameter");
   const rhoPInput = document.getElementById("mf-rho-p");
   const rhoFInput = document.getElementById("mf-rho-f");
@@ -29,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hindrance correlations
   function diFeliceChi(Re) {
-    const safeRe = Math.max(Re, 1e-9);
+    const safeRe = Math.max(Re, tol);
     const term = 1.5 - Math.log10(safeRe);
     return 3.7 - 0.65 * Math.exp(-(term * term) / 2.0);
   }
 
   function beetstraCd(Re, epsilon) {
     // Beetstra et al. (2007) style decomposition: viscous (∝ ε^-2) + inertial (∝ ε^-3)
-    const safeRe = Math.max(Re, 1e-9);
+    const safeRe = Math.max(Re, tol);
     const viscous = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (epsilon * epsilon);
     const inertial = 0.44 * (1.0 - epsilon) / Math.pow(epsilon, 3.0);
     return viscous + inertial;
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function rongCd(Re, epsilon) {
     // Rong et al. correlation: viscous scaling ~ ε^-2.2 and slightly stronger inertial crowding
-    const safeRe = Math.max(Re, 1e-9);
+    const safeRe = Math.max(Re, tol);
     const viscous = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / Math.pow(epsilon, 2.2);
     const inertial = 0.45 * (1.0 - epsilon) / Math.pow(epsilon, 3.0);
     return viscous + inertial;
@@ -64,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function wenYuCd(Re, epsilon) {
     // Wen–Yu (1966) single-sphere drag with ε scaling
-    const eps = Math.max(epsilon, 1e-6);
-    const safeRe = Math.max(Re, 1e-9);
+    const eps = Math.max(epsilon, tol);
+    const safeRe = Math.max(Re, tol);
     return (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (eps * eps);
   }
 
@@ -120,19 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const stokesGuess = ((rho_p - rho_f) * g * D * D) / (18.0 * mu);
     let v = Math.max(1e-5, stokesGuess / Math.max(epsilon, 0.2));
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 1000; i++) {
       const f = dragForce(rho_f, mu, D, v, epsilon, model) - weight;
-      const dv = Math.max(v * 0.01, 1e-6);
+      const dv = Math.max(v * 1e-6, tol);
       const f2 = dragForce(rho_f, mu, D, v + dv, epsilon, model) - weight;
       const jac = (f2 - f) / dv;
 
       let delta = -f / jac;
-      // keep Newton step reasonable. If the step is 10% or more of current value, limit it to 10%
+      // keep Newton step reasonable. If the step is 10% or more of current value of the velocity, limit it to 10%
       if (Math.abs(delta/v) > 0.1) delta = 0.1*delta;
 
       v += delta;
       if (v <= 0 || !Number.isFinite(v)) v = Math.max(Math.abs(delta), 1e-5);
-      if (Math.abs(delta) / v < 1e-6) break;
+      if (Math.abs(delta) / v < 1e-8) break;
     }
     return v;
   }
