@@ -63,13 +63,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function ergunCd(Re, epsilon) {
-    // Ergun (1952) packed-bed terms plus Wen–Yu (1966) single-sphere contribution
+    // Ergun (1952) packed-bed drag
     const eps = Math.max(epsilon, 1e-6);
     const safeRe = Math.max(Re, 1e-9);
-    const ergunViscous = (150.0 * (1.0 - eps)) / (Math.pow(eps, 3.0) * safeRe);
-    const ergunInertial = 1.75 / Math.pow(eps, 3.0);
-    const wenYu = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (eps * eps);
-    return ergunViscous + ergunInertial + wenYu;
+    const viscous = (150.0 * (1.0 - eps)) / (Math.pow(eps, 3.0) * safeRe);
+    const inertial = 1.75 / Math.pow(eps, 3.0);
+    return viscous + inertial;
+  }
+
+  function wenYuCd(Re, epsilon) {
+    // Wen–Yu (1966) single-sphere drag with ε scaling
+    const eps = Math.max(epsilon, 1e-6);
+    const safeRe = Math.max(Re, 1e-9);
+    return (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (eps * eps);
   }
 
   function hinderedDragCoefficient(Re, epsilon, model) {
@@ -79,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (model === "tenneti") return tennetiCd(Re, eps);
     if (model === "rong") return rongCd(Re, eps);
     if (model === "ergun") return ergunCd(Re, eps);
+    if (model === "wen-yu") return wenYuCd(Re, eps);
     return baseDragCoefficient(Re);
   }
 
@@ -108,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "di-felice": "Di Felice (1994)",
       tenneti: "Tenneti (2011)",
       rong: "Rong (2015)",
-      ergun: "Ergun/Wen–Yu (1966)",
+      ergun: "Ergun (1952)",
+      "wen-yu": "Wen–Yu (1966)",
     }[model] || model;
   }
 
@@ -123,19 +131,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const stokesGuess = ((rho_p - rho_f) * g * D * D) / (18.0 * mu);
     let v = Math.max(1e-5, stokesGuess / Math.max(epsilon, 0.2));
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 100; i++) {
       const f = dragForce(rho_f, mu, D, v, epsilon, model) - weight;
-      const dv = Math.max(v * 0.05, 1e-6);
+      const dv = Math.max(v * 0.01, 1e-6);
       const f2 = dragForce(rho_f, mu, D, v + dv, epsilon, model) - weight;
       const jac = (f2 - f) / dv;
 
-      let step = -f / jac;
-      // keep Newton step reasonable
-      step = Math.max(Math.min(step, v), -0.8 * v);
+      let delta = -f / jac;
+      // keep Newton step reasonable. If the step is 10% or more of current value, limit it to 10%
+      if (Math.abs(delta/v) > 0.1) delta = 0.1*delta;
 
-      v += step;
-      if (v <= 0 || !Number.isFinite(v)) v = Math.max(Math.abs(step), 1e-5);
-      if (Math.abs(step) / v < 1e-6) break;
+      v += delta;
+      if (v <= 0 || !Number.isFinite(v)) v = Math.max(Math.abs(delta), 1e-5);
+      if (Math.abs(delta) / v < 1e-6) break;
     }
     return v;
   }
