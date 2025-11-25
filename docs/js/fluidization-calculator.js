@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function expansionTrace(params, epsilon0, model) {
     const epsMin = Math.max(epsilon0, 0.35);
-    const epsMax = 0.95;
+    const epsMax = 0.9;
     const steps = 100;
     const epsilons = [];
     const superficial = [];
