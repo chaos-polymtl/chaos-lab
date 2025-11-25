@@ -120,7 +120,7 @@ Estimate the minimum fluidization velocity from hindered-drag correlations. Visu
 
       <div class="field">
         <label for="mf-epsilon0">Packed voidage ε<sub>0</sub> [–]</label>
-        <input type="number" id="mf-epsilon0" value="0.60" step="0.01" min="0.2" max="1">
+        <input type="number" id="mf-epsilon0" value="0.36" step="0.01" min="0.2" max="1">
       </div>
 
       <button type="button" id="mf-compute-btn" class="tool-button">
