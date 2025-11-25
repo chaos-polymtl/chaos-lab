@@ -100,27 +100,27 @@ Estimate the minimum fluidization velocity from hindered-drag correlations and v
     <form id="mf-form" class="tool-form">
       <div class="field">
         <label for="mf-diameter">Particle diameter d<sub>p</sub> [m]</label>
-        <input type="number" id="mf-diameter" value="0.0007" step="0.0001">
+        <input type="number" id="mf-diameter" value="0.001" step="0.0001">
       </div>
 
       <div class="field">
         <label for="mf-rho-p">Particle density ρ<sub>p</sub> [kg/m³]</label>
-        <input type="number" id="mf-rho-p" value="2500" step="50">
+        <input type="number" id="mf-rho-p" value="1000" step="10">
       </div>
 
       <div class="field">
         <label for="mf-rho-f">Fluid density ρ<sub>f</sub> [kg/m³]</label>
-        <input type="number" id="mf-rho-f" value="1000" step="10">
+        <input type="number" id="mf-rho-f" value="1" step="10">
       </div>
 
       <div class="field">
         <label for="mf-mu">Dynamic viscosity μ [Pa·s]</label>
-        <input type="number" id="mf-mu" value="0.001" step="0.0001">
+        <input type="number" id="mf-mu" value="0.00001" step="0.0001">
       </div>
 
       <div class="field">
         <label for="mf-epsilon0">Packed voidage ε<sub>0</sub> [–]</label>
-        <input type="number" id="mf-epsilon0" value="0.40" step="0.01" min="0.2" max="0.95">
+        <input type="number" id="mf-epsilon0" value="0.60" step="0.01" min="0.2" max="1">
       </div>
 
       <button type="button" id="mf-compute-btn" class="tool-button">
@@ -182,4 +182,5 @@ Estimate the minimum fluidization velocity from hindered-drag correlations and v
   </div>
 
 <div id="mf-plot" style="margin-top:1rem;"></div>
+<div id="mf-voidage-plot" style="margin-top:1rem;"></div>
 </div>

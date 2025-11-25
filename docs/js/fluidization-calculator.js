@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const repSpan = document.getElementById("mf-rep");
   const modelNote = document.getElementById("mf-model-note");
   const plotDiv = document.getElementById("mf-plot");
+  const voidagePlotDiv = document.getElementById("mf-voidage-plot");
 
   function baseDragCoefficient(Re) {
     if (Re <= 0) return 0.0;
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function expansionTrace(params, epsilon0, model) {
     const epsMin = Math.max(epsilon0, 0.35);
     const epsMax = 0.95;
-    const steps = 40;
+    const steps = 100;
     const epsilons = [];
     const superficial = [];
     const ratios = [];
@@ -180,10 +181,52 @@ document.addEventListener("DOMContentLoaded", () => {
       yaxis: { title: "Bed expansion H/H₀" },
       margin: { t: 10, r: 10, b: 60, l: 60 },
       height: 320,
+      font: { size: 14 },
       showlegend: models.length > 1,
     };
 
     Plotly.newPlot(plotDiv, traces, layout, { responsive: true });
+  }
+
+  function voidageSweep(params, models) {
+    const solidsMin = 0.0; // 1 - epsilon
+    const solidsMax = 0.7; // up to epsilon = 0.3
+    const steps = 100;
+    const palette = ["#2962ff", "#d95f02", "#1b9e77", "#e7298a", "#7570b3"];
+
+    return models.map((model, idx) => {
+      const solids = [];
+      const velocities = [];
+      for (let i = 0; i < steps; i++) {
+        const solidFrac = solidsMin + ((solidsMax - solidsMin) * i) / (steps - 1);
+        const eps = 1.0 - solidFrac;
+        const slip = solveSlipVelocity(params, eps, model);
+        solids.push(solidFrac);
+        velocities.push(eps * slip);
+      }
+      return {
+        x: solids,
+        y: velocities,
+        mode: "lines",
+        name: modelLabel(model),
+        line: { color: palette[idx % palette.length], width: 3 },
+        hovertemplate: `${modelLabel(model)}<br>φ = %{x:.3f}<br>U = %{y:.3g} m/s<extra></extra>`,
+      };
+    });
+  }
+
+  function plotVoidageVelocity(params, models) {
+    if (typeof Plotly === "undefined" || !voidagePlotDiv) return;
+    const traces = voidageSweep(params, models);
+    const layout = {
+      xaxis: { title: "Solid fraction φ = 1 − ε [–]", range: [0, 0.7] },
+      yaxis: { title: "Superficial velocity U [m/s]" },
+      margin: { t: 10, r: 10, b: 60, l: 60 },
+      height: 320,
+      font: { size: 14 },
+      showlegend: models.length > 1,
+    };
+    Plotly.newPlot(voidagePlotDiv, traces, layout, { responsive: true });
   }
 
   function update() {
@@ -218,6 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     repSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.Rep)}`).join("<br>");
 
     plotExpansion(params, epsilon0, models);
+    plotVoidageVelocity(params, models);
   }
 
   computeBtn.addEventListener("click", update);
