@@ -62,15 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return viscous + inertial;
   }
 
-  function ergunCd(Re, epsilon) {
-    // Ergun (1952) packed-bed drag
-    const eps = Math.max(epsilon, 1e-6);
-    const safeRe = Math.max(Re, 1e-9);
-    const viscous = (150.0 * (1.0 - eps)) / (Math.pow(eps, 3.0) * safeRe);
-    const inertial = 1.75 / Math.pow(eps, 3.0);
-    return viscous + inertial;
-  }
-
   function wenYuCd(Re, epsilon) {
     // Wen–Yu (1966) single-sphere drag with ε scaling
     const eps = Math.max(epsilon, 1e-6);
@@ -84,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (model === "di-felice") return diFeliceCd(Re, eps);
     if (model === "tenneti") return tennetiCd(Re, eps);
     if (model === "rong") return rongCd(Re, eps);
-    if (model === "ergun") return ergunCd(Re, eps);
     if (model === "wen-yu") return wenYuCd(Re, eps);
     return baseDragCoefficient(Re);
   }
@@ -115,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "di-felice": "Di Felice (1994)",
       tenneti: "Tenneti (2011)",
       rong: "Rong (2015)",
-      ergun: "Ergun (1952)",
       "wen-yu": "Wen–Yu (1966)",
     }[model] || model;
   }
@@ -171,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function plotExpansion(params, epsilon0, models) {
     if (typeof Plotly === "undefined" || !plotDiv) return;
-    const palette = ["#2962ff", "#d95f02", "#1b9e77", "#e7298a", "#7570b3"];
+    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
     const traces = models.map((model, idx) => {
       const series = expansionTrace(params, epsilon0, model);
       return {
@@ -179,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         y: series.ratios,
         mode: "lines",
         name: modelLabel(model),
-        line: { color: palette[idx % palette.length], width: 3 },
+        line: { color: colors[idx % colors.length], width: 3 },
         hovertemplate: `${modelLabel(model)}<br>U = %{x:.3g} m/s<br>H/H₀ = %{y:.3g}<extra></extra>`,
       };
     });
@@ -200,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const solidsMin = 0.0; // 1 - epsilon
     const solidsMax = 0.7; // up to epsilon = 0.3
     const steps = 100;
-    const palette = ["#2962ff", "#d95f02", "#1b9e77", "#e7298a", "#7570b3"];
+    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
 
     return models.map((model, idx) => {
       const solids = [];
@@ -217,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         y: velocities,
         mode: "lines",
         name: modelLabel(model),
-        line: { color: palette[idx % palette.length], width: 3 },
+        line: { color: colors[idx % colors.length], width: 3 },
         hovertemplate: `${modelLabel(model)}<br>φ = %{x:.3f}<br>U = %{y:.3g} m/s<extra></extra>`,
       };
     });

@@ -154,11 +154,6 @@ Estimate the minimum fluidization velocity from hindered-drag correlations and v
         </label>
 
         <label>
-          <input type="checkbox" name="mf_drag_model" value="ergun">
-          Ergun (1952)
-        </label>
-
-        <label>
           <input type="checkbox" name="mf_drag_model" value="wen-yu">
           Wen–Yu (1966)
         </label>
