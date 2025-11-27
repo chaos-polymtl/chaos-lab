@@ -2,6 +2,19 @@ site_name: "Chaos Laboratory"
 site_description: "Chaos Laboratory Research Group Website"
 site_author: "Chaos Laboratory Team"
 
+# Extra
+extra:
+  analytics:
+    provider: google
+    property: G-DNC5RHF516
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chaos-polymtl
+    - icon: fontawesome/solid/star
+      link: https://github.com/chaos-polymtl/lethe/stargazers
+    - icon: fontawesome/solid/code-branch
+      link: https://github.com/chaos-polymtl/lethe/network/members
+
 extra_css:
   - css/extra.css
   - css/random-youtube.css
@@ -81,12 +94,4 @@ markdown_extensions:
 plugins:
   - search
 
-# Extra
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/chaos-polymtl
-    - icon: fontawesome/solid/star
-      link: https://github.com/chaos-polymtl/lethe/stargazers
-    - icon: fontawesome/solid/code-branch
-      link: https://github.com/chaos-polymtl/lethe/network/members
+
