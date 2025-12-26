@@ -15,7 +15,7 @@ Browse our research publications of the last few years.
 
 - Vaillant, Mikael, Ferreira, Victor Oliveira, Mainville, Wiebke, Lamarre, Jean-Michel, Raymond, Vincent, Chioua, Moncef, Blais, Bruno. “Surrogate Model for Heat Transfer Prediction in Impinging Jet Arrays using Dynamic Inlet/Outlet and Flow Rate Control.” *arXiv preprint arXiv:2507.07034*, 2025.
 
-## Recent Journal Publications
+## Journal Publications
 
 ### 2025
 
