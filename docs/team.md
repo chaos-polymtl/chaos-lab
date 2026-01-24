@@ -221,23 +221,6 @@ toc:
 
 ---
 
-
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-  <img src="../assets/pictures/marine.jpg" alt="Marine Harel" class="team-photo">
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Marine Harel </strong></p>
-<p class="team-card-position">Research Intern</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-<small>Extension of the geometric interface reinitialization method to non-linear interface reconstructions</small>
-</p>
-</div>
-</div>
-
-
 ---
 
 ## Alumni
@@ -291,7 +274,15 @@ We are proud of our alumni who have gone on to successful careers in academia an
 ### Post-Doc
 
 - **Shahab Golshan** (2022) 
-- **Jeanne Joachim** (2022)  
+    - **Project Title**: Development of a parallel DEM module in an open-source CFD software.
+
+- **Jeanne Joachim** (2022)
+    - **Project Title**: CFD Simulation of bread dough heating during mixing.
+
+### Interns
+
+- **Marine Harel** (2025)
+    - **Project Titles**: (1) Simulation of heat transfer in granular media and (2) Extension of the geometric interface reinitialization method to non-linear interface reconstructions
 
 
 ---
