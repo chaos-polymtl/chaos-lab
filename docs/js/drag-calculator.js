@@ -216,8 +216,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   
-
-  computeBtn.addEventListener("click", update);
+  function initCalculator() {
+    const btn = document.getElementById("click");
+    if (!btn) return;              // page not ready or not this page
+    btn.addEventListener("click", update);
+  }
 
   [diameterInput, rhoPInput, rhoFInput, muInput].forEach((input) => {
     input.addEventListener("change", update);
@@ -228,6 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
     r.addEventListener("change", update);
   });
 
+  
+  initCalculator();
   
   initCdPlot();   // build the Cd(Re) plot once
 
