@@ -215,24 +215,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  
-  function initCalculator() {
-    const btn = document.getElementById("click");
-    if (!btn) return;              // page not ready or not this page
-    btn.addEventListener("click", update);
+  // Helper: attach event only if element exists
+  function on(el, event, handler, opts) {
+    if (!el) return false;
+    el.addEventListener(event, handler, opts);
+    return true;
   }
 
-  [diameterInput, rhoPInput, rhoFInput, muInput].forEach((input) => {
-    input.addEventListener("change", update);
-  });
-
-  // Recompute when drag model changes
-  modelInputs.forEach((r) => {
-    r.addEventListener("change", update);
-  });
-
   
-  initCalculator();
+  // Button click
+  on(document.getElementById("click"), "click", update);
+
+  // Numeric inputs
+  [diameterInput, rhoPInput, rhoFInput, muInput]
+    .filter(Boolean)
+    .forEach((input) => on(input, "change", update));
+
+  // Drag model radios (NodeList or array)
+  Array.from(modelInputs || [])
+    .filter(Boolean)
+    .forEach((r) => on(r, "change", update));
+
   
   initCdPlot();   // build the Cd(Re) plot once
 
