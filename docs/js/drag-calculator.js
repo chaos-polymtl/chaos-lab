@@ -182,19 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   function update() {
-    // Re-resolve each time (safe under MkDocs Material navigation)
-    const diameterInput = document.getElementById("diameter");
-    const rhoPInput     = document.getElementById("rhoP");
-    const rhoFInput     = document.getElementById("rhoF");
-    const muInput       = document.getElementById("mu");
-    const vtSpan        = document.getElementById("vt");
-    const fdSpan        = document.getElementById("fd");
-
-    // If not on the right page / not yet rendered, do nothing
-    if (!diameterInput || !rhoPInput || !rhoFInput || !muInput || !vtSpan || !fdSpan) {
-      return;
-    }
-
     const D = parseFloat(diameterInput.value);
     const rho_p = parseFloat(rhoPInput.value);
     const rho_f = parseFloat(rhoFInput.value);

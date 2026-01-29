@@ -21,7 +21,7 @@ extra_css:
   - css/utilities.css
 extra_javascript:
   - js/random-youtube.js
-  - https://cdn.plot.ly/plotly-latest.min.js
+  - https://cdn.plot.ly/plotly-3.3.1.min.js
   - js/drag-calculator.js  
   - js/fluidization-calculator.js
 

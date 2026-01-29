@@ -86,7 +86,7 @@ This utility calculates the terminal velocity, Reynolds number and drag coeffici
 
 <div id="drag-plot" style="margin-top:1rem;"></div>
 
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-3.3.1.min.js"></script>
 </div>
 
 
