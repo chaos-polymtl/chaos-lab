@@ -184,14 +184,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function update() {
     // Re-resolve each time (safe under MkDocs Material navigation)
     const diameterInput = document.getElementById("diameter");
-    const rhoPInput     = document.getElementById("rhoP");
-    const rhoFInput     = document.getElementById("rhoF");
+    const rhoPInput     = document.getElementById("rho_p");
+    const rhoFInput     = document.getElementById("rho_f");
     const muInput       = document.getElementById("mu");
     const vtSpan        = document.getElementById("vt");
-    const fdSpan        = document.getElementById("fd");
+    const RepSpan       = document.getElementById("Rep");
+    const CdSpan        = document.getElementById("Cd");
 
     // If not on the right page / not yet rendered, do nothing
-    if (!diameterInput || !rhoPInput || !rhoFInput || !muInput || !vtSpan || !fdSpan) {
+    if (!diameterInput || !rhoPInput || !rhoFInput || !muInput || !vtSpan || !RepSpan || !CdSpan) {
       return;
     }
 
@@ -202,7 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (![D, rho_p, rho_f, mu].every((v) => Number.isFinite(v) && v > 0)) {
       vtSpan.textContent = "invalid input";
-      fdSpan.textContent = "invalid input";
+      RepSpan.textContent = "–";
+      CdSpan.textContent = "–";
       return;
     }
 
@@ -237,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   // Button click
-  on(document.getElementById("click"), "click", update);
+  on(computeBtn, "click", update);
 
   // Numeric inputs
   [diameterInput, rhoPInput, rhoFInput, muInput]
