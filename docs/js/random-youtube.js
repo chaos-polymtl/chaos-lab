@@ -1,9 +1,11 @@
 // random-youtube.js — dynamic aspect ratio fix
 (function () {
-  const el = document.querySelector(".yt-random-player");
-  if (!el) return;
+  const playerEl = document.querySelector(".yt-random-player");
+  if (!playerEl) return;
 
-  const jsonPath = el.getAttribute("data-videos-src");
+  // Use wrapper for sizing (YouTube replaces playerEl with iframe)
+  const wrapper = playerEl.closest(".yt-wrapper") || playerEl.parentElement;
+  const jsonPath = playerEl.getAttribute("data-videos-src");
 
   async function loadVideos() {
     const res = await fetch(jsonPath);
@@ -53,22 +55,23 @@
         return queue.pop();
       }
 
-      // --- dynamic sizing helper ---
-      function setAspect(el, ratioStr) {
-        // Convert "21/9" → 21,9
+      // Track current ratio for resize handler
+      let currentRatio = "16/9";
+
+      // --- dynamic sizing helper (operates on wrapper) ---
+      function setAspect(ratioStr) {
         const [w, h] = ratioStr.split("/").map(Number);
         if (!w || !h) return;
+        currentRatio = ratioStr;
         const ratio = h / w;
-        // set height based on current width
-        const width = el.clientWidth;
-        const height = width * ratio;
-        el.style.height = `${height}px`;
+        const width = wrapper.clientWidth;
+        wrapper.style.height = `${width * ratio}px`;
       }
 
       const first = nextVideo();
-      setAspect(el, first.ratio);
+      setAspect(first.ratio);
 
-      const player = new YT.Player(el, {
+      const player = new YT.Player(playerEl, {
         videoId: first.id,
         host: "https://www.youtube-nocookie.com",
         playerVars: {
@@ -87,23 +90,19 @@
           onStateChange: (e) => {
             if (e.data === YT.PlayerState.ENDED) {
               const next = nextVideo();
-              setAspect(el, next.ratio);
+              setAspect(next.ratio);
               e.target.loadVideoById(next.id);
             }
           },
         },
       });
 
-      // Resize on window resize
-      window.addEventListener("resize", () => {
-        const iframe = el.querySelector("iframe");
-        if (iframe && iframe.dataset.currentRatio)
-          setAspect(el, iframe.dataset.currentRatio);
-      });
+      // Update size on window resize
+      window.addEventListener("resize", () => setAspect(currentRatio));
     } catch (err) {
       console.error("YouTube init failed:", err);
-      el.innerHTML =
-        '<p>⚠️ Unable to load YouTube video. <a href="https://youtube.com">Visit our channel</a>.</p>';
+      wrapper.innerHTML =
+        '<p>Unable to load YouTube video. <a href="https://youtube.com">Visit our channel</a>.</p>';
     }
   }
 
