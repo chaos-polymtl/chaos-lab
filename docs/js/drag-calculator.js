@@ -1,261 +1,315 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("drag-calculator");
-  if (!container) return;
+/**
+ * Drag Calculator (Terminal Velocity)
+ * Interactive tool for calculating terminal velocity of spherical particles.
+ *
+ * Dependencies: physics-utils.js, drag-models.js, plot-utils.js, Plotly
+ */
+(function () {
+  "use strict";
 
-  const g = 9.81;
+  // Import from shared modules
+  const {
+    GRAVITY,
+    reynoldsNumber,
+    particleWeight,
+    dragForce,
+    stokesTerminalVelocity,
+    newtonRaphson,
+    validatePositive,
+  } = window.PhysicsUtils;
 
-  const diameterInput = document.getElementById("diameter");
-  const rhoPInput = document.getElementById("rho_p");
-  const rhoFInput = document.getElementById("rho_f");
-  const muInput = document.getElementById("mu");
-  const computeBtn = document.getElementById("compute-btn");
+  const { computeSingleParticleCd, singleParticleModels, getModelLabel } =
+    window.DragModels;
 
-  const modelInputs = document.querySelectorAll('input[name="drag_model"]');
+  const {
+    logspace,
+    createLayout,
+    createLineTrace,
+    renderPlot,
+    formatScientific,
+  } = window.PlotUtils;
 
-  const vtSpan = document.getElementById("vt");
-  const RepSpan = document.getElementById("Rep");
-  const CdSpan = document.getElementById("Cd");
+  // ============================================================================
+  // DOM Elements
+  // ============================================================================
 
-  const plotDiv = document.getElementById("drag-plot");
+  let elements = null;
 
-  function computeInitialTerminalVelocity(D, rho_p, rho_f, mu) {
-    // Stokes regime: v_t = ( (ρ_p - ρ_f) g D² ) / (18 μ)
-    return ((rho_p - rho_f) * g * D * D) / (18.0 * mu);
-  }
+  /**
+   * Get or cache DOM element references.
+   * Re-resolves elements each time to handle MkDocs Material navigation.
+   * @returns {Object|null} Object with element references or null if container not found
+   */
+  function getElements() {
+    const container = document.getElementById("drag-calculator");
+    if (!container) return null;
 
-  function dragCoefficient(Re, model) {
-    if (Re <= 0) return 0.0;
-
-    if (model === "clift-gauvin") {
-    // Clift–Gauvin correlation (incompressible, smooth sphere)
-    // Cd = 24/Re * (1 + 0.15 Re^0.687) + 0.42 / (1 + 42500 Re^-1.16)
-    const term1 = (24.0 / Re) * (1.0 + 0.15 * Math.pow(Re, 0.687));
-    const term2 = 0.42 / (1.0 + 42500.0 * Math.pow(Re, -1.16));
-    return term1 + term2;
-    }
-
-    if (model === "schiller-naumann") {
-      // Schiller–Naumann: Cd = 24/Re * (1 + 0.15 Re^0.687), Re <~ 1000
-      // and ~0.44 at higher Re
-      if (Re < 1000) {
-        return (24.0 / Re) * (1.0 + 0.15 * Math.pow(Re, 0.687));
-      }
-      return 0.44;
-    }
-    if (model === "clift-grace-weber") {
-      // Piecewise CD,0 correlation
-      if (Re <= 20.0) {
-        // CD,0 = 24/Re [1 + 0.1315 Re^(0.82 – 0.05 log10 Re)]
-        return (
-          (24.0 / Re) *
-          (1.0 + 0.1315 * Math.pow(Re, 0.82 - 0.05 * Math.log10(Re)))
-        );
-        }
-
-        // CD,0 = 24/Re [1 + 0.1935 Re^0.6305], Re >= 20
-        return (24.0 / Re) * (1.0 + 0.1935 * Math.pow(Re, 0.6305));
-    }
-
-    // Default: Stokes
-    return 24.0 / Re;
-  }
-
-    // ------- Plot of Cd vs Re for all models ---------
-
-  function logspace(minExp, maxExp, n) {
-    const result = [];
-    const step = (maxExp - minExp) / (n - 1);
-    for (let i = 0; i < n; ++i) {
-      result.push(Math.pow(10, minExp + step * i));
-    }
-    return result;
-  }
-
-  function initCdPlot() {
-    if (!plotDiv || typeof Plotly === "undefined") return;
-
-    const ReValues = logspace(-1, 4, 200); // 1e-2 to 1e4
-
-    const modelsForPlot = [
-      { id: "stokes",             label: "Stokes" },
-      { id: "schiller-naumann",   label: "Schiller–Naumann" },
-      { id: "clift-gauvin",       label: "Clift–Gauvin" },
-      { id: "clift-grace-weber",  label: "Clift–Grace–Weber" }
-    ];
-
-    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
-
-    const traces = modelsForPlot.map((m, i) => {
-    const cds = ReValues.map((Re) => dragCoefficient(Re, m.id));
-    return {
-      x: ReValues,
-      y: cds,
-      mode: "lines",
-      name: m.label,
-      line: { color: colors[i] } // use your palette in order
-      };
-    });
-
-    const layout = {
-      xaxis: { type: "log", title: "Re" },
-      yaxis: { type: "log", title: "C\u2091" }, // C_D
-      margin: { t: 10, r: 10, b: 50, l: 60 },
-      height: 300
+    // Re-resolve elements each time for MkDocs compatibility
+    elements = {
+      container,
+      inputs: {
+        diameter: document.getElementById("diameter"),
+        rhoP: document.getElementById("rho_p"),
+        rhoF: document.getElementById("rho_f"),
+        mu: document.getElementById("mu"),
+      },
+      computeBtn: document.getElementById("compute-btn"),
+      modelInputs: document.querySelectorAll('input[name="drag_model"]'),
+      outputs: {
+        vt: document.getElementById("vt"),
+        Rep: document.getElementById("Rep"),
+        Cd: document.getElementById("Cd"),
+        equation: document.getElementById("cd-equation"),
+      },
+      plot: document.getElementById("drag-plot"),
     };
 
-    Plotly.newPlot(plotDiv, traces, layout, { responsive: true });
+    return elements;
   }
 
+  // ============================================================================
+  // Physics Calculations
+  // ============================================================================
 
-  function computeDragForce(rho_f, mu, D, v, model) 
-  {
-    const Re = (rho_f * v * D) / mu;
-    const Cd = dragCoefficient(Re, model);
-    const A = Math.PI * (D * D) / 4.0;
-    return 0.5 * rho_f * Cd * A * v * v;
+  /**
+   * Compute drag force for a given velocity and model.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} velocity - Particle velocity [m/s]
+   * @param {string} modelId - Drag model identifier
+   * @returns {number} Drag force [N]
+   */
+  function computeDragForce(params, velocity, modelId) {
+    const { rhoF, mu, D } = params;
+    const Re = reynoldsNumber(rhoF, velocity, D, mu);
+    const Cd = computeSingleParticleCd(Re, modelId);
+    return dragForce(rhoF, Cd, D, velocity);
   }
 
-  function computeGravityForce(rho_p, rho_f, D, g) 
-  {
-    return (rho_p - rho_f) * g * D * D * D * (Math.PI / 6.0);
+  /**
+   * Compute force balance (gravity - drag).
+   * At terminal velocity, this should equal zero.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} velocity - Particle velocity [m/s]
+   * @param {string} modelId - Drag model identifier
+   * @returns {number} Net force [N]
+   */
+  function forceBalance(params, velocity, modelId) {
+    const { rhoP, rhoF, D } = params;
+    const weight = particleWeight(rhoP, rhoF, D);
+    const drag = computeDragForce(params, velocity, modelId);
+    return weight - drag;
   }
 
-  function computeForceBalance(rho_p, rho_f, mu, D, v, model) 
-  {
-    return computeGravityForce(rho_p, rho_f, D, g) - computeDragForce(rho_f, mu, D, v, model);
+  /**
+   * Solve for terminal velocity using Newton-Raphson.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {string} modelId - Drag model identifier
+   * @returns {number} Terminal velocity [m/s]
+   */
+  function solveTerminalVelocity(params, modelId) {
+    const { rhoP, rhoF, mu, D } = params;
+
+    // Initial guess from Stokes' law
+    const initialGuess = stokesTerminalVelocity(rhoP, rhoF, D, mu);
+
+    // Force balance: W - F_drag = 0
+    const f = (v) => forceBalance(params, v, modelId);
+
+    return newtonRaphson(f, initialGuess, {
+      dx: 1e-6,
+      minValue: 1e-10,
+    });
   }
 
-  function getSelectedModel() {
-      let model = "stokes";
-      modelInputs.forEach((r) => {
-        if (r.checked) {
-          model = r.value;
-        }
+  // ============================================================================
+  // Plotting
+  // ============================================================================
+
+  /**
+   * Initialize the Cd vs Re plot showing all drag models.
+   */
+  function initCdPlot() {
+    const el = getElements();
+    if (!el?.plot) return;
+
+    const ReValues = logspace(-1, 4, 200);
+
+    // Build list of models to plot
+    const modelsForPlot = [
+      { id: "stokes", label: "Stokes" },
+      { id: "schiller-naumann", label: "Schiller-Naumann" },
+      { id: "clift-gauvin", label: "Clift-Gauvin" },
+      { id: "clift-grace-weber", label: "Clift-Grace-Weber" },
+    ];
+
+    const traces = modelsForPlot.map((model, idx) => {
+      const Cds = ReValues.map((Re) => computeSingleParticleCd(Re, model.id));
+
+      return createLineTrace({
+        x: ReValues,
+        y: Cds,
+        name: model.label,
+        colorIndex: idx,
       });
-      return model;
-    }
-  const cdEquationDiv = document.getElementById("cd-equation");
+    });
 
-  function cdEquationHtml(model) {
-    if (model === "schiller-naumann") {
-      return (
-        "C<sub>D</sub> = " +
-        "24 / Re<sub>p</sub> · (1 + 0.15 Re<sub>p</sub><sup>0.687</sup>)" +
-        "<br><span style='opacity:0.75'>(Schiller–Naumann)</span>"
-      );
-    }
+    const layout = createLayout({
+      xTitle: "Re",
+      yTitle: "C\u2091", // C_D with subscript
+      height: 300,
+      logX: true,
+      logY: true,
+    });
 
-    if (model === "clift-gauvin") {
-      return (
-        "C<sub>D</sub> = " +
-        "24 / Re<sub>p</sub> · (1 + 0.15 Re<sub>p</sub><sup>0.687</sup>)" +
-        " + 0.42 / (1 + 42500 Re<sub>p</sub><sup>-1.16</sup>)" +
-        "<br><span style='opacity:0.75'>(Clift–Gauvin)</span>"
-      );
-    }
-
-    if (model === "clift-grace-weber") {
-      return (
-      "<span style='font-size:0.8em'>" +
-        "C<sub>D</sub> = " +
-        "<br>&nbsp;&nbsp;24 / Re<sub>p</sub> · [1 + 0.1315 Re<sub>p</sub>" +
-          "<sup>0.82 - 0.05&nbsp;log<sub>10</sub>Re<sub>p</sub></sup>], " +
-          "if Re<sub>p</sub> &#8804; 20," +
-        "<br>&nbsp;&nbsp;24 / Re<sub>p</sub> · [1 + 0.1935 Re<sub>p</sub>" +
-        "<sup>0.6305</sup>], if Re<sub>p</sub> &#8805; 20" +
-      "</span>" + 
-      "<span style='opacity:0.75'> <br>&nbsp;&nbsp; (Clift–Grace–Weber)</span>"
-      );
-    }
-
-    // Default: Stokes
-    return (
-      "C<sub>D</sub> = 24 / Re<sub>p</sub>" +
-      "<br><span style='opacity:0.75'>(Stokes)</span>"
-    );
+    renderPlot(el.plot, traces, layout);
   }
 
-  function updateCdEquation(model) {
-  if (!cdEquationDiv) return;
-  cdEquationDiv.innerHTML = cdEquationHtml(model);
-  }
-  
+  // ============================================================================
+  // UI Helpers
+  // ============================================================================
 
+  /**
+   * Get the currently selected drag model ID.
+   * @returns {string} Selected model identifier
+   */
+  function getSelectedModel() {
+    const el = getElements();
+    if (!el) return "stokes";
+
+    let model = "stokes";
+    el.modelInputs.forEach((input) => {
+      if (input.checked) model = input.value;
+    });
+    return model;
+  }
+
+  /**
+   * Update the drag equation display for the selected model.
+   * @param {string} modelId - Drag model identifier
+   */
+  function updateEquationDisplay(modelId) {
+    const el = getElements();
+    if (!el?.outputs.equation) return;
+
+    const model = singleParticleModels[modelId];
+    el.outputs.equation.innerHTML = model?.equation || "";
+  }
+
+  /**
+   * Display results in the output spans.
+   * @param {number} vt - Terminal velocity [m/s]
+   * @param {number} Rep - Particle Reynolds number [-]
+   * @param {number} Cd - Drag coefficient [-]
+   */
+  function displayResults(vt, Rep, Cd) {
+    const el = getElements();
+    if (!el) return;
+
+    el.outputs.vt.textContent = formatScientific(vt);
+    el.outputs.Rep.textContent = formatScientific(Rep);
+    el.outputs.Cd.textContent = formatScientific(Cd);
+  }
+
+  /**
+   * Display invalid input message.
+   */
+  function displayInvalidInput() {
+    const el = getElements();
+    if (!el) return;
+
+    el.outputs.vt.textContent = "invalid input";
+    el.outputs.Rep.textContent = "-";
+    el.outputs.Cd.textContent = "-";
+  }
+
+  // ============================================================================
+  // Main Update Function
+  // ============================================================================
+
+  /**
+   * Main update function - reads inputs, computes results, updates display.
+   */
   function update() {
-    // Re-resolve each time (safe under MkDocs Material navigation)
-    const diameterInput = document.getElementById("diameter");
-    const rhoPInput     = document.getElementById("rho_p");
-    const rhoFInput     = document.getElementById("rho_f");
-    const muInput       = document.getElementById("mu");
-    const vtSpan        = document.getElementById("vt");
-    const RepSpan       = document.getElementById("Rep");
-    const CdSpan        = document.getElementById("Cd");
+    const el = getElements();
+    if (!el) return;
 
-    // If not on the right page / not yet rendered, do nothing
-    if (!diameterInput || !rhoPInput || !rhoFInput || !muInput || !vtSpan || !RepSpan || !CdSpan) {
+    // Check all required elements exist (handles MkDocs navigation)
+    const { diameter, rhoP, rhoF, mu } = el.inputs;
+    const { vt, Rep, Cd } = el.outputs;
+    if (!diameter || !rhoP || !rhoF || !mu || !vt || !Rep || !Cd) {
       return;
     }
 
-    const D = parseFloat(diameterInput.value);
-    const rho_p = parseFloat(rhoPInput.value);
-    const rho_f = parseFloat(rhoFInput.value);
-    const mu = parseFloat(muInput.value);
+    // Parse inputs
+    const D = parseFloat(diameter.value);
+    const rhoP_val = parseFloat(rhoP.value);
+    const rhoF_val = parseFloat(rhoF.value);
+    const mu_val = parseFloat(mu.value);
 
-    if (![D, rho_p, rho_f, mu].every((v) => Number.isFinite(v) && v > 0)) {
-      vtSpan.textContent = "invalid input";
-      RepSpan.textContent = "–";
-      CdSpan.textContent = "–";
+    // Validate inputs
+    if (!validatePositive([D, rhoP_val, rhoF_val, mu_val])) {
+      displayInvalidInput();
       return;
     }
 
-    const model = getSelectedModel();
+    const modelId = getSelectedModel();
+    const params = { rhoP: rhoP_val, rhoF: rhoF_val, mu: mu_val, D };
 
-    err = 1;
-    eps = 1e-6
-    vt = computeInitialTerminalVelocity(D, rho_p, rho_f, mu);
-    while (err > 1e-6) {
-      vt_eps = vt + eps;
-      Jacobian = (computeForceBalance(rho_p, rho_f, mu, D, vt_eps, model) - computeForceBalance(rho_p, rho_f, mu, D, vt, model)) / eps;
+    // Solve for terminal velocity
+    const terminalVelocity = solveTerminalVelocity(params, modelId);
+    const Re = reynoldsNumber(rhoF_val, terminalVelocity, D, mu_val);
+    const dragCoeff = computeSingleParticleCd(Re, modelId);
 
-      delta_vt = -computeForceBalance(rho_p, rho_f, mu, D, vt, model) / Jacobian;
-      vt = vt + delta_vt;
-      err = Math.abs(delta_vt) / vt;
-    }
-    Rep = (rho_f * vt * D) / mu;
-    Cd = dragCoefficient(Rep, model);
-    CdSpan.textContent = Cd.toExponential(3);
-    vtSpan.textContent = vt.toExponential(3);
-    RepSpan.textContent = Rep.toExponential(3);
-    updateCdEquation(model);   // <--- update equation display
-
+    displayResults(terminalVelocity, Re, dragCoeff);
+    updateEquationDisplay(modelId);
   }
 
-  // Helper: attach event only if element exists
-  function on(el, event, handler, opts) {
-    if (!el) return false;
-    el.addEventListener(event, handler, opts);
+  // ============================================================================
+  // Event Handling
+  // ============================================================================
+
+  /**
+   * Safely attach an event listener to an element.
+   * @param {HTMLElement|null} element - Target element
+   * @param {string} event - Event type
+   * @param {Function} handler - Event handler
+   * @returns {boolean} True if listener was attached
+   */
+  function on(element, event, handler) {
+    if (!element) return false;
+    element.addEventListener(event, handler);
     return true;
   }
 
-  
-  // Button click
-  on(computeBtn, "click", update);
+  // ============================================================================
+  // Initialization
+  // ============================================================================
 
-  // Numeric inputs
-  [diameterInput, rhoPInput, rhoFInput, muInput]
-    .filter(Boolean)
-    .forEach((input) => on(input, "change", update));
+  /**
+   * Initialize event listeners and run initial calculation.
+   */
+  function init() {
+    const el = getElements();
+    if (!el) return;
 
-  // Drag model radios (NodeList or array)
-  Array.from(modelInputs || [])
-    .filter(Boolean)
-    .forEach((r) => on(r, "change", update));
+    // Button click
+    on(el.computeBtn, "click", update);
 
-  
-  initCdPlot();   // build the Cd(Re) plot once
+    // Input changes
+    Object.values(el.inputs)
+      .filter(Boolean)
+      .forEach((input) => on(input, "change", update));
 
-  update();
-});
+    // Model selection changes
+    Array.from(el.modelInputs || [])
+      .filter(Boolean)
+      .forEach((input) => on(input, "change", update));
 
+    // Initialize plot and run first calculation
+    initCdPlot();
+    update();
+  }
 
-
+  // Initialize when DOM is ready
+  document.addEventListener("DOMContentLoaded", init);
+})();
