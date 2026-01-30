@@ -22,7 +22,12 @@ extra_css:
 extra_javascript:
   - js/random-youtube.js
   - https://cdn.plot.ly/plotly-3.3.1.min.js
-  - js/drag-calculator.js  
+  # Shared utilities (must load before calculators)
+  - js/physics-utils.js
+  - js/drag-models.js
+  - js/plot-utils.js
+  # Calculators
+  - js/drag-calculator.js
   - js/fluidization-calculator.js
 
 # Repository

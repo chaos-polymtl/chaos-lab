@@ -1,277 +1,390 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("fluidization-tool");
-  if (!container) return;
+/**
+ * Fluidization Calculator
+ * Interactive tool for calculating minimum fluidization velocity and bed expansion.
+ *
+ * Dependencies: physics-utils.js, drag-models.js, plot-utils.js, Plotly
+ */
+(function () {
+  "use strict";
 
-  const g = 9.81;
+  // Import from shared modules
+  const {
+    GRAVITY,
+    reynoldsNumber,
+    particleWeight,
+    dragForce,
+    sphereCrossSection,
+    stokesTerminalVelocity,
+    newtonRaphson,
+    validatePositive,
+    safeValue,
+  } = window.PhysicsUtils;
 
-  const tol = 1e-12;
+  const { computeHinderedCd, getModelLabel } = window.DragModels;
 
-  const diameterInput = document.getElementById("mf-diameter");
-  const rhoPInput = document.getElementById("mf-rho-p");
-  const rhoFInput = document.getElementById("mf-rho-f");
-  const muInput = document.getElementById("mf-mu");
-  const eps0Input = document.getElementById("mf-epsilon0");
-  const computeBtn = document.getElementById("mf-compute-btn");
-  const modelInputs = document.querySelectorAll('input[name="mf_drag_model"]');
+  const {
+    linspace,
+    createLayout,
+    createLineTrace,
+    renderPlot,
+    formatScientific,
+  } = window.PlotUtils;
 
-  const umfSpan = document.getElementById("mf-umf");
-  const slipSpan = document.getElementById("mf-slip");
-  const repSpan = document.getElementById("mf-rep");
-  const modelNote = document.getElementById("mf-model-note");
-  const plotDiv = document.getElementById("mf-plot");
-  const voidagePlotDiv = document.getElementById("mf-voidage-plot");
+  // ============================================================================
+  // Configuration
+  // ============================================================================
 
-  function baseDragCoefficient(Re) {
-    if (Re <= 0) return 0.0;
-    if (Re < 1000) {
-      return (24.0 / Re) * (1.0 + 0.15 * Math.pow(Re, 0.687));
-    }
-    return 0.44;
+  const CONFIG = {
+    expansionSteps: 100,
+    voidageMin: 0.35,
+    voidageMax: 0.9,
+    solidsMin: 0.0,
+    solidsMax: 0.7,
+  };
+
+  // ============================================================================
+  // DOM Elements
+  // ============================================================================
+
+  let elements = null;
+
+  /**
+   * Get or cache DOM element references.
+   * @returns {Object|null} Object with element references or null if container not found
+   */
+  function getElements() {
+    if (elements) return elements;
+
+    const container = document.getElementById("fluidization-tool");
+    if (!container) return null;
+
+    elements = {
+      container,
+      inputs: {
+        diameter: document.getElementById("mf-diameter"),
+        rhoP: document.getElementById("mf-rho-p"),
+        rhoF: document.getElementById("mf-rho-f"),
+        mu: document.getElementById("mf-mu"),
+        epsilon0: document.getElementById("mf-epsilon0"),
+      },
+      computeBtn: document.getElementById("mf-compute-btn"),
+      modelInputs: document.querySelectorAll('input[name="mf_drag_model"]'),
+      outputs: {
+        umf: document.getElementById("mf-umf"),
+        slip: document.getElementById("mf-slip"),
+        rep: document.getElementById("mf-rep"),
+        modelNote: document.getElementById("mf-model-note"),
+      },
+      plots: {
+        expansion: document.getElementById("mf-plot"),
+        voidage: document.getElementById("mf-voidage-plot"),
+      },
+    };
+
+    return elements;
   }
 
-  // Hindrance correlations
-  function diFeliceChi(Re) {
-    const safeRe = Math.max(Re, tol);
-    const term = 1.5 - Math.log10(safeRe);
-    return 3.7 - 0.65 * Math.exp(-(term * term) / 2.0);
+  // ============================================================================
+  // Physics Calculations
+  // ============================================================================
+
+  /**
+   * Calculate drag force using hindered drag model.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} slip - Slip velocity [m/s]
+   * @param {number} epsilon - Voidage [-]
+   * @param {string} modelId - Drag model identifier
+   * @returns {number} Drag force [N]
+   */
+  function computeHinderedDragForce(params, slip, epsilon, modelId) {
+    const { rhoF, mu, D } = params;
+    const Re = safeValue(reynoldsNumber(rhoF, slip, D, mu), 1e-12);
+    const Cd = computeHinderedCd(Re, epsilon, modelId);
+    return dragForce(rhoF, Cd, D, slip);
   }
 
-  function beetstraCd(Re, epsilon) {
-    // Beetstra et al. (2007) style decomposition: viscous (∝ ε^-2) + inertial (∝ ε^-3)
-    const safeRe = Math.max(Re, tol);
-    const viscous = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (epsilon * epsilon);
-    const inertial = 0.44 * (1.0 - epsilon) / Math.pow(epsilon, 3.0);
-    return viscous + inertial;
-  }
+  /**
+   * Solve for slip velocity at a given voidage using Newton-Raphson.
+   * At equilibrium: drag force = particle weight
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} epsilon - Voidage [-]
+   * @param {string} modelId - Drag model identifier
+   * @returns {number} Slip velocity [m/s]
+   */
+  function solveSlipVelocity(params, epsilon, modelId) {
+    const { rhoP, rhoF, mu, D } = params;
+    const weight = particleWeight(rhoP, rhoF, D);
 
-  function diFeliceCd(Re, epsilon) {
-    const chi = diFeliceChi(Re);
-    return baseDragCoefficient(Re) * Math.pow(epsilon, 2.0 - chi);
-  }
+    // Initial guess from Stokes law, adjusted for voidage
+    const stokesGuess = stokesTerminalVelocity(rhoP, rhoF, D, mu);
+    const initialGuess = Math.max(1e-5, stokesGuess / Math.max(epsilon, 0.2));
 
-  function tennetiCd(Re, epsilon) {
-    // Tenneti et al. (2011) correlation: power-law hindrance on viscous drag + mild inertial lift
-    const hindrance = Math.pow(epsilon, -2.65);
-    const inertial = 0.5 * (1.0 - epsilon) / Math.max(epsilon, 1e-6);
-    return baseDragCoefficient(Re) * hindrance + inertial;
-  }
+    // Force balance: F_drag - W = 0
+    const forceBalance = (v) =>
+      computeHinderedDragForce(params, v, epsilon, modelId) - weight;
 
-  function rongCd(Re, epsilon) {
-    // Rong et al. correlation: viscous scaling ~ ε^-2.2 and slightly stronger inertial crowding
-    const safeRe = Math.max(Re, tol);
-    const viscous = (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / Math.pow(epsilon, 2.2);
-    const inertial = 0.45 * (1.0 - epsilon) / Math.pow(epsilon, 3.0);
-    return viscous + inertial;
-  }
-
-  function wenYuCd(Re, epsilon) {
-    // Wen–Yu (1966) single-sphere drag with ε scaling
-    const eps = Math.max(epsilon, tol);
-    const safeRe = Math.max(Re, tol);
-    return (24.0 / safeRe) * (1.0 + 0.15 * Math.pow(safeRe, 0.687)) / (eps * eps);
-  }
-
-  function hinderedDragCoefficient(Re, epsilon, model) {
-    const eps = Math.min(Math.max(epsilon, 1e-4), 0.99);
-    if (model === "beetstra") return beetstraCd(Re, eps);
-    if (model === "di-felice") return diFeliceCd(Re, eps);
-    if (model === "tenneti") return tennetiCd(Re, eps);
-    if (model === "rong") return rongCd(Re, eps);
-    if (model === "wen-yu") return wenYuCd(Re, eps);
-    return baseDragCoefficient(Re);
-  }
-
-  function dragForce(rho_f, mu, D, slip, epsilon, model) {
-    const Re = Math.max((rho_f * slip * D) / mu, 1e-12);
-    const Cd = hinderedDragCoefficient(Re, epsilon, model);
-    const A = (Math.PI * D * D) / 4.0;
-    return 0.5 * rho_f * Cd * A * slip * slip;
-  }
-
-  function particleWeight(rho_p, rho_f, D) {
-    const volume = (Math.PI * Math.pow(D, 3)) / 6.0;
-    return (rho_p - rho_f) * g * volume;
-  }
-
-  function getSelectedModels() {
-    const selected = [];
-    modelInputs.forEach((r) => {
-      if (r.checked) selected.push(r.value);
+    return newtonRaphson(forceBalance, initialGuess, {
+      maxStep: 0.1,
+      minValue: 1e-5,
     });
-    return selected.length ? selected : ["tenneti"];
   }
 
-  function modelLabel(model) {
-    return {
-      beetstra: "Beetstra (2007)",
-      "di-felice": "Di Felice (1994)",
-      tenneti: "Tenneti (2011)",
-      rong: "Rong (2015)",
-      "wen-yu": "Wen–Yu (1966)",
-    }[model] || model;
-  }
+  // ============================================================================
+  // Data Generation
+  // ============================================================================
 
-  function updateModelNote(models) {
-    if (!modelNote) return;
-    modelNote.innerHTML = models.map((m) => modelLabel(m)).join("<br>");
-  }
+  /**
+   * Generate bed expansion data (H/H0 vs superficial velocity).
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} epsilon0 - Packed bed voidage [-]
+   * @param {string} modelId - Drag model identifier
+   * @returns {Object} Arrays of superficial velocities and H/H0 ratios
+   */
+  function computeExpansionData(params, epsilon0, modelId) {
+    const epsMin = Math.max(epsilon0, CONFIG.voidageMin);
+    const epsilons = linspace(epsMin, CONFIG.voidageMax, CONFIG.expansionSteps);
 
-  function solveSlipVelocity(params, epsilon, model) {
-    const { rho_p, rho_f, mu, D } = params;
-    const weight = particleWeight(rho_p, rho_f, D);
-    const stokesGuess = ((rho_p - rho_f) * g * D * D) / (18.0 * mu);
-    let v = Math.max(1e-5, stokesGuess / Math.max(epsilon, 0.2));
-
-    for (let i = 0; i < 1000; i++) {
-      const f = dragForce(rho_f, mu, D, v, epsilon, model) - weight;
-      const dv = Math.max(v * 1e-6, tol);
-      const f2 = dragForce(rho_f, mu, D, v + dv, epsilon, model) - weight;
-      const jac = (f2 - f) / dv;
-
-      let delta = -f / jac;
-      // keep Newton step reasonable. If the step is 10% or more of current value of the velocity, limit it to 10%
-      if (Math.abs(delta/v) > 0.1) delta = 0.1*delta;
-
-      v += delta;
-      if (v <= 0 || !Number.isFinite(v)) v = Math.max(Math.abs(delta), 1e-5);
-      if (Math.abs(delta) / v < 1e-8) break;
-    }
-    return v;
-  }
-
-  function expansionTrace(params, epsilon0, model) {
-    const epsMin = Math.max(epsilon0, 0.35);
-    const epsMax = 0.9;
-    const steps = 100;
-    const epsilons = [];
     const superficial = [];
     const ratios = [];
 
-    for (let i = 0; i < steps; i++) {
-      const eps = epsMin + ((epsMax - epsMin) * i) / (steps - 1);
-      const slip = solveSlipVelocity(params, eps, model);
+    for (const eps of epsilons) {
+      const slip = solveSlipVelocity(params, eps, modelId);
       const U = eps * slip;
       const ratio = (1.0 - epsilon0) / (1.0 - eps);
 
-      epsilons.push(eps);
       superficial.push(U);
       ratios.push(ratio);
     }
+
     return { superficial, ratios };
   }
 
-  function plotExpansion(params, epsilon0, models) {
-    if (typeof Plotly === "undefined" || !plotDiv) return;
-    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
-    const traces = models.map((model, idx) => {
-      const series = expansionTrace(params, epsilon0, model);
-      return {
-        x: series.superficial,
-        y: series.ratios,
-        mode: "lines",
-        name: modelLabel(model),
-        line: { color: colors[idx % colors.length], width: 3 },
-        hovertemplate: `${modelLabel(model)}<br>U = %{x:.3g} m/s<br>H/H₀ = %{y:.3g}<extra></extra>`,
-      };
+  /**
+   * Generate voidage-velocity data (solid fraction vs superficial velocity).
+   * @param {Object} params - Fluid/particle parameters
+   * @param {string} modelId - Drag model identifier
+   * @returns {Object} Arrays of solid fractions and superficial velocities
+   */
+  function computeVoidageData(params, modelId) {
+    const solidFractions = linspace(
+      CONFIG.solidsMin,
+      CONFIG.solidsMax,
+      CONFIG.expansionSteps
+    );
+
+    const solids = [];
+    const velocities = [];
+
+    for (const phi of solidFractions) {
+      const eps = 1.0 - phi;
+      const slip = solveSlipVelocity(params, eps, modelId);
+
+      solids.push(phi);
+      velocities.push(eps * slip);
+    }
+
+    return { solids, velocities };
+  }
+
+  // ============================================================================
+  // Plotting
+  // ============================================================================
+
+  /**
+   * Plot bed expansion curves for selected models.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {number} epsilon0 - Packed bed voidage [-]
+   * @param {string[]} modelIds - Array of model identifiers
+   */
+  function plotExpansion(params, epsilon0, modelIds) {
+    const el = getElements();
+    if (!el?.plots.expansion) return;
+
+    const traces = modelIds.map((modelId, idx) => {
+      const data = computeExpansionData(params, epsilon0, modelId);
+      const label = getModelLabel(modelId, "hindered");
+
+      return createLineTrace({
+        x: data.superficial,
+        y: data.ratios,
+        name: label,
+        colorIndex: idx,
+        hoverTemplate: `${label}<br>U = %{x:.3g} m/s<br>H/H\u2080 = %{y:.3g}<extra></extra>`,
+      });
     });
 
-    const layout = {
-      xaxis: { title: "Superficial fluid velocity U [m/s]" },
-      yaxis: { title: "Bed expansion H/H₀" },
-      margin: { t: 10, r: 10, b: 60, l: 60 },
-      height: 320,
-      font: { size: 14 },
-      showlegend: models.length > 1,
-    };
-
-    Plotly.newPlot(plotDiv, traces, layout, { responsive: true });
-  }
-
-  function voidageSweep(params, models) {
-    const solidsMin = 0.0; // 1 - epsilon
-    const solidsMax = 0.7; // up to epsilon = 0.3
-    const steps = 100;
-    const colors = ['#1b9e77','#d95f02','#7570b3','#e7298a','#66a61e','#e6ab02'];
-
-    return models.map((model, idx) => {
-      const solids = [];
-      const velocities = [];
-      for (let i = 0; i < steps; i++) {
-        const solidFrac = solidsMin + ((solidsMax - solidsMin) * i) / (steps - 1);
-        const eps = 1.0 - solidFrac;
-        const slip = solveSlipVelocity(params, eps, model);
-        solids.push(solidFrac);
-        velocities.push(eps * slip);
-      }
-      return {
-        x: solids,
-        y: velocities,
-        mode: "lines",
-        name: modelLabel(model),
-        line: { color: colors[idx % colors.length], width: 3 },
-        hovertemplate: `${modelLabel(model)}<br>φ = %{x:.3f}<br>U = %{y:.3g} m/s<extra></extra>`,
-      };
+    const layout = createLayout({
+      xTitle: "Superficial fluid velocity U [m/s]",
+      yTitle: "Bed expansion H/H\u2080",
+      showLegend: modelIds.length > 1,
     });
+
+    renderPlot(el.plots.expansion, traces, layout);
   }
 
-  function plotVoidageVelocity(params, models) {
-    if (typeof Plotly === "undefined" || !voidagePlotDiv) return;
-    const traces = voidageSweep(params, models);
-    const layout = {
-      xaxis: { title: "Solid fraction φ = 1 − ε [–]", range: [0, 0.7] },
-      yaxis: { title: "Superficial velocity U [m/s]" },
-      margin: { t: 10, r: 10, b: 60, l: 60 },
-      height: 320,
-      font: { size: 14 },
-      showlegend: models.length > 1,
-    };
-    Plotly.newPlot(voidagePlotDiv, traces, layout, { responsive: true });
+  /**
+   * Plot voidage-velocity relationship for selected models.
+   * @param {Object} params - Fluid/particle parameters
+   * @param {string[]} modelIds - Array of model identifiers
+   */
+  function plotVoidageVelocity(params, modelIds) {
+    const el = getElements();
+    if (!el?.plots.voidage) return;
+
+    const traces = modelIds.map((modelId, idx) => {
+      const data = computeVoidageData(params, modelId);
+      const label = getModelLabel(modelId, "hindered");
+
+      return createLineTrace({
+        x: data.solids,
+        y: data.velocities,
+        name: label,
+        colorIndex: idx,
+        hoverTemplate: `${label}<br>\u03C6 = %{x:.3f}<br>U = %{y:.3g} m/s<extra></extra>`,
+      });
+    });
+
+    const layout = createLayout({
+      xTitle: "Solid fraction \u03C6 = 1 \u2212 \u03B5 [-]",
+      yTitle: "Superficial velocity U [m/s]",
+      xRange: [0, 0.7],
+      showLegend: modelIds.length > 1,
+    });
+
+    renderPlot(el.plots.voidage, traces, layout);
   }
 
+  // ============================================================================
+  // UI Helpers
+  // ============================================================================
+
+  /**
+   * Get array of selected model IDs from checkboxes.
+   * @returns {string[]} Array of selected model identifiers
+   */
+  function getSelectedModels() {
+    const el = getElements();
+    if (!el) return ["tenneti"];
+
+    const selected = [];
+    el.modelInputs.forEach((input) => {
+      if (input.checked) selected.push(input.value);
+    });
+
+    return selected.length ? selected : ["tenneti"];
+  }
+
+  /**
+   * Update the model note display.
+   * @param {string[]} modelIds - Array of model identifiers
+   */
+  function updateModelNote(modelIds) {
+    const el = getElements();
+    if (!el?.outputs.modelNote) return;
+
+    el.outputs.modelNote.innerHTML = modelIds
+      .map((id) => getModelLabel(id, "hindered"))
+      .join("<br>");
+  }
+
+  /**
+   * Display results for all selected models.
+   * @param {Object[]} results - Array of result objects
+   */
+  function displayResults(results) {
+    const el = getElements();
+    if (!el) return;
+
+    const formatResult = (r, key) =>
+      `${getModelLabel(r.model, "hindered")}: ${formatScientific(r[key])}`;
+
+    el.outputs.umf.innerHTML = results.map((r) => formatResult(r, "umf")).join("<br>");
+    el.outputs.slip.innerHTML = results.map((r) => formatResult(r, "slip")).join("<br>");
+    el.outputs.rep.innerHTML = results.map((r) => formatResult(r, "Rep")).join("<br>");
+  }
+
+  /**
+   * Display invalid input message.
+   */
+  function displayInvalidInput() {
+    const el = getElements();
+    if (!el) return;
+
+    el.outputs.umf.textContent = "invalid input";
+    el.outputs.slip.textContent = "-";
+    el.outputs.rep.textContent = "-";
+  }
+
+  // ============================================================================
+  // Main Update Function
+  // ============================================================================
+
+  /**
+   * Main update function - reads inputs, computes results, updates display.
+   */
   function update() {
-    const D = parseFloat(diameterInput.value);
-    const rho_p = parseFloat(rhoPInput.value);
-    const rho_f = parseFloat(rhoFInput.value);
-    const mu = parseFloat(muInput.value);
-    const epsilon0 = parseFloat(eps0Input.value);
+    const el = getElements();
+    if (!el) return;
 
-    const inputsOk = [D, rho_p, rho_f, mu, epsilon0].every((v) => Number.isFinite(v) && v > 0);
-    if (!inputsOk || epsilon0 >= 1) {
-      umfSpan.textContent = "invalid input";
-      slipSpan.textContent = "–";
-      repSpan.textContent = "–";
+    // Parse inputs
+    const D = parseFloat(el.inputs.diameter.value);
+    const rhoP = parseFloat(el.inputs.rhoP.value);
+    const rhoF = parseFloat(el.inputs.rhoF.value);
+    const mu = parseFloat(el.inputs.mu.value);
+    const epsilon0 = parseFloat(el.inputs.epsilon0.value);
+
+    // Validate inputs
+    if (!validatePositive([D, rhoP, rhoF, mu, epsilon0]) || epsilon0 >= 1) {
+      displayInvalidInput();
       return;
     }
 
-    const models = getSelectedModels();
-    updateModelNote(models);
+    const modelIds = getSelectedModels();
+    updateModelNote(modelIds);
 
-    const params = { rho_p, rho_f, mu, D };
-    const results = models.map((model) => {
+    const params = { rhoP, rhoF, mu, D };
+
+    // Compute results for each model
+    const results = modelIds.map((model) => {
       const slip = solveSlipVelocity(params, epsilon0, model);
       const umf = epsilon0 * slip;
-      const Rep = (rho_f * slip * D) / mu;
+      const Rep = reynoldsNumber(rhoF, slip, D, mu);
       return { model, slip, umf, Rep };
     });
 
-    const fmt = (val) => (Number.isFinite(val) ? val.toExponential(3) : "–");
-    umfSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.umf)}`).join("<br>");
-    slipSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.slip)}`).join("<br>");
-    repSpan.innerHTML = results.map((r) => `${modelLabel(r.model)}: ${fmt(r.Rep)}`).join("<br>");
-
-    plotExpansion(params, epsilon0, models);
-    plotVoidageVelocity(params, models);
+    displayResults(results);
+    plotExpansion(params, epsilon0, modelIds);
+    plotVoidageVelocity(params, modelIds);
   }
 
-  computeBtn.addEventListener("click", update);
+  // ============================================================================
+  // Initialization
+  // ============================================================================
 
-  [diameterInput, rhoPInput, rhoFInput, muInput, eps0Input].forEach((input) => {
-    input.addEventListener("change", update);
-  });
+  /**
+   * Initialize event listeners and run initial calculation.
+   */
+  function init() {
+    const el = getElements();
+    if (!el) return;
 
-  modelInputs.forEach((r) => {
-    r.addEventListener("change", update);
-  });
+    // Button click
+    el.computeBtn?.addEventListener("click", update);
 
-  update();
-});
+    // Input changes
+    Object.values(el.inputs).forEach((input) => {
+      input?.addEventListener("change", update);
+    });
+
+    // Model selection changes
+    el.modelInputs.forEach((input) => {
+      input.addEventListener("change", update);
+    });
+
+    // Initial calculation
+    update();
+  }
+
+  // Initialize when DOM is ready
+  document.addEventListener("DOMContentLoaded", init);
+})();
