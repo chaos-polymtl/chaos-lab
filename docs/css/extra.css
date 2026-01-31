@@ -291,6 +291,185 @@
   color: var(--md-default-fg-color--light);
 }
 
+/* ---------------------------------------------------------------
+   RESEARCH PAGE STYLES
+   Grid layouts for research areas and projects
+---------------------------------------------------------------- */
+
+/* Research Areas Grid */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.research-card {
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid var(--md-accent-fg-color);
+}
+
+.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.research-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.research-card-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.research-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.research-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--md-default-fg-color);
+}
+
+.research-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  margin: 0;
+}
+
+/* Project Cards Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.project-card {
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.project-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--md-default-fg-color);
+  line-height: 1.4;
+}
+
+.project-card-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+.project-card-team {
+  font-size: 0.85rem;
+  color: var(--md-accent-fg-color);
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.project-card-team strong {
+  color: var(--md-default-fg-color);
+}
+
+/* Collaboration badges */
+.collab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.collab-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--md-default-bg-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Funding logos/links */
+.funding-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.funding-grid a {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.funding-grid a:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark mode adjustments for research page */
+[data-md-color-scheme="slate"] .research-card,
+[data-md-color-scheme="slate"] .project-card {
+  background: var(--md-code-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-md-color-scheme="slate"] .research-card:hover,
+[data-md-color-scheme="slate"] .project-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+[data-md-color-scheme="slate"] .collab-badge,
+[data-md-color-scheme="slate"] .funding-grid a {
+  background: var(--md-code-bg-color);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .research-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 /* ---------------------------------------------------------------
