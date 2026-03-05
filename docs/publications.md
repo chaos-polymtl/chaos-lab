@@ -9,13 +9,17 @@ Browse our research publications of the last few years.
 
 ## Preprints
 
-- Oliveira Ferreira, Victor, Mainville, Wiebke, Raymond, Vincent, Lamarre, Jean-Michel, Hamel, Antoine, Vaillant, Mikael, Chioua, Moncef, Blais, Bruno. “Active Cooling Device: A Flexible, Lab-Scale Experimental Unit to Develop Spatio-Temporal Temperature Control Strategies.” arXiv e-prints, arXiv:2510.18987, 2025.
+- Papillon-Laroche, Helene, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. "Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods." *arXiv preprint* arXiv:2602.00275, 2026.
 
 - Gaboriault, Olivier, Timercan, Anatolie, Pelletier, Roger, Lefebvre, Louis-Philippe, Melancon, David, Blais, Bruno. “Increase in packing density during multi-layer powder spreading: An experimental and numerical study.” *arXiv preprint arXiv:2509.26402*, 2025.
 
 - Vaillant, Mikael, Ferreira, Victor Oliveira, Mainville, Wiebke, Lamarre, Jean-Michel, Raymond, Vincent, Chioua, Moncef, Blais, Bruno. “Surrogate Model for Heat Transfer Prediction in Impinging Jet Arrays using Dynamic Inlet/Outlet and Flow Rate Control.” *arXiv preprint arXiv:2507.07034*, 2025.
 
 ## Journal Publications
+
+### 2026
+
+- Ferreira, Victor Oliveira, Mainville, Wiebke, Raymond, Vincent, Lamarre, Jean-Michel, Hamel, Antoine, Vaillant, Mikael, Chioua, Moncef, Blais, Bruno. "Active cooling device: A flexible, lab-scale experimental unit to develop spatio-temporal temperature control strategies." *Hardware X*, e00754, 2026.
 
 ### 2025
 
