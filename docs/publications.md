@@ -127,12 +127,22 @@ Browse our research publications of the last few years.
 
 #### PhD Dissertations
 
-*List of PhD dissertations from CHAOS Lab members will be added here.*
+- Prieto Saavedra, Laura. **Development of an Efficient Stabilized Navier-Stokes Solver to Simulate Turbulent Flows in Process-Intensified Devices.** PhD Dissertation, Polytechnique Montréal, 2025.
+- Mirakhori, Ghazaleh. **Development of a Model-Free Radioactive Particle Tracking (RPT) Technique for Hydrodynamic Characterization of Industrial-Scale Reactors.** PhD Dissertation, Polytechnique Montréal, 2024
+- Barbeau, Lucka. **Vers une approche CFD-DEM résolue d'ordre élevé pour la simulation directe d'écoulements autour d'essaims de particules.** PhD Dissertation, Polytechnique Montréal, 2024.
+- El Geitani Nehme, Toni. **Development of a Robust Eulerian-Lagrangian Model for Process Intensification of Gas Fluidized and Spouted Beds.** PhD Dissertation, Polytechnique Montréal, 2023.
+- Bérard, Ariane. **Principes fondamentaux de la RTD en phase gazeuse dans les réacteurs à lit fluidisé.** PhD Dissertation, Polytechnique Montréal, 2020.
 
 #### Master's Theses
 
-*List of Master's theses from CHAOS Lab members will be added here.*
+- Vaillant, Mikael. **Développement d'un modèle de substitution pour un système de refroidissement actif.** Master's Thesis, Polytechnique Montréal, 2025.
+- Collard-Daigneault, Audrey. **Développement de stratégies numériques basées sur la DEM et la CFD-DEM améliorant la performance computationnelle de simulations d'écoulements granulaires et polyphasiques.** Master's Thesis, Polytechnique Montréal, 2024.
+- Laurentin, Pierre Joseph Éric. **Développement, implémentation et étalonnage d'un modèle fluide à interface diffuse pour la simulation d'écoulements polyphasiques.** Master's Thesis, Polytechnique Montréal, 2024.
+- Bibeau, Valérie. **Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange."**Master's Thesis, Polytechnique Montréal, 2023.
+- Sarabi, Nika. **Computational Fluid Dynamic Modeling of a Hydraulic Flocculator for the Charles-J.-Des Baillets Water Treatment Plant (City of Montreal).** Master's Thesis, Polytechnique Montréal, 2023.
+- Daunais, Carole-Anne. **Développement de méthodes d'ordre élevé pour les écoulements non-newtoniens : application aux écoulements autour d'une sphère.** Master's Thesis, Polytechnique Montréal, 2022.
+- Biette, Guénaël. **Caractérisation expérimentale des interactions et de la coalescence entre deux bulles d'air dans de l'eau du robinet stagnante.** Master's Thesis, Polytechnique Montréal, 2022.
+- Deng, Jieyao. **Étude expérimentale des interactions entre deux particules sphériques, relâchées dans l'eau stagnante.** Master's Thesis, Polytechnique Montréal, 2022.
+- Shademani, Maryam. **CFD-DEM Hybrid Modelling of Multiphase Gravity-Driven Granular Flows.** Master's Thesis, Polytechnique Montréal, 2020.
+- Delacroix, Bastien. **Développement d'un modèle CFD-DEM en référentiel non-inertiel pour des applications au mélange solide-liquide.** Master's Thesis, Polytechnique Montréal, 2019.
 
-
-
-*This page is currently being updated. Please check back soon for a complete list of our publications.*
