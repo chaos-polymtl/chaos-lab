@@ -9,7 +9,8 @@ Browse our research publications of the last few years.
 
 ## Preprints
 
-- Papillon-Laroche, Helene, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. **Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods.** *arXiv preprint* arXiv:2602.00275, 2026.
+- Papillon-Laroche, Hélène, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. **Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods.** *arXiv preprint* arXiv:2602.00275, 2026.
+- Guévremont, Olivier, Gazil, Olivier, Galli, Federico, Virgilio, Nick, Blais, Bruno. **Surface-access limitation in catalytic porous monoliths: Performance diagnosis using pore-resolved CFD** *arXiv preprint* arXiv:2604.03514, 2026.
 
 ## Journal Publications
 
