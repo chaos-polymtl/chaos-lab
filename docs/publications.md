@@ -16,6 +16,8 @@ Browse our research publications of the last few years.
 
 ### 2026
 
+- Abda, Mohammed, Berthet, Lucas, Hamedi, Mohsen, Hibatullah, Dani, Piollet, Elsa, Blake, Christopher, Blais, Bruno, Gosselin, Frédérick P. **The finite element neural network method to simulate two dimensional partial differential equations and perform parameter identification.** *Scientific Reports*, 2026.
+- Klassen, Darius, Pouchet, Catherine, Simon, William, Smith, Isabella, Lemoine, Noémie, Blais, Bruno, Larose, Mikaël, Chouinard, Gérald, Karthikeyan, Adya, Dumont, Marie-Josée, Tavares, Jason R. **Pheromones Impregnated on Porous PLA Fibers for Integrated Pest Management.** *Journal of Polymers and the Environment*, 34(5), 99, 2026.
 - Gaboriault, Olivier, Timercan, Anatolie, Pelletier, Roger, Lefebvre, Louis-Philippe, Melancon, David, Blais, Bruno. **Increase in packing density during multi-layer powder spreading: An experimental and numerical study.** *Powder Technology*, 122460, 2026.
 - Vaillant, Mikael, Ferreira, Victor Oliveira, Mainville, Wiebke, Lamarre, Jean-Michel, Raymond, Vincent, Chioua, Moncef, Blais, Bruno. **Surrogate model for heat transfer prediction in impinging jet arrays using dynamic inlet/outlet and flow rate control.** *International Communications in Heat and Mass Transfer*, 175, 111046, 2026.
 - Ferreira, Victor Oliveira, Mainville, Wiebke, Raymond, Vincent, Lamarre, Jean-Michel, Hamel, Antoine, Vaillant, Mikael, Chioua, Moncef, Blais, Bruno. **Active cooling device: A flexible, lab-scale experimental unit to develop spatio-temporal temperature control strategies.** *HardwareX*, e00754, 2026.
