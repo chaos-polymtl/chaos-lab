@@ -29,6 +29,7 @@ extra_javascript:
   # Calculators
   - js/drag-calculator.js
   - js/fluidization-calculator.js
+  - js/publications-chart.js
 
 # Repository
 repo_name: chaos-polymtl/lethe

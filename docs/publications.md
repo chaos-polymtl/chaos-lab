@@ -7,6 +7,23 @@ hide:
 
 Browse our research publications of the last few years.
 
+<div class="publications-summary" markdown>
+
+<div class="publications-stats" markdown>
+
+**At a glance**
+
+- :material-file-document: **68** journal articles
+- :material-file-clock-outline: **3** preprints
+- :material-school: **5** PhD dissertations
+- :material-book-open-variant: **10** Master's theses
+
+</div>
+
+<div id="publications-per-year" class="publications-chart"></div>
+
+</div>
+
 ## Preprints
 
 - Papillon-Laroche, Hélène, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. **Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods.** *arXiv preprint* arXiv:2602.00275, 2026.

@@ -292,3 +292,39 @@
 }
 
 
+
+/* ---------------------------------------------------------------
+   PUBLICATIONS PAGE: summary block (stats + per-year chart)
+---------------------------------------------------------------- */
+.publications-summary {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  background: var(--md-default-bg-color);
+}
+
+.publications-stats ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+}
+
+.publications-stats li {
+  margin: 0.25rem 0;
+}
+
+.publications-chart {
+  width: 100%;
+  min-height: 240px;
+}
+
+@media (max-width: 768px) {
+  .publications-summary {
+    grid-template-columns: 1fr;
+  }
+}
