@@ -11,6 +11,7 @@ Browse our research publications of the last few years.
 
 - Papillon-Laroche, Hélène, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. **Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods.** *arXiv preprint* arXiv:2602.00275, 2026.
 - Guévremont, Olivier, Gazil, Olivier, Galli, Federico, Virgilio, Nick, Blais, Bruno. **Surface-access limitation in catalytic porous monoliths: Performance diagnosis using pore-resolved CFD** *arXiv preprint* arXiv:2604.03514, 2026.
+- Gaboriault, Olivier, Succar, Antonella, Delêtre, Cléo, Timercan, Anatolie, Pelletier, Roger, Melancon, David, Blais, Bruno. **From Angle of Repose to Heap Morphology: Full-Field Calibration of DEM for Granular Powders.** *arXiv preprint* arXiv:2605.09371, 2026.
 
 ## Journal Publications
 
