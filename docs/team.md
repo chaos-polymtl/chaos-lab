@@ -69,11 +69,6 @@ toc:
 </div>
 </div>
 
-
-
-
-
-
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/oreste.jpg" alt="Oreste Marquis" class="team-photo">
@@ -159,34 +154,17 @@ toc:
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-  <img src="../assets/pictures/paul.jpg" alt="Paul Alexander Patience" class="team-photo">
+  <img src="../assets/pictures/justin.jpg" alt="Justin Lamouche" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Paul Alexander Patience </strong></p>
-<p class="team-card-position">Ph.D. Candidate</p>
+<p class="team-card-name"><strong> Justin Lamouche </strong></p>
+<p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Design of TPMS-like cellular solids via blackbox optimization</small>
+<small>Computational modelling of acoustically driven particle-laden flows</small>
 </p>
 </div>
 </div>
-
-
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-  <img src="../assets/pictures/wiebke.jpg" alt="Wiebke Mainville" class="team-photo">
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Wiebke Mainville </strong></p>
-<p class="team-card-position">Master's Student</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-<small>Control strategies for active cooling systems.</small>
-</p>
-</div>
-</div>
-
 
 <div class="team-card" markdown>
 <div class="team-card-image">
@@ -205,14 +183,28 @@ toc:
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-  <img src="../assets/pictures/justin.jpg" alt="Justin Lamouche" class="team-photo">
+  <img src="../assets/pictures/loes.jpg" alt="Loes Cazemier" class="team-photo">
 </div>
 <div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Justin Lamouche </strong></p>
-<p class="team-card-position">Master's Student</p>
+<p class="team-card-name"><strong> Loes Cazemier </strong></p>
+<p class="team-card-position">Intern</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modelling of acoustically driven particle-laden flows</small>
+<small>Paticle tracking velocimetry in dense particle-laden flows.</small>
+</p>
+</div>
+</div>
+
+<div class="team-card" markdown>
+<div class="team-card-image">
+  <img src="../assets/pictures/pierre.jpg" alt="Pierre Pensec" class="team-photo">
+</div>
+<div class="team-card-content" markdown>
+<p class="team-card-name"><strong> Pierre Pensec </strong></p>
+<p class="team-card-position">Intern</p>
+<p class="team-card-research">
+<strong>Research Project:</strong>
+<small>Validation of a computational model for microwave heating.</small>
 </p>
 </div>
 </div>
@@ -247,9 +239,13 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 ### M. Sc.
 
+- **Wiebke Mainville** (2026) 
+    - **Thesis Title**: Développement d’une stratégie de commande pour un système de refroidissement actif
+    - **Current position**: -
+
 - **Mikael Vaillant** (2025) 
     - **Thesis Title**: Développement d’un modèle de substitution pour un système de  refroidissement actif
-    - **Current position**: - 
+    - **Current position**: CFD Engineer - Andritz Hydro 
 
 - **Pierre Joseph Eric Laurentin** (2024) 
     - **Thesis Title**: Développement, implémentation et étalonnage d'un modèle fluide à interface diffuse pour la simulation d'écoulements polyphasiques
