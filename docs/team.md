@@ -24,7 +24,7 @@ toc:
 <p class="team-card-position">Associate Professor</p>
 <p class="team-card-research">
 <strong>Research Focus:</strong>
-<small>High-performance computing tailored towards multiphase flows and process intensification</small></p>
+<small>High-performance computing tailored towards multiphase flows and process intensification.</small></p>
 </div>
 </div>
 
@@ -39,7 +39,7 @@ toc:
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Process intensification with CFD and experimental methods</small></p>
+<small>Process intensification with CFD and experimental methods.</small></p>
 </div>
 </div>
 
@@ -52,7 +52,7 @@ toc:
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Matrix-free domain decomposition methods for rotor-stator reactors</small></p>
+<small>Matrix-free domain decomposition methods for rotor-stator reactors.</small></p>
 </div>
 </div>
 
@@ -65,7 +65,7 @@ toc:
 <p class="team-card-position">Postdoctoral Researcher</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Experimental and numerical analysis of solid–liquid and solid–liquid–gas flows in fluidized beds</small></p>
+<small>Experimental and numerical analysis of solid–liquid and solid–liquid–gas flows in fluidized beds.</small></p>
 </div>
 </div>
 
@@ -78,7 +78,7 @@ toc:
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems</small></p>
+<small>Advanced finite element framework for multiphysics modeling of microwave heating in multiphase systems.</small></p>
 </div>
 </div>
 
@@ -91,21 +91,21 @@ toc:
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Pore-resolved CFD and machine learning for the simulation of reactive flows in porous media</small></p>
+<small>Pore-resolved CFD and machine learning for the simulation of reactive flows in porous media.</small></p>
 </p>
 </div>
 </div>
 
 <div class="team-card" markdown>
 <div class="team-card-image">
-  <img src="../assets/pictures/olivierga.jpg" alt="Olivier Gaboriault" class="team-photo">
+<img src="../assets/pictures/olivierga.jpg" alt="Olivier Gaboriault" class="team-photo" style="object-position: center 40%;">
 </div>
 <div class="team-card-content" markdown>
 <p class="team-card-name"><strong> Olivier Gaboriault </strong></p>
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Powder spreading for metal additive manufacturing</small></p>
+<small>Powder spreading for metal additive manufacturing.</small></p>
 </p>
 </div>
 </div>
@@ -119,7 +119,7 @@ toc:
 <p class="team-card-position">Ph.D. Candidate</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing</small></p>
+<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing.</small></p>
 </p>
 </div>
 </div>
@@ -133,7 +133,7 @@ toc:
 <p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing</small>
+<small>Computational modelling of melt pool dynamics in laser powder bed fusion (LPBF) metal additive manufacturing.</small>
 </p>
 </div>
 </div>
@@ -147,7 +147,7 @@ toc:
 <p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Dynamics of nonspherical-deformable-particle-laden flows</small>
+<small>Dynamics of nonspherical-deformable-particle-laden flows.</small>
 </p>
 </div>
 </div>
@@ -161,7 +161,7 @@ toc:
 <p class="team-card-position">Ph.D. Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Computational modelling of acoustically driven particle-laden flows</small>
+<small>Computational modelling of acoustically driven particle-laden flows.</small>
 </p>
 </div>
 </div>
