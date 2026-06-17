@@ -260,7 +260,7 @@ We are proud of our alumni who have gone on to successful careers in academia an
     - **Current position**: Process performance consultant - Enero Solutions
 
 - **Carole-Anne Daunais** (2022)
-    - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
+    - **Thesis Title**: Développement de méthodes d'ordre élevé pour les écoulements non-newtoniens : application aux écoulements autour d'une sphère
     - **Current position**: C++ Developer - Transit
 
 - **Bastien Delacroix** (2019)
