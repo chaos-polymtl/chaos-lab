@@ -59,6 +59,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -81,7 +82,10 @@ nav:
   - Experiments: experiments.md
   - Publications: publications.md
   - Teaching: teaching.md
-  - Utilities: utilities.md
+  - Utilities:
+      - utilities/index.md
+      - Terminal velocity calculator: utilities/terminal-velocity.md
+      - Minimum fluidization & bed expansion: utilities/fluidization.md
 
 # Extensions
 markdown_extensions:
