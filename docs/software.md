@@ -12,7 +12,7 @@ The CHAOS Laboratory develops and contributes to high-performance open-source sc
 ## Lethe ![Lethe logo](assets/lethe-logo-with-bkgd.png){ width="600" align=right }
 
 **Lethe** is an open-source finite-element framework for multiphysics and multiphase flow simulations.  
-It is designed for **high-performance computing** and includes advances features such as **mesh adaptation** and **dynamic load balancing**.
+It is designed for **high-performance computing** and includes advanced features such as **mesh adaptation** and **dynamic load balancing**.
 
 Lethe provides:
 - Matrix-free stabilized solvers for incompressible Navier–Stokes equations  

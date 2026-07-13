@@ -175,7 +175,7 @@ toc:
 <p class="team-card-position">Master's Student</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Complex particles geometries in discrete element method.</small>
+<small>Complex particle geometries in the discrete element method.</small>
 </p>
 </div>
 </div>
@@ -190,7 +190,7 @@ toc:
 <p class="team-card-position">Intern</p>
 <p class="team-card-research">
 <strong>Research Project:</strong>
-<small>Paticle tracking velocimetry in dense particle-laden flows.</small>
+<small>Particle tracking velocimetry in dense particle-laden flows.</small>
 </p>
 </div>
 </div>
@@ -249,11 +249,11 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 - **Pierre Joseph Eric Laurentin** (2024) 
     - **Thesis Title**: Développement, implémentation et étalonnage d'un modèle fluide à interface diffuse pour la simulation d'écoulements polyphasiques
-    - **Current position**: Solver software developper - MayaHTT
+    - **Current position**: Solver software developer - MayaHTT
 
 - **Audrey Collard-Daigneault** (2024) 
     - **Thesis Title**:  Développement de stratégies numériques basées sur la DEM et la CFD-DEM améliorant la performance computationnelle de simulations d'écoulements granulaires et polyphasiques 
-    - **Current position**: Solver software developper - MayaHTT
+    - **Current position**: Solver software developer - MayaHTT
 
 - **Valérie Bibeau** (2023)  
     - **Thesis Title**: Développement d'algorithmes d'apprentissage profond adaptés au génie chimique : cinétique chimique et mélange
