@@ -37,4 +37,13 @@ A collection of small interactive tools for quick engineering calculations. Sele
 
     [:octicons-arrow-right-24: Open](hpc-cost.md)
 
+-   :material-circle-multiple:{ .lg .middle } &nbsp;**DEM Rayleigh time & contact overlap**
+
+    ---
+
+    Compute the Rayleigh critical time for a DEM time step, and the maximum
+    Hertzian contact overlap for a given impact velocity.
+
+    [:octicons-arrow-right-24: Open](dem-contact.md)
+
 </div>
