@@ -29,6 +29,7 @@ extra_javascript:
   # Calculators
   - js/drag-calculator.js
   - js/fluidization-calculator.js
+  - js/hpc-cost-calculator.js
   - js/publications-chart.js
 
 # Repository
@@ -86,6 +87,7 @@ nav:
       - utilities/index.md
       - Terminal velocity calculator: utilities/terminal-velocity.md
       - Minimum fluidization & bed expansion: utilities/fluidization.md
+      - HPC job cost calculator: utilities/hpc-cost.md
 
 # Extensions
 markdown_extensions:

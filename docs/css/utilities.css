@@ -167,3 +167,95 @@
 #fluidization-tool .tool-results-below {
   margin-top: 1rem;
 }
+
+/* ---------------------------------------------------------------
+   HPC JOB COST CALCULATOR
+--------------------------------------------------------------- */
+#hpc-cost-tool.tool-card {
+  padding: 1.75rem;
+  margin: 1rem 0;
+  border-radius: 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Inputs, laid out side by side */
+#hpc-cost-tool .hpc-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+#hpc-cost-tool .hpc-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+}
+
+#hpc-cost-tool .hpc-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 0.45rem;
+  color: var(--md-default-fg-color--light);
+}
+
+#hpc-cost-tool .hpc-field input[type="number"] {
+  padding: 0.7rem 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#hpc-cost-tool .hpc-field input[type="number"]:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-accent-fg-color) 22%, transparent);
+}
+
+/* Results as prominent stat blocks */
+#hpc-cost-tool .hpc-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+#hpc-cost-tool .hpc-stat {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--md-default-fg-color--lightest);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+#hpc-cost-tool .hpc-value {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--md-accent-fg-color);
+  font-variant-numeric: tabular-nums;
+  word-break: break-word;
+}
+
+#hpc-cost-tool .hpc-unit {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-top: 0.2rem;
+}
+
+#hpc-cost-tool .hpc-caption {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.55rem;
+}

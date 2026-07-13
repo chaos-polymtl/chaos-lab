@@ -28,4 +28,13 @@ A collection of small interactive tools for quick engineering calculations. Sele
 
     [:octicons-arrow-right-24: Open](fluidization.md)
 
+-   :material-server:{ .lg .middle } &nbsp;**HPC job cost calculator**
+
+    ---
+
+    Convert a job's core count and duration in hours into its allocation cost
+    in core-hours and core-years.
+
+    [:octicons-arrow-right-24: Open](hpc-cost.md)
+
 </div>
