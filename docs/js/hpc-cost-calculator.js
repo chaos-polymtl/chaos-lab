@@ -26,6 +26,7 @@
       inputs: {
         cores: document.getElementById("hpc-cores"),
         hours: document.getElementById("hpc-hours"),
+        jobs: document.getElementById("hpc-jobs"),
       },
       outputs: {
         coreHours: document.getElementById("hpc-core-hours"),
@@ -52,14 +53,15 @@
 
     const cores = parseFloat(el.inputs.cores.value);
     const hours = parseFloat(el.inputs.hours.value);
+    const jobs = parseFloat(el.inputs.jobs.value);
 
-    if (!(cores > 0) || !(hours > 0)) {
+    if (!(cores > 0) || !(hours > 0) || !(jobs > 0)) {
       el.outputs.coreHours.textContent = "invalid input";
       el.outputs.coreYears.textContent = "-";
       return;
     }
 
-    const coreHours = cores * hours;
+    const coreHours = cores * hours * jobs;
     const coreYears = coreHours / HOURS_PER_YEAR;
 
     el.outputs.coreHours.textContent = formatNumber(coreHours);
