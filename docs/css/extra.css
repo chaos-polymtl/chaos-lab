@@ -333,3 +333,166 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------------------------------------------------------------
+   RESEARCH PAGE: theme cards (expandable) + project blocks
+---------------------------------------------------------------- */
+
+/* Responsive grid of theme cards */
+.md-typeset .research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+
+/* Two columns on medium screens */
+@media screen and (max-width: 900px) {
+  .md-typeset .research-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Each theme card is a native <details> element. Reset the default
+   Material admonition/details chrome so it reads as a clean card. */
+.md-typeset details.research-card {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1em;
+}
+
+.md-typeset details.research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Summary = the always-visible face of the card */
+.md-typeset details.research-card > summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 1.5rem 1.2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  list-style: none;
+  font-weight: inherit;
+}
+
+/* Remove the default disclosure markers/icons Material adds */
+.md-typeset details.research-card > summary::-webkit-details-marker,
+.md-typeset details.research-card > summary::marker {
+  display: none;
+}
+.md-typeset details.research-card > summary::before {
+  display: none;
+}
+
+/* Custom "+" / "−" indicator in the top-right corner */
+.md-typeset details.research-card > summary::after {
+  content: "+";
+  position: absolute;
+  top: 0.6rem;
+  right: 0.9rem;
+  margin: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--md-default-fg-color--light);
+  font-size: 1.3rem;
+  line-height: 1;
+  transform: none !important;
+  transition: none !important;
+}
+.md-typeset details.research-card[open] > summary::after {
+  content: "−";
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset details.research-card > summary > img {
+  height: 72px;
+  width: auto;
+  margin: 0 0 0.2rem 0;
+}
+
+/* The turbulent-jet icon is wide/short; give it a touch more height */
+.md-typeset details.research-card > summary > img[src$="cfd.svg"] {
+  height: 84px;
+}
+
+.md-typeset .research-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  line-height: 1.3;
+}
+
+.md-typeset .research-card-blurb {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Full description revealed on open */
+.md-typeset .research-card-body {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  margin-top: 0.2rem;
+  padding-top: 0.8rem;
+}
+
+.md-typeset .research-card-body > :first-child {
+  margin-top: 0;
+}
+.md-typeset .research-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Dark-mode adjustments (mirrors the team-card rules) */
+[data-md-color-scheme="slate"] .md-typeset details.research-card {
+  background: var(--md-code-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+[data-md-color-scheme="slate"] .md-typeset details.research-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Active-project blocks with a side thumbnail */
+.md-typeset .project-block {
+  overflow: hidden; /* contain the floated thumbnail */
+}
+
+.md-typeset .project-thumb {
+  float: right;
+  width: 240px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0.3rem 0 1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .md-typeset .research-grid {
+    grid-template-columns: 1fr;
+  }
+  .md-typeset .project-thumb {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
