@@ -46,4 +46,13 @@ A collection of small interactive tools for quick engineering calculations. Sele
 
     [:octicons-arrow-right-24: Open](dem-contact.md)
 
+-   :material-scatter-plot:{ .lg .middle } &nbsp;**Stokes number calculator**
+
+    ---
+
+    Compute a particle's relaxation time and its Stokes number relative to a
+    characteristic flow time scale to assess how closely it follows the flow.
+
+    [:octicons-arrow-right-24: Open](stokes-number.md)
+
 </div>

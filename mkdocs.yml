@@ -31,6 +31,7 @@ extra_javascript:
   - js/fluidization-calculator.js
   - js/hpc-cost-calculator.js
   - js/dem-contact-calculator.js
+  - js/stokes-number-calculator.js
   - js/publications-chart.js
 
 # Repository
@@ -90,6 +91,7 @@ nav:
       - Minimum fluidization & bed expansion: utilities/fluidization.md
       - HPC job cost calculator: utilities/hpc-cost.md
       - DEM Rayleigh time & contact overlap: utilities/dem-contact.md
+      - Stokes number calculator: utilities/stokes-number.md
 
 # Extensions
 markdown_extensions:
