@@ -29,20 +29,6 @@ toc:
 </div>
 
 
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-  <img src="../assets/pictures/victor.jpg" alt="Victor Oliveira Ferreira" class="team-photo">
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Victor Oliveira Ferreira </strong></p>
-<p class="team-card-position">Postdoctoral Researcher</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-<small>Process intensification with CFD and experimental methods.</small></p>
-</div>
-</div>
-
 <div class="team-card" markdown>
 <div class="team-card-image">
   <img src="../assets/pictures/bruna.jpg" alt="Bruna Campos" class="team-photo">
