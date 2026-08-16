@@ -55,4 +55,12 @@ A collection of small interactive tools for quick engineering calculations. Sele
 
     [:octicons-arrow-right-24: Open](stokes-number.md)
 
+-   :material-server:{ .lg .middle } &nbsp; **Cluster core-year consumption**
+
+    ---
+
+    Display the core-year consumption of an allocation on a cluster from a CSV 
+    file.
+
+    [:octicons-arrow-right-24: Open](consumption.md)`
 </div>
