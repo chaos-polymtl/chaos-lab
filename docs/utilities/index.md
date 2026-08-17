@@ -62,5 +62,5 @@ A collection of small interactive tools for quick engineering calculations. Sele
     Display the core-year consumption of an allocation on a cluster from a CSV 
     file.
 
-    [:octicons-arrow-right-24: Open](consumption.md)`
+    [:octicons-arrow-right-24: Open](consumption.md)
 </div>
