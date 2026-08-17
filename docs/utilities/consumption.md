@@ -69,6 +69,12 @@ with non-zero usage, each user's share of the total, and a pie chart. The CSV va
           </table>
         </div>
       </div>
+
+      <div class="card">
+        <h2>3. Total consumption over time</h2>
+        <p class="sub" id="total-plot-sub">Sum across all users, for every reporting date in the file</p>
+        <div id="total-plot"></div>
+      </div>
     </div>
 
     <footer id="results-footer">Values are converted from the selected CSV unit and always displayed in core-years.</footer>
@@ -299,6 +305,10 @@ with non-zero usage, each user's share of the total, and a pie chart. The CSV va
 .consumption-calculator #pie-plot {
   flex: 1 1 420px;
   min-width: 300px;
+}
+
+.consumption-calculator #total-plot {
+  width: 100%;
 }
 
 .consumption-calculator table {
@@ -701,7 +711,103 @@ function renderResults(idx) {
     }
   );
 
+  renderTotalChart(idx);
+
   resultsSection.style.display = 'block';
+}
+
+function renderTotalChart(selectedIdx) {
+  const dates = parsedRows.map(r => r.date);
+  const totals = parsedRows.map(
+    r => r.values.reduce((s, v) => s + toCoreYears(v || 0), 0)
+  );
+
+  const lineTrace = {
+    type: 'scatter',
+    mode: 'lines+markers',
+    x: dates,
+    y: totals,
+    line: {
+      color: '#146B69',
+      width: 2.5,
+      shape: 'spline'
+    },
+    marker: {
+      color: '#146B69',
+      size: 5
+    },
+    hovertemplate: '%{x}<br>%{y:,.2f} core-years<extra></extra>',
+    name: 'Total'
+  };
+
+  const highlightTrace = {
+    type: 'scatter',
+    mode: 'markers',
+    x: [dates[selectedIdx]],
+    y: [totals[selectedIdx]],
+    marker: {
+      color: '#D98A2B',
+      size: 11,
+      line: {
+        color: '#FFFFFF',
+        width: 2
+      }
+    },
+    hovertemplate: '%{x}<br>%{y:,.2f} core-years<extra></extra>',
+    showlegend: false,
+    name: 'Selected'
+  };
+
+  const layout = {
+    margin: {
+      t: 10,
+      b: 40,
+      l: 55,
+      r: 20
+    },
+    height: 300,
+    showlegend: false,
+    font: {
+      family: 'Inter',
+      size: 11.5,
+      color: '#4B5B70'
+    },
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    xaxis: {
+      showgrid: false,
+      tickfont: {
+        family: 'IBM Plex Mono',
+        size: 10
+      }
+    },
+    yaxis: {
+      title: {
+        text: 'Core-years',
+        font: {
+          family: 'IBM Plex Mono',
+          size: 11
+        }
+      },
+      gridcolor: '#DCE3E8',
+      zeroline: false,
+      tickfont: {
+        family: 'IBM Plex Mono',
+        size: 10
+      }
+    },
+    hovermode: 'closest'
+  };
+
+  Plotly.newPlot(
+    'total-plot',
+    [lineTrace, highlightTrace],
+    layout,
+    {
+      displayModeBar: false,
+      responsive: true
+    }
+  );
 }
 
 function formatNum(n) {
