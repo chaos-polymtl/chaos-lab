@@ -10,7 +10,7 @@
     if (!el || typeof Plotly === "undefined") return;
 
     const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
-    const journals = [2, 6, 8, 11, 8, 11, 7, 9, 6];
+    const journals = [2, 6, 8, 11, 8, 11, 7, 9, 7];
 
     const isDark = document.body.getAttribute("data-md-color-scheme") === "slate";
     const fontColor = isDark ? "#e0e0e0" : "#212121";

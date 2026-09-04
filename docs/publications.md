@@ -13,8 +13,8 @@ Browse our research publications of the last few years.
 
 **At a glance**
 
-- :material-file-document: **68** journal articles
-- :material-file-clock-outline: **3** preprints
+- :material-file-document: **69** journal articles
+- :material-file-clock-outline: **4** preprints
 - :material-school: **5** PhD dissertations
 - :material-book-open-variant: **10** Master's theses
 
@@ -27,13 +27,15 @@ Browse our research publications of the last few years.
 ## Preprints
 
 - Papillon-Laroche, Hélène, Alphonius, Amishga, Schreter-Fleischhacker, Magdalena, Harvey, Jean-Philippe, Blais, Bruno. **Geometric Reinitialization for Capillary Flows: a Comparative Study with State-of-the-Art Conservative Level-Set Methods.** *arXiv preprint* arXiv:2602.00275, 2026.
-- Guévremont, Olivier, Gazil, Olivier, Galli, Federico, Virgilio, Nick, Blais, Bruno. **Surface-access limitation in catalytic porous monoliths: Performance diagnosis using pore-resolved CFD** *arXiv preprint* arXiv:2604.03514, 2026.
 - Gaboriault, Olivier, Succar, Antonella, Delêtre, Cléo, Timercan, Anatolie, Pelletier, Roger, Melancon, David, Blais, Bruno. **From Angle of Repose to Heap Morphology: Full-Field Calibration of DEM for Granular Powders.** *arXiv preprint* arXiv:2605.09371, 2026.
+- Campos, Bruna, Munch, Peter, Ferreira, Victor Oliveira, Boffito, Daria Camilla, Banquy, Xavier, Blais, Bruno. **High-order stabilized matrix-free simulation of rotating mixing devices using the Mortar Element Method.** *arXiv preprint* arXiv:2608.27423, 2026.
+- Marquis, Oreste, Maier, Matthias, Blais, Bruno. **A discontinuous Petrov-Galerkin finite-element framework for the simulation of microwave-heated flows.** *arXiv preprint* arXiv:2609.03155, 2026.
 
 ## Journal Publications
 
 ### 2026
 
+- Guévremont, Olivier, Gazil, Olivier, Galli, Federico, Virgilio, Nick, Blais, Bruno. **Surface-access limitation in catalytic porous monoliths: Performance diagnosis using pore-resolved CFD.** *Chemical Engineering Journal*, 180249, 2026.
 - Abda, Mohammed, Berthet, Lucas, Hamedi, Mohsen, Hibatullah, Dani, Piollet, Elsa, Blake, Christopher, Blais, Bruno, Gosselin, Frédérick P. **The finite element neural network method to simulate two dimensional partial differential equations and perform parameter identification.** *Scientific Reports*, 2026.
 - Klassen, Darius, Pouchet, Catherine, Simon, William, Smith, Isabella, Lemoine, Noémie, Blais, Bruno, Larose, Mikaël, Chouinard, Gérald, Karthikeyan, Adya, Dumont, Marie-Josée, Tavares, Jason R. **Pheromones Impregnated on Porous PLA Fibers for Integrated Pest Management.** *Journal of Polymers and the Environment*, 34(5), 99, 2026.
 - Gaboriault, Olivier, Timercan, Anatolie, Pelletier, Roger, Lefebvre, Louis-Philippe, Melancon, David, Blais, Bruno. **Increase in packing density during multi-layer powder spreading: An experimental and numerical study.** *Powder Technology*, 122460, 2026.
