@@ -1,0 +1,279 @@
+/* Container card */
+#drag-calculator.tool-card,
+#fluidization-tool.tool-card {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout: form on the left, results/plot on the right (wrap on small screens) */
+#drag-calculator .tool-layout,
+#fluidization-tool .tool-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Form styles */
+#drag-calculator .tool-form,
+#fluidization-tool .tool-form {
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+
+#drag-calculator .field,
+#fluidization-tool .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+#drag-calculator .field label,
+#fluidization-tool .field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+#drag-calculator .field input[type="number"],
+#fluidization-tool .field input[type="number"] {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#drag-calculator .field input[type="number"]:focus,
+#fluidization-tool .field input[type="number"]:focus {
+  outline: none;
+  border-color: #2962ff; /* tweak to match your theme */
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+}
+
+/* Button */
+#drag-calculator .tool-button,
+#fluidization-tool .tool-button {
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #2962ff; /* primary color */
+  color: #fff;
+}
+
+#drag-calculator .tool-button:hover,
+#fluidization-tool .tool-button:hover {
+  background-color: #254ed4;
+}
+
+/* Results */
+#drag-calculator .tool-results,
+#fluidization-tool .tool-results {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+#drag-calculator .result-line,
+#fluidization-tool .result-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+#drag-calculator .result-label,
+#fluidization-tool .result-label {
+  font-weight: 500;
+}
+
+#drag-calculator .result-value,
+#fluidization-tool .result-value {
+  font-family: monospace;
+}
+
+/* Compact multi-model output */
+#fluidization-tool .result-value {
+  font-size: 0.8rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Plot */
+#drag-calculator .tool-plot,
+#fluidization-tool .tool-plot {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  margin-top: 1rem;
+}
+
+
+/* Two-column layout: inputs + drag model */
+#drag-calculator .tool-layout,
+#fluidization-tool .tool-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+/* Right column: drag model selector */
+#drag-calculator .tool-options,
+#fluidization-tool .tool-options {
+  flex: 0 1 400px;
+  max-width: 400px;
+  font-size: 0.9rem;
+}
+
+#drag-calculator .model-choice,
+#fluidization-tool .model-choice {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+#drag-calculator .model-choice legend,
+#fluidization-tool .model-choice legend {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0 0.25rem;
+}
+
+#drag-calculator .model-choice label,
+#fluidization-tool .model-choice label {
+  display: block;
+  margin: 0.25rem 0;
+}
+
+#drag-calculator .model-note,
+#fluidization-tool .model-note {
+  margin: 0.25rem 0 0;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+/* Results below, full width */
+#drag-calculator .tool-results-below,
+#fluidization-tool .tool-results-below {
+  margin-top: 1rem;
+}
+
+/* ---------------------------------------------------------------
+   SHARED "STAT TOOL" STYLING
+   Rounded input boxes + prominent, accent-coloured result blocks.
+   Used by the HPC job cost and DEM contact calculators.
+--------------------------------------------------------------- */
+.stat-tool.tool-card {
+  padding: 1.75rem;
+  margin: 1rem 0;
+  border-radius: 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Inputs in an even grid; auto-fill keeps equal columns and stops a lone
+   trailing field from stretching. align-items:end bottom-aligns every input,
+   so labels of different lengths (even when they wrap) never misalign them. */
+.stat-tool .calc-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.1rem 1.25rem;
+  align-items: end;
+}
+
+.stat-tool .calc-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Two-line label: variable name on top, then "symbol [units]" underneath.
+   The fixed structure gives every field an equal-height header so the input
+   boxes line up. No text-transform — labels hold case-sensitive physics
+   symbols (d_p, ρ_p, v) that must not be forced to uppercase. */
+.stat-tool .calc-field label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.45rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.stat-tool .calc-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stat-tool .calc-sym {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.1rem;
+}
+
+.stat-tool .calc-field input[type="number"] {
+  padding: 0.7rem 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-tool .calc-field input[type="number"]:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-accent-fg-color) 22%, transparent);
+}
+
+/* Results as prominent stat blocks */
+.stat-tool .calc-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.stat-tool .calc-stat {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  border-radius: 0.6rem;
+  background: var(--md-default-fg-color--lightest);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.stat-tool .calc-value {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--md-accent-fg-color);
+  font-variant-numeric: tabular-nums;
+  word-break: break-word;
+}
+
+.stat-tool .calc-unit {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+  margin-top: 0.2rem;
+}
+
+.stat-tool .calc-caption {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.55rem;
+}
