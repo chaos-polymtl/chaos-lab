@@ -167,34 +167,6 @@ toc:
 </div>
 
 
-<div class="team-card" markdown>
-<div class="team-card-image">
-  <img src="../assets/pictures/loes.jpg" alt="Loes Cazemier" class="team-photo">
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Loes Cazemier </strong></p>
-<p class="team-card-position">Intern</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-<small>Particle tracking velocimetry in dense particle-laden flows.</small>
-</p>
-</div>
-</div>
-
-<div class="team-card" markdown>
-<div class="team-card-image">
-  <img src="../assets/pictures/pierre.jpg" alt="Pierre Pensec" class="team-photo">
-</div>
-<div class="team-card-content" markdown>
-<p class="team-card-name"><strong> Pierre Pensec </strong></p>
-<p class="team-card-position">Intern</p>
-<p class="team-card-research">
-<strong>Research Project:</strong>
-<small>Validation of a computational model for microwave heating.</small>
-</p>
-</div>
-</div>
-
 </div>
 
 ---
@@ -265,6 +237,12 @@ We are proud of our alumni who have gone on to successful careers in academia an
 
 - **Marine Harel** (2025)
     - **Project Titles**: (1) Simulation of heat transfer in granular media and (2) Extension of the geometric interface reinitialization method to non-linear interface reconstructions
+
+- **Loes Cazemier** (2026)
+    - **Project Title**: Particle tracking velocimetry in dense particle-laden flows
+
+- **Pierre Pensec** (2026)
+    - **Project Title**: Validation of a computational model for microwave heating
 
 
 ---
