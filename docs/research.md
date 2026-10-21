@@ -110,9 +110,13 @@ To address these limitations, the project leverages the CFD-DEM capabilities of 
 
 More specifically, the research is structured around three complementary directions. The first focuses on developing a coupled electromagnetic–thermal model for multiphase systems to capture the unique volumetric heating characteristics of microwave-assisted processes. The second leverages artificial neural networks to accelerate the simulation of reactive porous media, enabling the exploration of a wider range of operating conditions and geometries. Finally, the third investigates a proof of concept for active cooling based on impinging jet systems to dynamically control local temperature gradients.
 
-**Team Members:** Oreste Marquis, Victor Oliveira Ferreira, Olivier Guévremont, Bruna Campos, Antonella Succar.
+**Team Members:** Oreste Marquis, Olivier Guévremont, Bruna Campos, Antonella Succar.
 </div>
 
+
+---
+
+## Past Projects
 
 ### Ultrasonic particle control  <sup>a.1,</sup><sup>b.1</sup> { data-toc-label="Ultrasonic particle control" }
 
@@ -122,14 +126,9 @@ The core innovation relies on the use of acoustic radiation forces to concentrat
 
 **Team Members:** Justin Lamouche.
 
-
----
-
-## Past Projects
-
 ### Radioactive particle tracking (RPT)<sup>a.1</sup> { data-toc-label="Radioactive particle tracking (RPT)" }
 
-**Description:** The project introduces a novel model-free RPT technique for characterizing hydrodynamics in multiphase reactors. By replacing traditional radiation models with experimental data and training an artificial neural network, the approach significantly improves positional accuracy and eliminates extensive calibration. The method was validated in laminar and transitional stirred tank flows, accurately capturing vortex formation and key hydrodynamic parameters, and showing strong agreement with multiphase CFD simulations. 
+**Description:** The project introduces a novel model-free RPT technique for characterizing hydrodynamics in multiphase reactors. By replacing traditional radiation models with experimental data and training an artificial neural network, the approach significantly improves positional accuracy and eliminates extensive calibration. The method was validated in laminar and transitional stirred tank flows, accurately capturing vortex formation and key hydrodynamic parameters, and showing strong agreement with multiphase CFD simulations.
 
 **Duration:** September 2019 - December 2024
 
@@ -151,10 +150,10 @@ We actively collaborate with:
 
 ## Funding
 
-We are grateful for the support from various funding agencies and organizations. 
+We are grateful for the support from various funding agencies and organizations.
 
 - [Natural Sciences and Engineering Research Council](https://www.nserc-crsng.gc.ca/)
-- [Institut de l'énergie Trottier ](https://iet.polymtl.ca/)  
+- [Institut de l'énergie Trottier ](https://iet.polymtl.ca/)
 - [Fonds de recherche du Québec - Nature et technologies](https://frq.gouv.qc.ca/)
 
 ---
