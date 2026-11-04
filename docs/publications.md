@@ -14,7 +14,7 @@ Browse our research publications of the last few years.
 **At a glance**
 
 - :material-file-document: **69** journal articles
-- :material-file-clock-outline: **4** preprints
+- :material-file-clock-outline: **5** preprints
 - :material-school: **5** PhD dissertations
 - :material-book-open-variant: **10** Master's theses
 
@@ -30,6 +30,7 @@ Browse our research publications of the last few years.
 - Gaboriault, Olivier, Succar, Antonella, Delêtre, Cléo, Timercan, Anatolie, Pelletier, Roger, Melancon, David, Blais, Bruno. **From Angle of Repose to Heap Morphology: Full-Field Calibration of DEM for Granular Powders.** *arXiv preprint* arXiv:2605.09371, 2026.
 - Campos, Bruna, Munch, Peter, Ferreira, Victor Oliveira, Boffito, Daria Camilla, Banquy, Xavier, Blais, Bruno. **High-order stabilized matrix-free simulation of rotating mixing devices using the Mortar Element Method.** *arXiv preprint* arXiv:2608.27423, 2026.
 - Marquis, Oreste, Maier, Matthias, Blais, Bruno. **A discontinuous Petrov-Galerkin finite-element framework for the simulation of microwave-heated flows.** *arXiv preprint* arXiv:2609.03155, 2026.
+- Denner, Fabian, Campos, Bruna, Blais, Bruno. **QMOMKit: A C++ library for quadrature-based moment methods.** *arXiv preprint* arXiv:2610.36189, 2026.
 
 ## Journal Publications
 
