@@ -73,7 +73,8 @@
 
       const player = new YT.Player(playerEl, {
         videoId: first.id,
-        host: "https://www.youtube-nocookie.com",
+        // Default host (www.youtube.com). youtube-nocookie.com triggers YouTube's
+        // "Sign in to confirm you're not a bot" wall for many visitors.
         playerVars: {
           autoplay: 1,
           controls: 1,
